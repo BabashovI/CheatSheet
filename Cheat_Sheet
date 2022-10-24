@@ -1,4 +1,4 @@
-### Bash
+### Linux cmd
 echo $? - exit status of last command (0 no error)
 ' - Single quote removes meaning special meaning of special character.
 find /qwe -type f -iname _.js -exec cp --parents -t /tmp/ {} + -- find all js files and copy with parent directory
@@ -8,7 +8,11 @@ echo <password> | sudo -S
 for i in t@01 st@02 ba@sta03;do ssh -o RequestTTY=true $i "sudo -l";done -- allow tty present
 sed '/pattern to match/d' ./infile > ./newfile
 sed -i 's/old-text/new-text/g' input.txt > outputfile
+sed 's/\<the\>/their/g' qwe.txt > /home/qwe_REPLACE.txt -- change "the -> their"
 
+### Network
+ss -tulp       -- list udp&tcp 
+netstat -tulp
 
 ### VIM
 :r! sed -n '16,812 p' < input_file.txt -- copy line range from input_file
