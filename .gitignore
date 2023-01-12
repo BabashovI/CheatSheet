@@ -1,3 +1,5 @@
+id_rsa
+*.pub
 .git
 # Compiled files
 *.tfstate
