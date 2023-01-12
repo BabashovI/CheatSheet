@@ -1,6 +1,3 @@
-id_rsa
-*.pub
-.git
 # Compiled files
 *.tfstate
 *.tfstate.backup
@@ -11,7 +8,7 @@ terraform.tfstate*
 
 # Auto-generated var files
 *.auto.tfvars
-
+*.tfvars
 # Other stuff
 *.pem
 .*.un~
@@ -19,6 +16,9 @@ terraform.tfstate*
 .DS_Store
 debug.tmp
 .vscode
+id_rsa
+*.pub
+.git
 
 # Test Artifacts
 .venv
