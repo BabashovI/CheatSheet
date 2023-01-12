@@ -1,0 +1,7 @@
+vm_name          = "logging"
+tenancy_ocid     = "ocid1.tenancy.oc1..aaaaaaaansmdajirvrt3cmeazl3ihjqnaepnasuja7xyripfzslkjv7yfauq"
+user_ocid        = "ocid1.user.oc1..aaaaaaaajy5tirxiokgo7hkivthmrrinxdeiyqihtjak7fyenlqjvthxwikq"
+private_key_path = "../keys/oci-api-key.pem"
+fingerprint      = "93:47:63:cf:fd:6d:a7:e5:88:73:3f:f0:aa:fd:3f:d9"
+region           = "eu-frankfurt-1"
+compartment_ocid = "ocid1.compartment.oc1..aaaaaaaaokhshbawalgivi2wukwgkqx4uv2ihh3ymtdjxnvqi5h6pwnvsp4a"

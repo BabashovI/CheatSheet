@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" class="js" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>terraform-oci:lab05 | DevOps Courses</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="keywords" content="terraform-oci,lab05">
+<link rel="search" type="application/opensearchdescription+xml" href="https://doc.devops.courses/lib/exe/opensearch.php" title="DevOps Courses">
+<link rel="start" href="https://doc.devops.courses/">
+<link rel="contents" href="https://doc.devops.courses/doku.php?id=terraform-oci:lab05&amp;do=index" title="Sitemap">
+<link rel="manifest" href="https://doc.devops.courses/lib/exe/manifest.php">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="https://doc.devops.courses/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="https://doc.devops.courses/feed.php?mode=list&amp;ns=terraform-oci">
+<link rel="alternate" type="text/html" title="Plain HTML" href="https://doc.devops.courses/doku.php?do=export_xhtml&amp;id=terraform-oci:lab05">
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="https://doc.devops.courses/doku.php?do=export_raw&amp;id=terraform-oci:lab05">
+<link rel="canonical" href="https://doc.devops.courses/doku.php?id=terraform-oci:lab05">
+<link rel="stylesheet" href="terraform-oci%20lab05_files/css.css">
+<!--[if gte IE 9]><!-->
+<script>/*<![CDATA[*/var NS='terraform-oci';var SIG=" --- \/\/[[terraform-oci-student@ubergeek.ro|Student Terraform OCI]] 2022\/11\/16 16:29\/\/";var JSINFO = {"plugin_pdfjs":{"hide_download_button":0},"id":"terraform-oci:lab05","namespace":"terraform-oci","ACT":"show","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="terraform-oci%20lab05_files/jquery.php" defer="defer"></script>
+<script src="terraform-oci%20lab05_files/js.php" defer="defer"></script>
+<!--<![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="https://doc.devops.courses/lib/tpl/typowiki/images/favicon.ico">
+<link rel="apple-touch-icon" href="https://doc.devops.courses/lib/tpl/typowiki/images/apple-touch-icon.png">
+        <link href="terraform-oci%20lab05_files/microns.css" rel="stylesheet">
+</head>
+
+<body>
+        <!--[if lte IE 8 ]><div id="IE8"><![endif]-->
+
+            <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_typowiki loggedIn   ">
+        
+        <!-- ********** HEADER ********** -->
+        <nav>
+            <div class="nav-bar dark">
+                <div class="container">
+                    <div class="row">
+                    <div class="col-3 col-md-6 col-lg-7 nav-brand">
+                                            <a href="https://doc.devops.courses/doku.php?id=start" id="wiki-logo" accesskey="h" title="[H]"><img src="terraform-oci%20lab05_files/dokuwiki-128.png" alt=""></a>                      <h2><a href="https://doc.devops.courses/doku.php?id=start" accesskey="h" title="[H]">DevOps Courses</a></h2>
+                    </div>
+                    <div class="col-9 col-md-6 col-lg-5 nav-actions">
+                        <span id="doku-action-btn"><form class="button btn_source" method="post" action="/doku.php"><div class="no"><input type="hidden" name="do" value="edit"><input type="hidden" name="id" value="terraform-oci:lab05"><button type="submit" accesskey="v" title="Show pagesource [V]">Show pagesource</button></div></form></span>
+                        <button id="menu-toggle" onclick="togglediv('menu_unified')">Menu <span class="mu mu-menu txt-12" aria-hidden="true"></span></button>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        <ul class="a11y skip">
+            <a href="#dokuwiki__content">skip to content</a>
+        </ul>
+        <div class="nav-expanded dark">
+            <div id="menu_unified" class="nav-expanded-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-7 left">
+                            <span class="mu mu-search menu-icon" aria-hidden="true"></span>
+                            <form action="/doku.php?id=start" method="get" role="search" class="search doku_form" id="dw__search" accept-charset="utf-8"><input type="hidden" name="do" value="search"><input type="hidden" name="id" value="terraform-oci:lab05"><div class="no"><input name="q" type="text" class="edit" title="[F]" accesskey="f" placeholder="Search" autocomplete="on" id="qsearch__in"><button value="1" type="submit" title="Search">Search</button><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>                        </div>
+                        <div class="col-sm-5 right">
+                          <span class="mu mu-user menu-icon" aria-hidden="true"></span><p class="ui-title">Logged in as: <bdi>Student Terraform OCI</bdi> (<bdi>terraform-oci-student</bdi>)</p>                          <ul role="navigation">
+                              <li><bdi><a href="https://doc.devops.courses/doku.php?id=user:terraform-oci-student:start" class="wikilink2" title="user:terraform-oci-student:start" rel="nofollow" data-wiki-id="user:terraform-oci-student:start">User page</a></bdi></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab05&amp;do=profile" class="action profile" rel="nofollow" title="Update Profile">Update Profile</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab05&amp;do=logout&amp;sectok=2eb244dbe4175243dc22840059e4e571" class="action logout" rel="nofollow" title="Log Out">Log Out</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab05&amp;do=admin" class="action admin" rel="nofollow" title="Admin">Admin</a></li>                          </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+        <div class="wrapper">
+
+            <!-- ********** CONTENT ********** -->
+        <div class="usr-content">
+            <div id="dokuwiki__content">
+                <div class="container usr-container">
+                                                                <div class="breadcrumbs"><span class="bchead">Trace:</span> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab01" class="breadcrumbs" title="terraform-oci:lab01">lab01</a></bdi> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab02" class="breadcrumbs" title="terraform-oci:lab02">lab02</a></bdi> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab03" class="breadcrumbs" title="terraform-oci:lab03">lab03</a></bdi> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab04" class="breadcrumbs" title="terraform-oci:lab04">lab04</a></bdi> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:start" class="breadcrumbs" title="terraform-oci:start">terraform-oci</a></bdi> <span class="bcsep">•</span> <span class="curid"><bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab05" class="breadcrumbs" title="terraform-oci:lab05">lab05</a></bdi></span></div>
+                                                                                            <div class="row usr-inner">
+                        <div class="col-md-9 col-main">
+                                                
+                            <div class="page">
+                                
+                                <!-- BREADCRUMBS -->
+
+                                <!-- wikipage start -->
+                                
+<h1 class="sectionedit1" id="lab_5_terraform_features">Lab #5 – Terraform Features</h1>
+<div class="level1">
+
+</div>
+
+<h2 class="sectionedit2" id="setup">Setup</h2>
+<div class="level2">
+
+<p>
+For this lab, you will be using the Terraform provider for Oracle OCI. 
+</p>
+
+<p>
+You will be using the credentials for the Terraform OCI Provider given to you by the trainer.
+</p>
+
+<p>
+<em>PLEASE BE CAREFUL when applying infrastructure changes. You are 
+using a shared environment with limited resources, so we kindly ask you 
+to not use more resources than you are instructed in the lab. The 
+service limits are not very high and we risk breaking the labs for 
+everyone so please play nice!</em>
+</p>
+
+<p>
+For all the following tasks that involve creation of resources, make 
+sure you PREFIX all your resource names with “studentXX” where XX are 
+your initials.
+</p>
+
+<p>
+For all the tasks below, make sure you open a browser window with the official OCI documentation for Terraform: <a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs</a>
+</p>
+
+<p>
+It is recommended to create a new folder named <code>lab5</code>, copy into it your <code>lab4.tf</code> file from the previous lab, rename it to <code>lab5.tf</code> and continue working on it.
+</p>
+
+<p>
+If you want to start from scratch, make sure you copy at least the 
+provider definition from the previous lab, along with any authentication
+ credentials you might be using.
+</p>
+<pre class="code">$ cd ..
+$ mkdir lab5
+$ cd lab5
+$ cp ../lab4/lab4.tf lab5.tf</pre>
+
+<p>
+Make sure you run <code>terraform init</code> in the new folder if you only copy the configuration file, to redownload the providers.
+</p>
+
+</div>
+
+<h2 class="sectionedit3" id="multiplying_instances">Multiplying Instances</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit4" id="block_storage_resource">Block storage resource</h3>
+<div class="level3">
+
+<p>
+So far, for every new resource that you created, you defined a new 
+resource block. There is an easy way to avoid code duplication as long 
+as you are creating similar resources (that is, of the same <abbr title="Application Programming Interface">API</abbr>/Terraform type).
+</p>
+
+<p>
+Let's define a new type of resource that we can quickly deploy and easily multiply: a block storage entity.
+</p>
+
+<p>
+Block volumes can be created, attached to instances, moved as well as 
+modified from a capacity and performance perspective, as needed, to meet
+ your storage, performance, and application requirements. After you 
+attach and connect a volume to an instance, you can use the volume like a
+ regular hard drive. You can also disconnect a volume and attach it to 
+another instance without losing any data.
+</p>
+
+<p>
+Check the official documentation for the block storage resource and create one in your code with the following parameters (<a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_volume" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_volume" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_volume</a>):
+</p>
+<ul>
+<li class="level1"><div class="li"> Name: studentXX-volume (where XX are your initials)</div>
+</li>
+<li class="level1"><div class="li"> Size: 50GB (do not forget to set the size, as the default is 1TB)</div>
+</li>
+<li class="level1"><div class="li"> One tag with the key of <code>department</code> and a value of <code>training</code></div>
+</li>
+<li class="level1"><div class="li"> Use the <code>compartment_id</code> and the <code>availability_domain</code> from the previous resource definitions</div>
+</li>
+</ul>
+
+<p>
+<strong>Hint</strong>: You have 2 ways (different parameters) of 
+specifying the volume size. One of them is deprecated. Check the 
+documentation link above to figure out which one should be used.
+</p>
+
+<p>
+Apply your configuration and check the newly created block storage 
+object in the cloud console under the navigation menu &gt; Block Storage
+ &gt; Block Volumes.
+</p>
+
+</div>
+
+<h3 class="sectionedit5" id="the_count_parameter">The "count" parameter</h3>
+<div class="level3">
+
+<p>
+So far, you've been creating one resource block for every resource. In 
+scenarios where you need multiple instances of the same resource, one 
+useful way of avoiding redundant code is the <code>count</code> parameter. <code>Count</code> runs the resource creation block multiple time and provides the <code>count.index</code> parameter to identify in which iteration you are currently in.
+</p>
+
+<p>
+Update your block storage resource definition with a <code>count</code> definition of <code>3</code>, to create 3 identical block storage entities.
+</p>
+
+<p>
+Store the value <code>3</code> in a variable called <code>block_count</code>.
+</p>
+<pre class="code">count = var.block_count</pre>
+
+<p>
+Check the cloud console and validate the creation of the 3 resources. 
+What are the resource names? Can you tell just by looking at the object 
+names which storage block was created initially, and which were added 
+later?
+</p>
+
+</div>
+
+<h3 class="sectionedit6" id="making_your_resources_distinct">Making your resources distinct</h3>
+<div class="level3">
+
+<p>
+Generate a different name for each of your 3 storage blocks starting 
+from the current name followed by an index number from 1 to 3. For 
+example if your storage block was named “studentXX-volume” where XX are 
+your initials, your clones should be named:
+</p>
+<ul>
+<li class="level1"><div class="li"> studentXX-volume-1</div>
+</li>
+<li class="level1"><div class="li"> studentXX-volume-2 </div>
+</li>
+<li class="level1"><div class="li"> studentXX-volume-3</div>
+</li>
+</ul>
+
+<p>
+<strong>Hint</strong>: You will need to generate a different name for each “pass” through the resource block. The <code>count.index</code> parameter tells you in which iteration you currently are.
+</p>
+
+<p>
+<strong>Hint</strong>: The <code>count.index</code> parameter is zero-indexed. 
+</p>
+
+<p>
+<strong>Hint</strong>: In this case, you can simply append <code>_${count.index}</code> to your VM name. However, a more powerful way to concatenate two variables in Terraform is by using the <code>format()</code> function. It is similar in syntax to C language's <code>sprintf</code> function. If you are not familiar with it:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>format()</code> takes at least one argument, which is the string to generate. For example <code>format(“hello world”)</code> will output <code>hello world</code>.</div>
+</li>
+<li class="level1"><div class="li"> Including variables in output 
+requires variable “placeholders” and as many additional parameters as 
+the number of variables used. For our example, suffice to say that you 
+would need the <code>%s</code> placeholder to insert a string and <code>%d</code> to insert an integer, which can also be the result of a simple math operation. For example, <code>format(“%s %s - %d”, “hello”, “world”, 2022+1)</code> will output <code>hello world – 2023</code>.</div>
+</li>
+<li class="level1"><div class="li"> Remember that <code>format()</code> is an interpolation function so it requires the <code>${}</code> interpolation syntax to work.</div>
+</li>
+<li class="level1"><div class="li"> Using the examples above, you should
+ now be able to concatenate a number from 1 to 3 to your original 
+instance name. Don't forget to use the <code>count.index</code> parameter.</div>
+</li>
+</ul>
+
+<p>
+Apply your configuration and check the cloud console for the updated storage block names.
+</p>
+
+</div>
+
+<h3 class="sectionedit7" id="experiment_with_the_count_parameter">Experiment with the "count" parameter</h3>
+<div class="level3">
+
+<p>
+Test the fact that you can now provision the number of desired block storage resources just by changing one variable. 
+</p>
+
+<p>
+Change the <code>block_count</code> variable to <code>1</code> and run <code>terraform plan</code> and <code>terraform apply</code>.
+</p>
+
+<p>
+Then change it back to 3 and run <code>terraform plan</code> and <code>terraform apply</code> again. 
+</p>
+
+<p>
+Observe how the infrastructure changes dynamically.
+</p>
+
+</div>
+
+<h3 class="sectionedit8" id="lifecycle_create_before_destroy">Lifecycle – Create before destroy</h3>
+<div class="level3">
+
+<p>
+Whenever Terraform needs to replace a resource, the default behavior is 
+to destroy the first resource and then create its replacement.
+</p>
+
+<p>
+You can override this default behavior using an additional parameter in the <code>lifecycle {}</code> block: <code>create_before_destroy</code>:
+</p>
+<pre class="code">lifecycle {
+  create_before_destroy = true
+}</pre>
+
+<p>
+Add the block above inside your virtual instance definition (your virtual machine, not your block storage!).
+</p>
+
+<p>
+Apply your configuration then head over to the cloud console and notice 
+the changed behavior – the new instance is now created before the old 
+one is decommissioned.
+</p>
+
+</div>
+
+<h3 class="sectionedit9" id="lifecycle_depends_on">Lifecycle – ''Depends on''</h3>
+<div class="level3">
+
+<p>
+Terraform default behavior when deploying multiple resources is to 
+attempt to deploy as many resources in parallel as possible (maximum 10,
+ by default). For any resource dependencies that are detected in your 
+code (for example a subnet must be created after a VCN because a subnet 
+cannot reside outside a VCN) Terraform knows to deploy those resources 
+in the right order.
+</p>
+
+<p>
+Add a <code>depends_on</code> parameter to your block storage resource 
+definition. Ensure than your block storage devices will always be 
+deployed AFTER the VM instances are created.
+</p>
+
+<p>
+Destroy and re-apply your infrastructure to see this behavior in action.
+</p>
+
+<p>
+<strong>Hint</strong>: check the official documentation on the syntax to use with depends_on: <a href="https://www.terraform.io/docs/language/meta-arguments/depends_on.html" class="urlextern" title="https://www.terraform.io/docs/language/meta-arguments/depends_on.html" rel="ugc nofollow">https://www.terraform.io/docs/language/meta-arguments/depends_on.html</a>
+</p>
+
+</div>
+
+<h3 class="sectionedit10" id="for-eachmultiple_resources_defined_by_a_map">For-each: Multiple resources defined by a map</h3>
+<div class="level3">
+
+<p>
+If you need multiple resources of the same type and they are almost identical, using <code>count</code>
+ might be the easiest option. But for resources where multiple arguments
+ need to be distinct and they cannot be easily derived from a numerical 
+value (the <code>count.index</code>), it is more convenient to use <code>for_each</code>.
+</p>
+
+<p>
+In this task, you will create an additional 3 block storage resources, 
+not just with different names but also with different attributes:
+</p>
+<ol>
+<li class="level1"><div class="li"> Name: studentXX-volume-small, size: 50 <abbr title="Gigabyte">GB</abbr></div>
+</li>
+<li class="level1"><div class="li"> Name: studentXX-volume-medium, size: 65 <abbr title="Gigabyte">GB</abbr></div>
+</li>
+<li class="level1"><div class="li"> Name: studentXX-volume-large, size: 90 <abbr title="Gigabyte">GB</abbr></div>
+</li>
+</ol>
+
+<p>
+<strong>Note</strong>: You cannot use <code>count</code> and <code>for_each</code> in the same resource block.
+</p>
+
+<p>
+Define a NEW resource of type <code>oci_core_volume</code>. Make sure you give it a different Terraform object name. If you copied your previous definition, remove the <code>count</code> parameter from the resource block.
+</p>
+
+<p>
+Check the official documentation for guidelines and examples on how to use the <code>for_each</code> block: <a href="https://www.terraform.io/docs/language/meta-arguments/for_each.html" class="urlextern" title="https://www.terraform.io/docs/language/meta-arguments/for_each.html" rel="ugc nofollow">https://www.terraform.io/docs/language/meta-arguments/for_each.html</a>
+</p>
+
+<p>
+<strong>Hint</strong>: The <code>for_each</code> block can include a 
+list or a map. In our case it is easier to use a map made up of 3 
+entries, each being a key-value pair. The keys can store the strings 
+that get appended to the name (“small”, “medium”, “large”) and the 
+values can store the different sizes (50, 65, 90).
+</p>
+
+<p>
+<strong>Hint</strong>: As described in the documentation link above, for each iteration, you may reference the current key with <code>each.key</code> and the current value with <code>each.value</code>.
+</p>
+
+<p>
+Apply your config and check the cloud console for the expected results.
+</p>
+
+</div>
+
+<h2 class="sectionedit11" id="local-exec_provisioner">Local-exec provisioner</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit12" id="create_a_local-exec_provisioner">Create a local-exec provisioner</h3>
+<div class="level3">
+
+<p>
+The <code>local-exec</code> provisioner Terraform construct allows you 
+to invoke one or more commands to be executed on the machine running 
+Terraform AFTER a certain resource has been created.
+</p>
+
+<p>
+Have a look in the official documentation for the syntax and behavior of a <code>local-exec</code> provisioner: <a href="https://www.terraform.io/docs/language/resources/provisioners/local-exec.html" class="urlextern" title="https://www.terraform.io/docs/language/resources/provisioners/local-exec.html" rel="ugc nofollow">https://www.terraform.io/docs/language/resources/provisioners/local-exec.html</a>
+</p>
+
+<p>
+Add a <code>local-exec</code> provisioner to your compute instance, 
+which should be already deployed, up and running. Use the provisioner to
+ output the public IP address of your instance along with its designated
+ <code>display_name</code> in a local file called <code>instances.txt</code>. Start with the example usage scenario in the official documentation and adapt it to your requirements.
+</p>
+
+<p>
+The resulting <code>instances.txt</code> file should have one line stating:
+</p>
+<pre class="code">studentXX-vm1 – [ip.add.re.ss]</pre>
+
+<p>
+<strong>Hint</strong>: Keep in mind that the provisioner can fire only 
+upon resource creation. If your resource is already deployed, the 
+provisioner will not fire until the next destroy/apply or the next 
+change in the configuration that requires the resource to be rebuilt.
+</p>
+
+</div>
+
+<h3 class="sectionedit13" id="force_a_resource_to_be_rebuilt">Force a resource to be rebuilt</h3>
+<div class="level3">
+
+<p>
+Since provisioners only fire upon resource creation and your compute 
+resource is already deployed, we can use the “taint” feature of 
+Terraform, which marks specific resources in the state file for 
+destruction and recreation on the next apply.
+</p>
+
+<p>
+Type the <code>terraform taint</code> command (without any parameters) 
+and try to figure out the right way to use it and check the official 
+documentation page as well: <a href="https://www.terraform.io/docs/cli/commands/taint.html" class="urlextern" title="https://www.terraform.io/docs/cli/commands/taint.html" rel="ugc nofollow">https://www.terraform.io/docs/cli/commands/taint.html</a>
+</p>
+
+<p>
+Taint your compute resource.
+</p>
+
+<p>
+Apply your config – the compute resource should be rebuilt and an <code>instances.txt</code> file should be present in your current folder, next to your Terraform config files.
+</p>
+
+<p>
+<strong>Hint</strong>: You may ignore all the other options and you only
+ need to specify the type of the resource followed by the Terraform name
+ of that resource in the format <code>type.name</code>
+</p>
+
+</div>
+
+<h2 class="sectionedit14" id="modules">Modules</h2>
+<div class="level2">
+
+<p>
+Before moving on, destroy your current infrastructure.
+</p>
+
+<p>
+Modules allow you to import existing code into your configuration and 
+also help with avoiding code duplication. A module definition includes 
+resources that get deployed, along with a set of input variables (which 
+act as input parameters to the module itself) and a set of outputs 
+(which represent the type of information returned by your module).
+</p>
+
+<p>
+Take a look at the official documentation page on modules for some examples: <a href="https://www.terraform.io/docs/configuration/modules.html" class="urlextern" title="https://www.terraform.io/docs/configuration/modules.html" rel="ugc nofollow">https://www.terraform.io/docs/configuration/modules.html</a>
+</p>
+
+<p>
+Update your current code and “move” your <code>oci_core_subnet</code> resource definition inside a module. In order to do this, follow these steps:
+</p>
+<ul>
+<li class="level1"><div class="li"> Create a folder next to your Terraform configuration files and name it <code>subnet_module</code></div>
+</li>
+<li class="level1"><div class="li"> Inside the <code>subnet_module folder</code>, create a new <code>subnet.tf</code> file and move the <code>oci_core_subnet</code> resource definition from your original <code>.tf</code> file to your <code>subnet.tf</code></div>
+</li>
+<li class="level1"><div class="li"> Inputs: Make a note of what type of information is required for your subnet to be created:</div>
+</li>
+</ul>
+<ol>
+<li class="level1"><div class="li"> An IP address space (<code>cidr_block</code>)</div>
+</li>
+<li class="level1"><div class="li"> A compartment ID (<code>compartment_id</code>)</div>
+</li>
+<li class="level1"><div class="li"> A VCN ID to connect you subnet to (<code>vcn_id</code>)</div>
+</li>
+<li class="level1"><div class="li"> A display name that shows up in the cloud console (<code>display_name</code>)</div>
+</li>
+</ol>
+
+<p>
+Inside your <code>subnet.tf</code> file make sure you define a variable for each of the above input parameters. Do not add any default values for <code>cidr_block</code>, <code>compartment_id</code> and <code>vcn_id</code>. Specify a default value of <code>studentXX_subnet</code> only for the <code>display_name</code>, where XX are your initials.
+</p>
+<ul>
+<li class="level1"><div class="li"> What type of information do you need from the subnet definition? That's right, its id, which is used in the <code>oci_core_instance</code> resource definition in order to connect your virtual machine to a valid subnet. Inside your <code>subnet.tf</code> file, create an output block that returns in its value the <code>id</code> attribute of your newly created subnet.</div>
+</li>
+<li class="level1"><div class="li"> Back in your main <code>.tf</code> file, define a <code>module {}</code> block with a <code>source</code> location that points to the folder where <code>subnet.tf</code> is located (most likely <code>./subnet_module</code>).</div>
+</li>
+<li class="level1"><div class="li"> Inside the <code>module {}</code> block, right next to the <code>source</code>
+ parameter, add the 4 parameters mentioned in the third step and give 
+them valid values. This is where you actually set the values of those 
+input variables defined in your module.</div>
+</li>
+<li class="level1"><div class="li"> The last required step is to update your <code>oci_core_resource</code> definition and replace the <code>subnet_id</code> parameter value with the one returned by your module.</div>
+</li>
+</ul>
+
+<p>
+Don't forget to initialize your config once more so that Terraform 
+becomes aware of the new module's location. Then apply your config. The 
+subnet should deploy just like before.
+</p>
+
+<p>
+<strong>Hint</strong>: When you define your module in the main <code>.tf</code> file, you can use whichever name you want for the module call.
+</p>
+
+<p>
+<strong>Hint</strong>: A module output is referenced in the main <code>.tf</code> file using the syntax <code>module.module_name.output_parameter</code>
+</p>
+
+</div>
+
+<h2 class="sectionedit15" id="optional_importing_resources">(Optional) Importing Resources</h2>
+<div class="level2">
+
+<p>
+Often, existing resources in cloud environment will need to be imported 
+into your Terraform configurations so that they can be managed by 
+Terraform. Terraform has the ability to import only the state of 
+existing resources, but not the Terraform code itself – this one is up 
+to you.
+</p>
+
+<p>
+Let's try importing a simple entity like a subnet.
+</p>
+
+<p>
+First, make sure that up to this point your configuration is error-free and already deployed on OCI. 
+</p>
+
+<p>
+Head to the cloud console, in your browser, and navigate to Networking 
+&gt; Virtual Cloud Networks and select your Terraform-deployed VCN. You 
+should be able to see one subnet, the one which you previously deployed 
+in a module.
+</p>
+
+<p>
+Right next to your existing subnet, create a new subnet from the cloud 
+console with the following properties, while leaving all the other 
+attributes at their defaults:
+</p>
+<ul>
+<li class="level1"><div class="li"> Name: <code>studentXX-importedsubnet</code> where XX are your initials</div>
+</li>
+<li class="level1"><div class="li"> CIDR block: 10.0.200.0/24  (or any other valid subnet address which matches the VCN's IP address space)</div>
+</li>
+</ul>
+
+<p>
+Wait for the subnet to be created and switch to your Terraform code.
+</p>
+
+<p>
+Try typing in your console <code>terraform import</code> without any arguments and identify the right syntax to use from the error output. The <code>terraform import</code> command expects to receive:
+</p>
+<ul>
+<li class="level1"><div class="li"> a <code>type.name</code> construct where type is the Terraform resource type that you are importing (<code>oci_core_subnet</code>) and name is the name that you choose for this resource in your code</div>
+</li>
+<li class="level1"><div class="li"> one unique resource identifier (the OCID of your imported resource)</div>
+</li>
+</ul>
+
+<p>
+Extract the OCID of your subnet from the cloud console and run the import command like this:
+</p>
+<pre class="code">terraform import oci_core_subnet.importedsubnet ocid1.subnet.oc1…..</pre>
+
+<p>
+The last argument represents the OCID identifier of your newly created subnet.
+Have a look at the error message – it suggests that you should create a resource definition of type <code>oci_core_subnet</code> with the name <code>importedsubnet</code>.
+</p>
+
+<p>
+Create a new resource definition in your Terraform code (the main 
+configuration file, not the module) similar to the one suggested by the 
+Terraform output and fill in the following parameters:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>cidr_block</code></div>
+</li>
+<li class="level1"><div class="li"> <code>vcn_id</code></div>
+</li>
+<li class="level1"><div class="li"> <code>display_name</code></div>
+</li>
+<li class="level1"><div class="li"> <code>compartment_id</code></div>
+</li>
+</ul>
+
+<p>
+Run the <code>terraform import</code> command again and watch the resource being imported in the state file. Search the <code>terraform.tfstate</code> file for <code>importedsubnet</code> to confirm that the resource was properly imported.
+</p>
+
+</div>
+
+<h2 class="sectionedit16" id="clean-up">Clean-up</h2>
+<div class="level2">
+
+<p>
+This is the end of this lab. To clean-up your environment, run <code>terraform destroy</code>.
+</p>
+
+<p>
+<strong>Hint</strong>: If you are confident enough, add the <code>-auto-approve</code> flag to the command.
+<strong>Hint</strong>: You should also see that the <code>importedsubnet</code> imported resource also gets destroyed along with the rest of the infrastructure.
+</p>
+
+</div>
+
+<h1 class="sectionedit17" id="solutions_to_lab_5_terraform_features">Solutions to Lab #5 – Terraform Features</h1>
+<div class="level1">
+
+</div>
+
+<h2 class="sectionedit18" id="multiplying_instances1">Multiplying Instances</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit19" id="block_storage_resource1">Block storage resource</h3>
+<div class="level3">
+<pre class="code">resource "oci_core_volume" "test_volume" {
+  availability_domain = data.oci_identity_availability_domains.ADs.availability_domains[0]["name"]
+  compartment_id = var.compartment_ocid
+  display_name = "StudentAC-volume"
+  freeform_tags = {
+    "Department" = "Training"
+  }
+  size_in_gbs = "50"
+}</pre>
+
+</div>
+
+<h3 class="sectionedit20" id="the_count_parameter1">The "count" parameter</h3>
+<div class="level3">
+<pre class="code">variable "block_count" {
+  default = 3
+}
+
+resource "oci_core_volume" "test_volume" {
+  count = var.block_count
+  availability_domain = data.oci_identity_availability_domains.ADs.availability_domains[0]["name"]
+  compartment_id = var.compartment_ocid
+  display_name = "StudentAC-volume"
+  freeform_tags = {
+    "Department" = "Training"
+  }
+  size_in_gbs = "50"
+}</pre>
+
+</div>
+
+<h3 class="sectionedit21" id="making_your_resources_distinct1">Making your resources distinct</h3>
+<div class="level3">
+<pre class="code">variable "block_count" {
+  default = 3
+}
+
+resource "oci_core_volume" "test_volume" {
+  count = var.block_count
+  availability_domain = data.oci_identity_availability_domains.ADs.availability_domains[0]["name"]
+  compartment_id = var.compartment_ocid
+  display_name = "StudentAC-volume-${count.index + 1}"
+  freeform_tags = {
+    "Department" = "Training"
+  }
+  size_in_gbs = "50"
+}</pre>
+
+</div>
+
+<h3 class="sectionedit22" id="experiment_with_the_count_parameter1">Experiment with the "count" parameter</h3>
+<div class="level3">
+
+<p>
+Self-explanatory :)
+</p>
+
+</div>
+
+<h3 class="sectionedit23" id="lifecycle_create_before_destroy1">Lifecycle – Create before destroy</h3>
+<div class="level3">
+<pre class="code">resource "oci_core_instance" "test_instance" {
+  availability_domain = data.oci_identity_availability_domains.ADs.availability_domains[0]["name"]
+  compartment_id = var.compartment_ocid
+  shape = local.myshape
+  display_name = "StudentAC-VMl"
+
+  create_vnic_details {
+    subnet_id = oci_core_subnet.test_subnet.id
+  }
+
+  source_details {
+    source_id = local.myimage
+    source_type = "image"
+  }
+  
+  freeform_tags = {
+    "name" = "Andrew"
+    "department" = "training"
+    "purpose" = "testing"
+  }
+
+  lifecycle {
+    ignore_changes = [freeform_tags]
+    create_before_destroy = true
+  }
+}</pre>
+
+</div>
+
+<h3 class="sectionedit24" id="lifecycle_depends_on1">Lifecycle – Depends on</h3>
+<div class="level3">
+<pre class="code">resource "oci_core_volume" "test_volume" {
+  count = var.block_count
+  availability_domain = data.oci_identity_availability_domains.ADs.availability_domains[0]["name"]
+  compartment_id = var.compartment_ocid
+  display_name = "StudentAC-volume-${count.index + 1}"
+  freeform_tags = {
+    "Department" = "Training"
+  }
+  size_in_gbs = "50"
+  depends_on = [ oci_core_instance.test_instance ]
+}</pre>
+
+</div>
+
+<h3 class="sectionedit25" id="for-eachmultiple_resources_defined_by_a_map1">For-each: Multiple resources defined by a map</h3>
+<div class="level3">
+<pre class="code">resource "oci_core_volume" "test_volume" {
+  for_each = {
+    small = 50
+    medium = 65
+    large = 90
+  }
+  availability_domain = data.oci_identity_availability_domains.ADs.availability_domains[0]["name"]
+  compartment_id = var.compartment_ocid
+  display_name = "StudentAC-volume-${each.key}"
+  freeform_tags = {
+    "Department" = "Training"
+  }
+  size_in_gbs = each.value
+  depends_on = [ oci_core_instance.test_instance ]
+}</pre>
+
+</div>
+
+<h2 class="sectionedit26" id="local-exec_provisioner1">Local-exec provisioner</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit27" id="create_a_local-exec_provisioner1">Create a local-exec provisioner</h3>
+<div class="level3">
+<pre class="code">resource "oci_core_instance" "test_instance" {
+  availability_domain = data.oci_identity_availability_domains.ADs.availability_domains[0]["name"]
+  compartment_id = var.compartment_ocid
+  shape = local.myshape
+  display_name = "StudentAC-VMl"
+
+  create_vnic_details {
+    subnet_id = oci_core_subnet.test_subnet.id
+  }
+
+  source_details {
+    source_id = local.myimage
+    source_type = "image"
+  }
+  
+  freeform_tags = {
+    "name" = "Andrew"
+    "department" = "training"
+    "purpose" = "testing"
+  }
+
+  lifecycle {
+    ignore_changes = [freeform_tags]
+    create_before_destroy = true
+  }
+
+  provisioner "local-exec" {
+    command = "echo ${self.display_name} - ${self.public_ip} &gt; instances.txt"
+  }
+}</pre>
+
+</div>
+
+<h3 class="sectionedit28" id="force_a_resource_to_be_rebuilt1">Force a Resource to be Rebuilt</h3>
+<div class="level3">
+<pre class="code">$ terraform taint oci_core_instance.test_instance</pre>
+
+</div>
+
+<h2 class="sectionedit29" id="modules1">Modules</h2>
+<div class="level2">
+
+<p>
+<strong>subnet.tf</strong>
+</p>
+<pre class="code">variable "cidr_block" {}
+variable "compartment_ocid" {}
+variable "vcn_id" {}
+
+resource "oci_core_subnet" "test_subnet" {
+  cidr_block = var.cidr_block
+  compartment_id = var.compartment_ocid
+  display_name = "StudentAC-subnet"
+  vcn_id = var.vcn_id
+}
+
+output "subnet_id" {
+  value = oci_core_subnet.test_subnet.id
+}</pre>
+
+<p>
+<strong>lab5.tf</strong>
+</p>
+<pre class="code">module "subnet_module" {
+  source = "./subnet_module"
+  cidr_block = "10.0.100.0./24"
+  compartment_ocid = var.compartment_ocid
+  vcn_id = oci_core_vcn.test_vcn.id
+}
+
+resource "oci_core_instance" "test_instance" {
+  availability_domain = data.oci_identity_availability_domains.ADs.availability_domains[0]["name"]
+  compartment_id = var.compartment_ocid
+  shape = local.myshape
+  display_name = "StudentAC-VMl"
+
+  create_vnic_details {
+    subnet_id = module.subnet_module.subnet_id
+  }
+
+  source_details {
+    source_id = local.myimage
+    source_type = "image"
+  }
+  
+  freeform_tags = {
+    "name" = "Andrew"
+    "department" = "training"
+    "purpose" = "testing"
+  }
+
+  lifecycle {
+    ignore_changes = [freeform_tags]
+    create_before_destroy = true
+  }
+
+  provisioner "local-exec" {
+    command = "echo ${self.display_name} - ${self.public_ip} &gt; instances.txt"
+  }
+}</pre>
+
+</div>
+
+<h2 class="sectionedit30" id="importing_resources">Importing Resources</h2>
+<div class="level2">
+<pre class="code">resource "oci_core_subnet" "impsub" {
+  cidr_block = "10.0.200.0/24"
+  vcn_id = oci_core_vcn.test_vcn.id
+  display_name = "StudentAC-importedsubnet"
+  compartment_id = var.compartment_ocid
+}
+
+$ terraform import oci_core_subnet.impsub ocid1.subnet.oc1.eu-frankfurt-1.aaaachdiu2386428hsd29hgr2239j2398..."</pre>
+
+</div>
+
+<h2 class="sectionedit31" id="clean-up1">Clean-up</h2>
+<div class="level2">
+<pre class="code">$ terraform destroy -auto-approve</pre>
+
+</div>
+
+                                <!-- wikipage stop -->
+                                <div class="clearer"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-side">
+                                                        <div class="nav-side" role="navigation">
+                                <div class="nav-side-inner">
+                                    <!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>Table of Contents</h3>
+<div style="" aria-expanded="true">
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#lab_5_terraform_features">Lab #5 – Terraform Features</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#setup">Setup</a></div></li>
+<li class="level2"><div class="li"><a href="#multiplying_instances">Multiplying Instances</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#block_storage_resource">Block storage resource</a></div></li>
+<li class="level3"><div class="li"><a href="#the_count_parameter">The "count" parameter</a></div></li>
+<li class="level3"><div class="li"><a href="#making_your_resources_distinct">Making your resources distinct</a></div></li>
+<li class="level3"><div class="li"><a href="#experiment_with_the_count_parameter">Experiment with the "count" parameter</a></div></li>
+<li class="level3"><div class="li"><a href="#lifecycle_create_before_destroy">Lifecycle – Create before destroy</a></div></li>
+<li class="level3"><div class="li"><a href="#lifecycle_depends_on">Lifecycle – ''Depends on''</a></div></li>
+<li class="level3"><div class="li"><a href="#for-eachmultiple_resources_defined_by_a_map">For-each: Multiple resources defined by a map</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#local-exec_provisioner">Local-exec provisioner</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#create_a_local-exec_provisioner">Create a local-exec provisioner</a></div></li>
+<li class="level3"><div class="li"><a href="#force_a_resource_to_be_rebuilt">Force a resource to be rebuilt</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#modules">Modules</a></div></li>
+<li class="level2"><div class="li"><a href="#optional_importing_resources">(Optional) Importing Resources</a></div></li>
+<li class="level2"><div class="li"><a href="#clean-up">Clean-up</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="#solutions_to_lab_5_terraform_features">Solutions to Lab #5 – Terraform Features</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#multiplying_instances1">Multiplying Instances</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#block_storage_resource1">Block storage resource</a></div></li>
+<li class="level3"><div class="li"><a href="#the_count_parameter1">The "count" parameter</a></div></li>
+<li class="level3"><div class="li"><a href="#making_your_resources_distinct1">Making your resources distinct</a></div></li>
+<li class="level3"><div class="li"><a href="#experiment_with_the_count_parameter1">Experiment with the "count" parameter</a></div></li>
+<li class="level3"><div class="li"><a href="#lifecycle_create_before_destroy1">Lifecycle – Create before destroy</a></div></li>
+<li class="level3"><div class="li"><a href="#lifecycle_depends_on1">Lifecycle – Depends on</a></div></li>
+<li class="level3"><div class="li"><a href="#for-eachmultiple_resources_defined_by_a_map1">For-each: Multiple resources defined by a map</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#local-exec_provisioner1">Local-exec provisioner</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#create_a_local-exec_provisioner1">Create a local-exec provisioner</a></div></li>
+<li class="level3"><div class="li"><a href="#force_a_resource_to_be_rebuilt1">Force a Resource to be Rebuilt</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#modules1">Modules</a></div></li>
+<li class="level2"><div class="li"><a href="#importing_resources">Importing Resources</a></div></li>
+<li class="level2"><div class="li"><a href="#clean-up1">Clean-up</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+                                    <!-- ********** ASIDE ********** -->
+                                    
+                                    <div class="back-to-top-wrapper">
+                                        <a href="#dokuwiki__top" class="back-to-top-link primary"><span class="mu mu-arrow-up"></span> Back to Top</a>
+                                    </div>
+                                </div>
+                            </div>
+                                                    </div>
+                    </div><!-- /row -->
+                </div><!-- /container -->
+            </div><!-- /content -->
+        </div>
+
+            <div class="clearer"></div>
+            <hr class="a11y">
+
+        </div><!-- /wrapper -->
+
+        <!-- ********** FOOTER ********** -->
+        <footer id="dokuwiki__footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-8">
+                        <div class="doc"><bdi>terraform-oci/lab05.txt</bdi> · Last modified: 2022/08/10 18:21 by <bdi>danut.matei</bdi></div>
+                                            </div>
+                    <div class="col-sm-3 col-md-2">
+                        <!-- PAGE ACTIONS -->
+                                                    <div id="dokuwiki__pagetools">
+                                <ul class="footer-menu ul-raw">
+                                    <li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab05&amp;do=edit" class="action source" accesskey="v" rel="nofollow" title="Show pagesource [V]">Show pagesource</a></li><li><bdi><a href="https://doc.devops.courses/doku.php?id=discussion:terraform-oci:lab05" class="wikilink2" title="discussion:terraform-oci:lab05" rel="nofollow" data-wiki-id="discussion:terraform-oci:lab05">Discussion</a></bdi></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab05&amp;do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]">Old revisions</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab05&amp;do=backlink" class="action backlink" rel="nofollow" title="Backlinks">Backlinks</a></li><li><a href="#dokuwiki__top" class="action top" accesskey="t" rel="nofollow" title="Back to top [T]">Back to top</a></li>                                </ul>
+                            </div>
+                                            </div>
+                    <div class="col-sm-3 col-md-2">
+                        <!-- SITE TOOLS -->
+                        <div id="dokuwiki__sitetools">
+                            <ul class="footer-menu ul-raw">
+                                <li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab05&amp;do=recent" class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab05&amp;do=media&amp;ns=terraform-oci" class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab05&amp;do=index" class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="no"><img src="terraform-oci%20lab05_files/taskrunner.gif" alt="" width="2" height="1"></div>
+        </footer><!-- /footer -->
+
+            </div></div><!-- /site -->
+
+    <script>
+        function togglediv(id) {
+            var div = document.getElementById(id);
+            div.style.display = div.style.display == "block" ? "none" : "block";
+        }
+    </script>
+
+
+</body></html>

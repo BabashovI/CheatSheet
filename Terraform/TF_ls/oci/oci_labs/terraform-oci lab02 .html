@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" class="js" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>terraform-oci:lab02 | DevOps Courses</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="keywords" content="terraform-oci,lab02">
+<link rel="search" type="application/opensearchdescription+xml" href="https://doc.devops.courses/lib/exe/opensearch.php" title="DevOps Courses">
+<link rel="start" href="https://doc.devops.courses/">
+<link rel="contents" href="https://doc.devops.courses/doku.php?id=terraform-oci:lab02&amp;do=index" title="Sitemap">
+<link rel="manifest" href="https://doc.devops.courses/lib/exe/manifest.php">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="https://doc.devops.courses/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="https://doc.devops.courses/feed.php?mode=list&amp;ns=terraform-oci">
+<link rel="alternate" type="text/html" title="Plain HTML" href="https://doc.devops.courses/doku.php?do=export_xhtml&amp;id=terraform-oci:lab02">
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="https://doc.devops.courses/doku.php?do=export_raw&amp;id=terraform-oci:lab02">
+<link rel="canonical" href="https://doc.devops.courses/doku.php?id=terraform-oci:lab02">
+<link rel="stylesheet" href="terraform-oci%20lab02%20_files/css.css">
+<!--[if gte IE 9]><!-->
+<script>/*<![CDATA[*/var NS='terraform-oci';var SIG=" --- \/\/[[terraform-oci-student@ubergeek.ro|Student Terraform OCI]] 2022\/11\/16 16:29\/\/";var JSINFO = {"plugin_pdfjs":{"hide_download_button":0},"id":"terraform-oci:lab02","namespace":"terraform-oci","ACT":"show","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="terraform-oci%20lab02%20_files/jquery.php" defer="defer"></script>
+<script src="terraform-oci%20lab02%20_files/js.php" defer="defer"></script>
+<!--<![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="https://doc.devops.courses/lib/tpl/typowiki/images/favicon.ico">
+<link rel="apple-touch-icon" href="https://doc.devops.courses/lib/tpl/typowiki/images/apple-touch-icon.png">
+        <link href="terraform-oci%20lab02%20_files/microns.css" rel="stylesheet">
+</head>
+
+<body>
+        <!--[if lte IE 8 ]><div id="IE8"><![endif]-->
+
+            <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_typowiki loggedIn   ">
+        
+        <!-- ********** HEADER ********** -->
+        <nav>
+            <div class="nav-bar dark">
+                <div class="container">
+                    <div class="row">
+                    <div class="col-3 col-md-6 col-lg-7 nav-brand">
+                                            <a href="https://doc.devops.courses/doku.php?id=start" id="wiki-logo" accesskey="h" title="[H]"><img src="terraform-oci%20lab02%20_files/dokuwiki-128.png" alt=""></a>                      <h2><a href="https://doc.devops.courses/doku.php?id=start" accesskey="h" title="[H]">DevOps Courses</a></h2>
+                    </div>
+                    <div class="col-9 col-md-6 col-lg-5 nav-actions">
+                        <span id="doku-action-btn"><form class="button btn_source" method="post" action="/doku.php"><div class="no"><input type="hidden" name="do" value="edit"><input type="hidden" name="id" value="terraform-oci:lab02"><button type="submit" accesskey="v" title="Show pagesource [V]">Show pagesource</button></div></form></span>
+                        <button id="menu-toggle" onclick="togglediv('menu_unified')">Menu <span class="mu mu-menu txt-12" aria-hidden="true"></span></button>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        <ul class="a11y skip">
+            <a href="#dokuwiki__content">skip to content</a>
+        </ul>
+        <div class="nav-expanded dark">
+            <div id="menu_unified" class="nav-expanded-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-7 left">
+                            <span class="mu mu-search menu-icon" aria-hidden="true"></span>
+                            <form action="/doku.php?id=start" method="get" role="search" class="search doku_form" id="dw__search" accept-charset="utf-8"><input type="hidden" name="do" value="search"><input type="hidden" name="id" value="terraform-oci:lab02"><div class="no"><input name="q" type="text" class="edit" title="[F]" accesskey="f" placeholder="Search" autocomplete="on" id="qsearch__in"><button value="1" type="submit" title="Search">Search</button><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>                        </div>
+                        <div class="col-sm-5 right">
+                          <span class="mu mu-user menu-icon" aria-hidden="true"></span><p class="ui-title">Logged in as: <bdi>Student Terraform OCI</bdi> (<bdi>terraform-oci-student</bdi>)</p>                          <ul role="navigation">
+                              <li><bdi><a href="https://doc.devops.courses/doku.php?id=user:terraform-oci-student:start" class="wikilink2" title="user:terraform-oci-student:start" rel="nofollow" data-wiki-id="user:terraform-oci-student:start">User page</a></bdi></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab02&amp;do=profile" class="action profile" rel="nofollow" title="Update Profile">Update Profile</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab02&amp;do=logout&amp;sectok=2eb244dbe4175243dc22840059e4e571" class="action logout" rel="nofollow" title="Log Out">Log Out</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab02&amp;do=admin" class="action admin" rel="nofollow" title="Admin">Admin</a></li>                          </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+        <div class="wrapper">
+
+            <!-- ********** CONTENT ********** -->
+        <div class="usr-content">
+            <div id="dokuwiki__content">
+                <div class="container usr-container">
+                                                                <div class="breadcrumbs"><span class="bchead">Trace:</span> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab04" class="breadcrumbs" title="terraform-oci:lab04">lab04</a></bdi> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab01" class="breadcrumbs" title="terraform-oci:lab01">lab01</a></bdi> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:start" class="breadcrumbs" title="terraform-oci:start">terraform-oci</a></bdi> <span class="bcsep">•</span> <span class="curid"><bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab02" class="breadcrumbs" title="terraform-oci:lab02">lab02</a></bdi></span></div>
+                                                                                            <div class="row usr-inner">
+                        <div class="col-md-9 col-main">
+                                                
+                            <div class="page">
+                                
+                                <!-- BREADCRUMBS -->
+
+                                <!-- wikipage start -->
+                                
+<h1 class="sectionedit1" id="lab_2_variables">Lab #2 – Variables</h1>
+<div class="level1">
+
+<p>
+In this lab you will play with variables in Terraform. Managing 
+variables is something that you can do without connecting to a cloud 
+provider so for this lab you will only use Terraform without defining 
+providers, resources and other cloud-specific entities.
+</p>
+
+<p>
+You can use the same Terraform commands on Windows, Linux and MacOS. For other <abbr title="Operating System">OS</abbr>-specific
+ commands mentioned below for Linux/MacOS like setting environment 
+variables, displaying the contents of text files on the command line, 
+etc, if you are using Windows you can either use the equivalent Windows 
+commands or Linux shell emulator for Windows (MinGW, WSL, etc). Or ask 
+your instructor for assistance.
+</p>
+
+<p>
+Short tutorial for managing environment variables from the Windows command line:
+<a href="http://www.dowdandassociates.com/blog/content/howto-set-an-environment-variable-in-windows-command-line-and-registry/" class="urlextern" title="http://www.dowdandassociates.com/blog/content/howto-set-an-environment-variable-in-windows-command-line-and-registry/" rel="ugc nofollow">http://www.dowdandassociates.com/blog/content/howto-set-an-environment-variable-in-windows-command-line-and-registry/</a>
+</p>
+
+</div>
+
+<h2 class="sectionedit2" id="defining_variables">Defining Variables</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit3" id="file_and_folder_structure">File and Folder Structure</h3>
+<div class="level3">
+
+<p>
+Create a new folder named “lab2” and create a new text file in it named “lab2.tf”.
+</p>
+
+<p>
+<strong>Hint</strong>: For Linux, use <code>mkdir</code> and your favorite command-line text editor. <code>nano</code> is a recommended editor. But you can use <code>vi</code> if you are feeling brave :) 
+</p>
+
+</div>
+
+<h3 class="sectionedit4" id="create_a_static_output_block">Create a Static ''output {}'' Block</h3>
+<div class="level3">
+
+<p>
+One of the purposes of output blocks is to display information about 
+your infrastructure. Let’s start with a simple example where you display
+ some static text.
+</p>
+
+<p>
+Append to the “lab2.tf” file an output structure named “Training” and output the text “Terraform”.
+</p>
+
+<p>
+Use the following template:
+</p>
+<pre class="code">output “Training” {
+	...
+}</pre>
+
+<p>
+Run <code>terraform validate</code> in the same folder and ensure your 
+syntax is correct. If not, go back and fix it using the official 
+documentation or the solutions at the end of this document (Hint: you 
+need a value to output)
+</p>
+
+<p>
+Run <code>terraform plan</code> in the same folder. You should not receive any errors.
+</p>
+
+<p>
+Run <code>terraform apply</code> in the same folder.
+</p>
+
+<p>
+Your console result should look like this:
+</p>
+<pre class="code">Outputs:
+
+Training = Terraform</pre>
+
+</div>
+
+<h3 class="sectionedit5" id="create_a_variable_block">Create a ''variable {}'' Block</h3>
+<div class="level3">
+
+<p>
+Within “lab2.tf”, create the structure for a new variable named 
+“myself”, give it the default value of your first name and a description
+ with any text you like.
+</p>
+
+<p>
+Use the following template:
+</p>
+<pre class="code">variable “myself” {
+	...
+}</pre>
+
+<p>
+<strong>Hint</strong>: Check the Terraform docs for variable definition syntax: <a href="https://www.terraform.io/docs/configuration/variables.html" class="urlextern" title="https://www.terraform.io/docs/configuration/variables.html" rel="ugc nofollow">https://www.terraform.io/docs/configuration/variables.html</a>
+</p>
+
+<p>
+<strong>Hint</strong>: You only need to use the <code>default</code> parameter but try adding a description just for fun.
+</p>
+
+<p>
+Run <code>terraform validate</code> in the same folder and ensure your 
+syntax is correct. If not, go back and fix it using the official 
+documentation or the solutions at the end of this document.	
+</p>
+
+<p>
+Run <code>terraform plan</code> in the same folder. You should not receive any errors.
+</p>
+
+<p>
+Run <code>terraform apply</code> in the same folder. This should also run error-free. Can you see the value of your variable in any of these outputs? Why not?
+</p>
+
+</div>
+
+<h3 class="sectionedit6" id="create_an_output_block_for_your_variable">Create an ''output {}'' Block for Your Variable</h3>
+<div class="level3">
+
+<p>
+Let’s see how we can display the value of our variable. We will use an 
+output block just like the one you created before, with the <code>“Training = Terraform”</code> output.
+</p>
+
+<p>
+Append to the <code>lab2.tf</code> file an output structure named <code>My_name_is</code> and output the content of the <code>myself</code> variable that you just created
+</p>
+
+<p>
+Use the following template:
+</p>
+<pre class="code">output "My_name_is" {
+	...
+}</pre>
+
+<p>
+<strong>Hint</strong>: Check the Terraform docs for the output syntax: <a href="https://www.terraform.io/docs/configuration/outputs.html" class="urlextern" title="https://www.terraform.io/docs/configuration/outputs.html" rel="ugc nofollow">https://www.terraform.io/docs/configuration/outputs.html</a>
+</p>
+
+<p>
+How can you use the variable’s name to return its content? The <code>value</code> parameter needs to access the variable’s content using the <code>var</code> keyword. So instead of the static text in your previous output block, you will now give the output block your variable:
+</p>
+<pre class="code">var.name_of_variable</pre>
+
+<p>
+Make sure you replace <code>name_of_variable</code> with the variable name you created in the previous exercise.
+</p>
+
+<p>
+Run <code>terraform validate</code> in the same folder and ensure your 
+syntax is correct. If not, go back and fix it using the official 
+documentation or the solutions at the end of this document.
+</p>
+
+</div>
+
+<h3 class="sectionedit7" id="test_your_output">Test Your Output</h3>
+<div class="level3">
+
+<p>
+Run <code>terraform plan</code> and <code>terraform apply</code>. You should see the name of the output block followed by the content of your variable (your first name).
+</p>
+
+<p>
+You can see that <code>terraform plan</code> completes successfully this
+ time even though there are no infrastructure changes to be made (you’re
+ just outputting a local variable) because now you have a valid 
+configuration file. 
+</p>
+
+<p>
+Also, notice that your output is visible only upon running <code>terraform apply</code>.
+</p>
+
+</div>
+
+<h3 class="sectionedit8" id="variables_and_environment_variables">Variables and Environment Variables</h3>
+<div class="level3">
+
+<p>
+Another way of setting variables is via environment variables. Terraform
+ looks for environment variables with a special prefix of <code>TF_VAR_</code>
+ and for any environment variable found with this prefix it assumes that
+ you are declaring a Terraform variable named after whatever follows 
+this prefix. 
+</p>
+
+<p>
+For example, setting an environment variable called <code>TF_VAR_username=“student”</code> will make Terraform assign a <code>username</code> variable with the value <code>student</code> to be used in your Terraform configuration files. The variable should still be defined in your configuration.
+</p>
+
+<p>
+Right now, the <code>myself</code> variable should hold your name because this is the default value that you used when you declared it in the <code>variable {}</code> block. Try setting your <code>myself</code> variable to a different value using environment variables.
+</p>
+
+<p>
+Check that your environment variable has been properly set using
+</p>
+<pre class="code">$ echo $TF_VAR_myself</pre>
+
+<p>
+or, to display all environment variables (depends on your <abbr title="Operating System">OS</abbr>):
+</p>
+<pre class="code">$ env</pre>
+
+<p>
+Run <code>terraform apply</code> to see the result.
+</p>
+
+<p>
+<strong>Hint</strong>: On Linux/MacOS use the <code>export</code> command followed by the <code>TF_VAR_</code> prefix, an equal sign (<code>=</code>) and the value in quotes (<code>“…”</code>). On Windows, set the environment variable using the Environment Variable Editor by searching for this tool on the Start menu.
+</p>
+
+<p>
+<strong>Hint</strong>: Nothing should change in your configuration file.
+</p>
+
+</div>
+
+<h3 class="sectionedit9" id="create_a_terraformtfvars_file">Create a ''terraform.tfvars'' File</h3>
+<div class="level3">
+
+<p>
+Create a new <code>terraform.tfvars</code> file in the same directory as
+ your configuration file. This file will only store variables. Add a 
+single line in it that assigns a different value to the same <code>myself</code> variable (for example your first name AND your last name) using the syntax described here: <a href="https://www.terraform.io/docs/configuration/variables.html#variable-files" class="urlextern" title="https://www.terraform.io/docs/configuration/variables.html#variable-files" rel="ugc nofollow">https://www.terraform.io/docs/configuration/variables.html#variable-files</a>
+</p>
+
+<p>
+<strong>Hint</strong>: The syntax for <code>.tvfars</code> files is similar to the one you used to define the default value of a variable in your configuration (<code>.tf</code>) file and should look like <code>var_name = “assigned value”</code>.
+</p>
+
+<p>
+<strong>Hint</strong>: Terraform will not load by default other <code>.tfvars</code> files apart from <code>terraform.tfvars</code> so pay attention to the filename.
+</p>
+
+</div>
+
+<h3 class="sectionedit10" id="output">Output</h3>
+<div class="level3">
+
+<p>
+What is the variable preference so far? 
+</p>
+
+<p>
+You declared a default value within a <code>variable {}</code> block which was overridden by an environment variable. The environment variable then was overridden by the <code>.tfvars file</code>. Check that you still have the default value in your <code>.tf</code> file and the environment variable set.
+</p>
+<pre class="code">$ cat lab2.tf
+$ echo $TF_VAR_myself</pre>
+
+<p>
+Run <code>terraform apply</code> again and confirm. 
+</p>
+<pre class="code">$ terraform apply</pre>
+
+<p>
+Hint: You may also run <code>terraform plan</code> as often as you like, but since we do not make any infrastructure changes, you won’t see any changes in the output.
+</p>
+
+</div>
+
+<h3 class="sectionedit11" id="command-line_override">Command-line override</h3>
+<div class="level3">
+
+<p>
+Use the command line arguments of <code>terraform apply</code> to change the value of the <code>myself</code> variable one more time. Leave the <code>lab02.tf</code> and <code>terraform.tfvars</code> files unchanged. 
+</p>
+
+<p>
+<strong>Hint</strong>: use the <code>-var</code> argument as described in the Terraform docs: <a href="https://www.terraform.io/docs/configuration/variables.html#variable-merging" class="urlextern" title="https://www.terraform.io/docs/configuration/variables.html#variable-merging" rel="ugc nofollow">https://www.terraform.io/docs/configuration/variables.html#variable-merging</a>
+</p>
+
+<p>
+<strong>Hint</strong>: You can override specific variables when running <code>terraform apply</code> by specifying a <code>-var</code> argument followed by a variable assignment. For example:
+</p>
+<pre class="code">$ terraform apply -var “username=Student”</pre>
+
+<p>
+You now have 4 values for the same variable:
+</p>
+<ol>
+<li class="level1"><div class="li"> 1st in the <code>lab2.tf</code> file within the <code>variable {}</code> block;</div>
+</li>
+<li class="level1"><div class="li"> 2nd in the environment variable <code>TF_VAR_myself</code>;</div>
+</li>
+<li class="level1"><div class="li"> 3rd in the <code>terraform.tfvars</code> file;</div>
+</li>
+<li class="level1"><div class="li"> 4th specified on the command line with <code>-var</code>.</div>
+</li>
+</ol>
+
+<p>
+Can you figure out on your own which is the final override order for Terraform variables?
+</p>
+
+</div>
+
+<h3 class="sectionedit12" id="what_about_uninitialized_variables">What About Uninitialized Variables?</h3>
+<div class="level3">
+
+<p>
+Finally, delete the environment variable, comment out the <code>default</code> line in <code>lab2.tf</code> and the variable assignment in <code>terraform.tfvars</code> and run <code>terraform apply</code>. How does Terraform treat variables when they have no values?
+</p>
+
+<p>
+<strong>Hint</strong>: On Linux/MacOS, use the <code>unset</code> command to delete the environment variable. On Windows:
+</p>
+<pre class="code">$ unset TF_VAR_myself</pre>
+
+<p>
+<strong>Hint</strong>: use the # character to comment lines in Terraform configuration files  
+</p>
+<pre class="code"># default = "Agent Smith"
+# myself = "FirstName LastName </pre>
+
+</div>
+
+<h2 class="sectionedit13" id="types_of_variables">Types of Variables</h2>
+<div class="level2">
+
+<p>
+From this point on, we will be working with just your main Terraform 
+file, just to keep things simple. In the real world, it is recommended 
+to split your configuration files in dedicated files for resources, 
+variables, data sources, etc.
+</p>
+
+</div>
+
+<h3 class="sectionedit14" id="define_a_list">Define a List</h3>
+<div class="level3">
+
+<p>
+Reopen the <code>lab2.tf</code> file and define a variable of type list 
+with at least 3 items, using the syntax below and an output structure to
+ display the entire list, just like you did before with simple string 
+variables:
+</p>
+<pre class="code">variable "mylist" {
+  type = list
+  default = ...
+}</pre>
+
+<p>
+Insert the following items in your list:
+</p>
+<pre class="code">[“apple”, “orange”, “banana”]</pre>
+
+<p>
+<strong>Hint</strong>: there are 2 ways of telling Terraform that the variable is a list and not a string (which is the default).
+</p>
+
+<p>
+First, you can just specify the <code>list</code> type in your variable block:
+</p>
+<pre class="code">variable "mylist" {
+  type = list
+}</pre>
+
+<p>
+Second, let Terraform figure out that you have a list by declaring a 
+default value that LOOKS like a list (use square brackets [] ):
+</p>
+<pre class="code">variable "mylist" {
+    default = [some, comma, separated, string, values, here]
+}</pre>
+
+</div>
+
+<h3 class="sectionedit15" id="extract_an_element_from_a_list">Extract an Element From a List</h3>
+<div class="level3">
+
+<p>
+Create a second <code>output</code> construct in the <code>lab2.tf</code> file and try to display the second element in your list.
+</p>
+
+<p>
+<strong>Hint</strong>: Lists are indexed from 0 (zero).
+</p>
+
+<p>
+<strong>Hint</strong>: You can use either of the following 2 methods for extracting an element from a list:
+</p>
+<pre class="code">var.varname[index]</pre>
+
+<p>
+or the element() function:
+</p>
+<pre class="code">element(list, index)</pre>
+
+</div>
+
+<h3 class="sectionedit16" id="nested_lists">Nested Lists</h3>
+<div class="level3">
+
+<p>
+Using what you’ve seen so far, create a second list variable and this 
+time EMBED two lists within the parent list so that the output variable 
+looks like this:
+</p>
+<pre class="code">myListInList = [
+    [
+        item1,
+        item2
+    ],
+    [
+        item3,
+        item4
+    ]
+]</pre>
+
+<p>
+<strong>Hint</strong>: Remember that lists are identified by square brackets [] and a list can also be an element of another list.
+</p>
+
+<p>
+<strong>Hint</strong>: Make sure that the items in your list are either quoted strings or numerical values.
+</p>
+
+</div>
+
+<h3 class="sectionedit17" id="extracting_data_from_embedded_lists">Extracting Data From Embedded Lists</h3>
+<div class="level3">
+
+<p>
+Can you create an output that prints only “item4” (element [1][1] in the list) like this?
+</p>
+<pre class="code">myListInListElement = item4</pre>
+
+</div>
+
+<h3 class="sectionedit18" id="enumerating_nested_lists">Enumerating Nested Lists</h3>
+<div class="level3">
+
+<p>
+Use the <code>flatten()</code> function in a new output block to enumerate all the elements in the nested list.
+</p>
+
+<p>
+Your output should be similar to this:
+</p>
+<pre class="code">Outputs:
+
+flat = [
+  "item1",
+  "item2",
+  "item3",
+  "item4",
+]</pre>
+
+</div>
+
+<h3 class="sectionedit19" id="map_variables">Map variables</h3>
+<div class="level3">
+
+<p>
+Create a map variable in <code>lab2.tf</code> with at least 3 key-value pairs and an output construct that lists the entire map like this:
+</p>
+<pre class="code">my_region_map = {
+  apac = Asia/Pacific
+  eu = Europe
+  us = United States
+}</pre>
+
+<p>
+<strong>Hint</strong>: Specify the type explicitly (<code>type = map</code>) or implicitly (<code>default = {}</code>).
+</p>
+
+<p>
+<strong>Hint</strong>: You may need to quote the values so that they are correctly interpreted as strings.
+</p>
+
+</div>
+
+<h3 class="sectionedit20" id="extract_a_map_element">Extract a map element</h3>
+<div class="level3">
+
+<p>
+Create one more output construct and display only the “United States” element of the map.
+</p>
+
+<p>
+<strong>Hint</strong>: you can either use the <code>map[key]</code> method, just like with lists, or you can use the <code>lookup(map, key)</code> function as described here: <a href="https://www.terraform.io/docs/language/functions/lookup.html" class="urlextern" title="https://www.terraform.io/docs/language/functions/lookup.html" rel="ugc nofollow">https://www.terraform.io/docs/language/functions/lookup.html</a>
+</p>
+
+</div>
+
+<h2 class="sectionedit21" id="organizing_the_configuration">Organizing the Configuration</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit22" id="multiple_files">Multiple files</h3>
+<div class="level3">
+
+<p>
+By this time, the configuration is already beginning to be difficult to 
+read. So let us organize it a bit better. Split your configuration into 
+several files:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>variables.tf</code> , that defines the variables (including the default values, if they are specified)</div>
+</li>
+<li class="level1"><div class="li"> <code>outputs.tf</code>, that defines the outputs</div>
+</li>
+</ul>
+
+<p>
+The only purpose of this exercise is to show you that regardless how you
+ split your configuration files, they will all be processed like before.
+</p>
+
+<p>
+Apply your configuration after splitting your config to ensure everything still works:
+</p>
+<pre class="code">$ terraform apply</pre>
+
+<p>
+<strong>Hint</strong>: You can use any name you want, as long as the names end in <code>.tf</code> all such files in the current folder will be processed by Terraform. 
+</p>
+
+<p>
+<strong>Note</strong>: This might seem like a pointless exercise for 
+such a small configuration. But it will become very relevant in the real
+ world, when the configuration files start to grow. 
+</p>
+
+<p>
+<strong>Note</strong>: In the real world, you will often see <code>terraform.tfvars</code> and other <code>*.auto.tfvars</code>
+ files, that are used to set variable values using a simpler syntax. For
+ the sake of simplicity, we will not be using them in these labs but you
+ can find out more about then in the course.
+</p>
+
+</div>
+
+<h3 class="sectionedit23" id="beautify_your_code">Beautify your code</h3>
+<div class="level3">
+
+<p>
+Frequent changes on configuration files (and any other type of code), 
+using different editors and being edited by different people inevitably 
+breaks the uniformity of the code: alignment, indentation, spacing, etc.
+ You can periodically “beautify” your code using an automated tool in 
+Terraform. Try finding the correct parameter for this tool in the 
+terraform's command output.
+</p>
+
+<p>
+<strong>Hint</strong>: <code>terraform fmt</code>
+</p>
+
+<p>
+<strong>Hint</strong>: No need to specify the files, <code>terraform fmt</code>
+ will look for all configuration files in the current folder. File names
+ as output after running this command indicate files that have been 
+changed.
+</p>
+
+<p>
+<strong>Note</strong>: This will not break your configuration as long as it was in a syntactically-correct form before <code>terraform fmt</code>.
+</p>
+
+</div>
+
+<h1 class="sectionedit24" id="solutions_to_lab_2_variables">Solutions to Lab #2 – Variables</h1>
+<div class="level1">
+
+</div>
+
+<h2 class="sectionedit25" id="defining_variables1">Defining Variables</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit26" id="creating_the_first_configuration_file">Creating the first configuration file</h3>
+<div class="level3">
+<pre class="code">mkdir lab2
+nano lab2.tf</pre>
+
+<p>
+or
+</p>
+<pre class="code">vim lab2.tf</pre>
+
+</div>
+
+<h3 class="sectionedit27" id="static_output">Static output</h3>
+<div class="level3">
+<pre class="code">output "Training" {
+  value = "Terraform"
+}
+
+$ terraform validate
+$ terraform plan
+$ terraform apply</pre>
+
+</div>
+
+<h3 class="sectionedit28" id="variable">Variable</h3>
+<div class="level3">
+<pre class="code">variable "myself" {
+  description = "A VARIABLE that stores my name, even though my name never changes..."
+  default = "Agent Smith"
+}
+
+$ terraform validate
+$ terraform plan
+$ terraform apply</pre>
+
+<p>
+You cannot see the value of the variable unless you also create an <code>output {}</code> block to print it out. You will do this in the next step.
+</p>
+
+</div>
+
+<h3 class="sectionedit29" id="output_variable">Output variable</h3>
+<div class="level3">
+<pre class="code">output "My_name_is" {
+  value = var.myself
+}
+
+$ terraform validate</pre>
+
+</div>
+
+<h3 class="sectionedit30" id="test_output_variables">Test output variables</h3>
+<div class="level3">
+<pre class="code">$ terraform plan
+$ terraform apply</pre>
+
+</div>
+
+<h3 class="sectionedit31" id="exporting_variables">Exporting variables</h3>
+<div class="level3">
+<pre class="code">export TF_VAR_myself=”Morpheus”</pre>
+
+</div>
+
+<h3 class="sectionedit32" id="using_a_tfvars_file">Using a ''.tfvars'' file</h3>
+<div class="level3">
+
+<p>
+Inside the <code>terraform.tfvars</code> file:
+</p>
+<pre class="code">myself = "Agent Smith"</pre>
+
+</div>
+
+<h3 class="sectionedit33" id="variable_override_order">Variable override order</h3>
+<div class="level3">
+
+<p>
+The current value of the variable should be the one in the <code>terraform.tfvars</code> file.
+</p>
+
+</div>
+
+<h3 class="sectionedit34" id="command-line_override1">Command-line override</h3>
+<div class="level3">
+<pre class="code">$ terraform apply -var “myself=Neo”</pre>
+
+<p>
+The override order is the reverse order specified in the task:
+</p>
+<ol>
+<li class="level1"><div class="li"> <code>-var</code> command-line arguments</div>
+</li>
+<li class="level1"><div class="li"> <code>.tfvars</code> file</div>
+</li>
+<li class="level1"><div class="li"> environment variable</div>
+</li>
+<li class="level1"><div class="li"> default value</div>
+</li>
+</ol>
+
+</div>
+
+<h3 class="sectionedit35" id="uninitialized_variables">Uninitialized variables</h3>
+<div class="level3">
+
+<p>
+Terraform interactively asks for the variable value if none was provided.
+</p>
+
+</div>
+
+<h2 class="sectionedit36" id="types_of_variables1">Types of Variables</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit37" id="define_a_list1">Define a list</h3>
+<div class="level3">
+<pre class="code">variable "mylist" {
+    type = list
+    default = [“apple”, “orange”, “banana”]
+}</pre>
+
+</div>
+
+<h3 class="sectionedit38" id="return_an_element_from_a_list">Return an element from a list</h3>
+<div class="level3">
+<pre class="code">output "second_element_by_index" {
+  value = var.mylist[1]
+}</pre>
+
+<p>
+or
+</p>
+<pre class="code">output "second_element_by_function" {
+  value = element(var.mylist,1)
+}</pre>
+
+</div>
+
+<h3 class="sectionedit39" id="nested_lists1">Nested Lists</h3>
+<div class="level3">
+<pre class="code">variable "my_list_in_list" {
+  type = list
+
+  default = [
+    ["item1", "item2"],
+    ["item3", "item4"]
+  ]
+}</pre>
+
+</div>
+
+<h3 class="sectionedit40" id="extracting_data_from_nested_lists">Extracting data from nested lists</h3>
+<div class="level3">
+<pre class="code">output "myListInListElement" {
+  value = var.my_list_in_list[1][1]
+}</pre>
+
+</div>
+
+<h3 class="sectionedit41" id="enumerating_nested_lists1">Enumerating Nested Lists</h3>
+<div class="level3">
+<pre class="code">output "flat" {
+  value = flatten(var.listinlist)
+}</pre>
+
+</div>
+
+<h3 class="sectionedit42" id="map_variables1">Map variables</h3>
+<div class="level3">
+<pre class="code">variable mymap {
+    default = {
+      us = "United States"
+      eu = "Europe"
+      apac = "Asia/Pacific"
+    }
+}
+
+output "my_region_map" {
+  value = var.mymap
+}</pre>
+
+</div>
+
+<h3 class="sectionedit43" id="extract_a_map_element1">Extract a map element</h3>
+<div class="level3">
+<pre class="code">output "single_map_element" {
+  value = lookup(var.mymap, "us")
+}</pre>
+
+</div>
+
+<h2 class="sectionedit44" id="organizing_the_configuration1">Organizing the Configuration</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit45" id="multiple_files1">Multiple files</h3>
+<div class="level3">
+
+<p>
+Example <code>variables.tf</code> file:
+</p>
+<pre class="code">variable "myself" {
+  description = "a variable that stores my name"
+  default     = "Agent Smith"
+}
+
+variable "mylist" {
+  type    = list
+  default = ["apple", "orange", "banana"]
+}
+
+variable mymap {
+    default = {
+      us = "United States"
+      eu = "Europe"
+      apac = "Asia/Pacific"
+    }
+}
+
+variable "my_list_in_list" {
+  type = list
+
+  default = [
+    ["item1", "item2"],
+    ["item3", "item4"],
+  ]
+}</pre>
+
+<p>
+example <code>outputs.tf</code> file:
+</p>
+<pre class="code">output "my_region_map" {
+  value = var.mymap
+}
+
+output "listIndex" {
+  value = var.mylist[1]
+}
+
+output "listElement" {
+  value = element(var.mylist,1)
+}
+
+output "myListInList" {
+  value = var.my_list_in_list
+}
+
+output "myListInListElement" {
+  value = element(var.my_list_in_list[1],1)
+}
+
+output "Training" {
+  value = "Terraform"
+}</pre>
+
+</div>
+
+<h3 class="sectionedit46" id="beautify_your_code1">Beautify your code</h3>
+<div class="level3">
+<pre class="code">$ terraform fmt</pre>
+
+</div>
+
+                                <!-- wikipage stop -->
+                                <div class="clearer"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-side">
+                                                        <div class="nav-side" role="navigation">
+                                <div class="nav-side-inner">
+                                    <!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>Table of Contents</h3>
+<div style="" aria-expanded="true">
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#lab_2_variables">Lab #2 – Variables</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#defining_variables">Defining Variables</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#file_and_folder_structure">File and Folder Structure</a></div></li>
+<li class="level3"><div class="li"><a href="#create_a_static_output_block">Create a Static ''output {}'' Block</a></div></li>
+<li class="level3"><div class="li"><a href="#create_a_variable_block">Create a ''variable {}'' Block</a></div></li>
+<li class="level3"><div class="li"><a href="#create_an_output_block_for_your_variable">Create an ''output {}'' Block for Your Variable</a></div></li>
+<li class="level3"><div class="li"><a href="#test_your_output">Test Your Output</a></div></li>
+<li class="level3"><div class="li"><a href="#variables_and_environment_variables">Variables and Environment Variables</a></div></li>
+<li class="level3"><div class="li"><a href="#create_a_terraformtfvars_file">Create a ''terraform.tfvars'' File</a></div></li>
+<li class="level3"><div class="li"><a href="#output">Output</a></div></li>
+<li class="level3"><div class="li"><a href="#command-line_override">Command-line override</a></div></li>
+<li class="level3"><div class="li"><a href="#what_about_uninitialized_variables">What About Uninitialized Variables?</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#types_of_variables">Types of Variables</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#define_a_list">Define a List</a></div></li>
+<li class="level3"><div class="li"><a href="#extract_an_element_from_a_list">Extract an Element From a List</a></div></li>
+<li class="level3"><div class="li"><a href="#nested_lists">Nested Lists</a></div></li>
+<li class="level3"><div class="li"><a href="#extracting_data_from_embedded_lists">Extracting Data From Embedded Lists</a></div></li>
+<li class="level3"><div class="li"><a href="#enumerating_nested_lists">Enumerating Nested Lists</a></div></li>
+<li class="level3"><div class="li"><a href="#map_variables">Map variables</a></div></li>
+<li class="level3"><div class="li"><a href="#extract_a_map_element">Extract a map element</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#organizing_the_configuration">Organizing the Configuration</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#multiple_files">Multiple files</a></div></li>
+<li class="level3"><div class="li"><a href="#beautify_your_code">Beautify your code</a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="#solutions_to_lab_2_variables">Solutions to Lab #2 – Variables</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#defining_variables1">Defining Variables</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#creating_the_first_configuration_file">Creating the first configuration file</a></div></li>
+<li class="level3"><div class="li"><a href="#static_output">Static output</a></div></li>
+<li class="level3"><div class="li"><a href="#variable">Variable</a></div></li>
+<li class="level3"><div class="li"><a href="#output_variable">Output variable</a></div></li>
+<li class="level3"><div class="li"><a href="#test_output_variables">Test output variables</a></div></li>
+<li class="level3"><div class="li"><a href="#exporting_variables">Exporting variables</a></div></li>
+<li class="level3"><div class="li"><a href="#using_a_tfvars_file">Using a ''.tfvars'' file</a></div></li>
+<li class="level3"><div class="li"><a href="#variable_override_order">Variable override order</a></div></li>
+<li class="level3"><div class="li"><a href="#command-line_override1">Command-line override</a></div></li>
+<li class="level3"><div class="li"><a href="#uninitialized_variables">Uninitialized variables</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#types_of_variables1">Types of Variables</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#define_a_list1">Define a list</a></div></li>
+<li class="level3"><div class="li"><a href="#return_an_element_from_a_list">Return an element from a list</a></div></li>
+<li class="level3"><div class="li"><a href="#nested_lists1">Nested Lists</a></div></li>
+<li class="level3"><div class="li"><a href="#extracting_data_from_nested_lists">Extracting data from nested lists</a></div></li>
+<li class="level3"><div class="li"><a href="#enumerating_nested_lists1">Enumerating Nested Lists</a></div></li>
+<li class="level3"><div class="li"><a href="#map_variables1">Map variables</a></div></li>
+<li class="level3"><div class="li"><a href="#extract_a_map_element1">Extract a map element</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#organizing_the_configuration1">Organizing the Configuration</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#multiple_files1">Multiple files</a></div></li>
+<li class="level3"><div class="li"><a href="#beautify_your_code1">Beautify your code</a></div></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+                                    <!-- ********** ASIDE ********** -->
+                                    
+                                    <div class="back-to-top-wrapper">
+                                        <a href="#dokuwiki__top" class="back-to-top-link primary"><span class="mu mu-arrow-up"></span> Back to Top</a>
+                                    </div>
+                                </div>
+                            </div>
+                                                    </div>
+                    </div><!-- /row -->
+                </div><!-- /container -->
+            </div><!-- /content -->
+        </div>
+
+            <div class="clearer"></div>
+            <hr class="a11y">
+
+        </div><!-- /wrapper -->
+
+        <!-- ********** FOOTER ********** -->
+        <footer id="dokuwiki__footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-8">
+                        <div class="doc"><bdi>terraform-oci/lab02.txt</bdi> · Last modified: 2022/04/29 23:37 by <bdi>andrei.ciorba</bdi></div>
+                                            </div>
+                    <div class="col-sm-3 col-md-2">
+                        <!-- PAGE ACTIONS -->
+                                                    <div id="dokuwiki__pagetools">
+                                <ul class="footer-menu ul-raw">
+                                    <li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab02&amp;do=edit" class="action source" accesskey="v" rel="nofollow" title="Show pagesource [V]">Show pagesource</a></li><li><bdi><a href="https://doc.devops.courses/doku.php?id=discussion:terraform-oci:lab02" class="wikilink2" title="discussion:terraform-oci:lab02" rel="nofollow" data-wiki-id="discussion:terraform-oci:lab02">Discussion</a></bdi></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab02&amp;do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]">Old revisions</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab02&amp;do=backlink" class="action backlink" rel="nofollow" title="Backlinks">Backlinks</a></li><li><a href="#dokuwiki__top" class="action top" accesskey="t" rel="nofollow" title="Back to top [T]">Back to top</a></li>                                </ul>
+                            </div>
+                                            </div>
+                    <div class="col-sm-3 col-md-2">
+                        <!-- SITE TOOLS -->
+                        <div id="dokuwiki__sitetools">
+                            <ul class="footer-menu ul-raw">
+                                <li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab02&amp;do=recent" class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab02&amp;do=media&amp;ns=terraform-oci" class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab02&amp;do=index" class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="no"><img src="terraform-oci%20lab02%20_files/taskrunner.gif" alt="" width="2" height="1"></div>
+        </footer><!-- /footer -->
+
+            </div></div><!-- /site -->
+
+    <script>
+        function togglediv(id) {
+            var div = document.getElementById(id);
+            div.style.display = div.style.display == "block" ? "none" : "block";
+        }
+    </script>
+
+
+</body></html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" class="js" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>terraform-oci:lab01 | DevOps Courses</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="keywords" content="terraform-oci,lab01">
+<link rel="search" type="application/opensearchdescription+xml" href="https://doc.devops.courses/lib/exe/opensearch.php" title="DevOps Courses">
+<link rel="start" href="https://doc.devops.courses/">
+<link rel="contents" href="https://doc.devops.courses/doku.php?id=terraform-oci:lab01&amp;do=index" title="Sitemap">
+<link rel="manifest" href="https://doc.devops.courses/lib/exe/manifest.php">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="https://doc.devops.courses/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="https://doc.devops.courses/feed.php?mode=list&amp;ns=terraform-oci">
+<link rel="alternate" type="text/html" title="Plain HTML" href="https://doc.devops.courses/doku.php?do=export_xhtml&amp;id=terraform-oci:lab01">
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="https://doc.devops.courses/doku.php?do=export_raw&amp;id=terraform-oci:lab01">
+<link rel="canonical" href="https://doc.devops.courses/doku.php?id=terraform-oci:lab01">
+<link rel="stylesheet" href="terraform-oci%20lab01_files/css.css">
+<!--[if gte IE 9]><!-->
+<script>/*<![CDATA[*/var NS='terraform-oci';var SIG=" --- \/\/[[terraform-oci-student@ubergeek.ro|Student Terraform OCI]] 2022\/11\/16 16:27\/\/";var JSINFO = {"plugin_pdfjs":{"hide_download_button":0},"id":"terraform-oci:lab01","namespace":"terraform-oci","ACT":"show","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="terraform-oci%20lab01_files/jquery.php" defer="defer"></script>
+<script src="terraform-oci%20lab01_files/js.php" defer="defer"></script>
+<!--<![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="https://doc.devops.courses/lib/tpl/typowiki/images/favicon.ico">
+<link rel="apple-touch-icon" href="https://doc.devops.courses/lib/tpl/typowiki/images/apple-touch-icon.png">
+        <link href="terraform-oci%20lab01_files/microns.css" rel="stylesheet">
+</head>
+
+<body>
+        <!--[if lte IE 8 ]><div id="IE8"><![endif]-->
+
+            <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_typowiki loggedIn   ">
+        
+        <!-- ********** HEADER ********** -->
+        <nav>
+            <div class="nav-bar dark">
+                <div class="container">
+                    <div class="row">
+                    <div class="col-3 col-md-6 col-lg-7 nav-brand">
+                                            <a href="https://doc.devops.courses/doku.php?id=start" id="wiki-logo" accesskey="h" title="[H]"><img src="terraform-oci%20lab01_files/dokuwiki-128.png" alt=""></a>                      <h2><a href="https://doc.devops.courses/doku.php?id=start" accesskey="h" title="[H]">DevOps Courses</a></h2>
+                    </div>
+                    <div class="col-9 col-md-6 col-lg-5 nav-actions">
+                        <span id="doku-action-btn"><form class="button btn_source" method="post" action="/doku.php"><div class="no"><input type="hidden" name="do" value="edit"><input type="hidden" name="id" value="terraform-oci:lab01"><button type="submit" accesskey="v" title="Show pagesource [V]">Show pagesource</button></div></form></span>
+                        <button id="menu-toggle" onclick="togglediv('menu_unified')">Menu <span class="mu mu-menu txt-12" aria-hidden="true"></span></button>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        <ul class="a11y skip">
+            <a href="#dokuwiki__content">skip to content</a>
+        </ul>
+        <div class="nav-expanded dark">
+            <div id="menu_unified" class="nav-expanded-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-7 left">
+                            <span class="mu mu-search menu-icon" aria-hidden="true"></span>
+                            <form action="/doku.php?id=start" method="get" role="search" class="search doku_form" id="dw__search" accept-charset="utf-8"><input type="hidden" name="do" value="search"><input type="hidden" name="id" value="terraform-oci:lab01"><div class="no"><input name="q" type="text" class="edit" title="[F]" accesskey="f" placeholder="Search" autocomplete="on" id="qsearch__in"><button value="1" type="submit" title="Search">Search</button><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>                        </div>
+                        <div class="col-sm-5 right">
+                          <span class="mu mu-user menu-icon" aria-hidden="true"></span><p class="ui-title">Logged in as: <bdi>Student Terraform OCI</bdi> (<bdi>terraform-oci-student</bdi>)</p>                          <ul role="navigation">
+                              <li><bdi><a href="https://doc.devops.courses/doku.php?id=user:terraform-oci-student:start" class="wikilink2" title="user:terraform-oci-student:start" rel="nofollow" data-wiki-id="user:terraform-oci-student:start">User page</a></bdi></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab01&amp;do=profile" class="action profile" rel="nofollow" title="Update Profile">Update Profile</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab01&amp;do=logout&amp;sectok=2eb244dbe4175243dc22840059e4e571" class="action logout" rel="nofollow" title="Log Out">Log Out</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab01&amp;do=admin" class="action admin" rel="nofollow" title="Admin">Admin</a></li>                          </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+        <div class="wrapper">
+
+            <!-- ********** CONTENT ********** -->
+        <div class="usr-content">
+            <div id="dokuwiki__content">
+                <div class="container usr-container">
+                                                                <div class="breadcrumbs"><span class="bchead">Trace:</span> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab04" class="breadcrumbs" title="terraform-oci:lab04">lab04</a></bdi> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:start" class="breadcrumbs" title="terraform-oci:start">terraform-oci</a></bdi> <span class="bcsep">•</span> <span class="curid"><bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab01" class="breadcrumbs" title="terraform-oci:lab01">lab01</a></bdi></span></div>
+                                                                                            <div class="row usr-inner">
+                        <div class="col-md-9 col-main">
+                                                
+                            <div class="page">
+                                
+                                <!-- BREADCRUMBS -->
+
+                                <!-- wikipage start -->
+                                
+<h1 class="sectionedit1" id="lab_01_-_the_lab_environment_installing_terraform">Lab 01 - The Lab Environment &amp; Installing Terraform</h1>
+<div class="level1">
+
+</div>
+
+<h2 class="sectionedit2" id="oci_access">OCI Access</h2>
+<div class="level2">
+
+<p>
+Your instructor will provide you with the necessary access credentials 
+for a demo OCI account, but you will not need them until lab #3.
+</p>
+
+<p>
+Make sure you can locate and download the 2 sets of keys necessary for the lab environment:
+</p>
+<ul>
+<li class="level1"><div class="li"> An “oci” folder with the public/private key pair for interacting with the OCI <abbr title="Application Programming Interface">API</abbr></div>
+</li>
+<li class="level1"><div class="li"> An “ssh” folder with the 
+public/private key pair for assigning remote access to one of your 
+virtual instances that you will deploy with Terraform</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit3" id="downloading_and_getting_terraform_ready">Downloading and Getting Terraform Ready</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit4" id="option_1downloading_terraform_from_official_repositories">Option 1: Downloading Terraform from official repositories</h3>
+<div class="level3">
+
+<p>
+If you are using a Debian-based Linux distribution (like Ubuntu or Linux Mint) you can use the installation guide for the <code>apt</code> package manager: <a href="https://www.terraform.io/cli/install/apt" class="urlextern" title="https://www.terraform.io/cli/install/apt" rel="ugc nofollow">https://www.terraform.io/cli/install/apt</a>
+</p>
+
+<p>
+If you are using a Linux distribution that uses the <code>yum</code> package manager (like Oracle Linux, Red Hat, CentOS, Rocket or Fedora) you can use the installation guide for the <code>yum</code> package manager: <a href="https://www.terraform.io/cli/install/yum" class="urlextern" title="https://www.terraform.io/cli/install/yum" rel="ugc nofollow">https://www.terraform.io/cli/install/yum</a>
+</p>
+
+</div>
+
+<h3 class="sectionedit5" id="option_2download_terraform_as_a_zip_file">Option 2: Download Terraform as a zip file</h3>
+<div class="level3">
+
+<p>
+To download the Terraform binary, use the link below. You will get the latest version.
+<a href="https://www.terraform.io/downloads.html" class="urlextern" title="https://www.terraform.io/downloads.html" rel="ugc nofollow">https://www.terraform.io/downloads.html</a>
+</p>
+<ul>
+<li class="level1"><div class="li"> For Linux you would likely need the <code>linux_amd64</code> version;</div>
+</li>
+<li class="level1"><div class="li"> For MacOS you would likely need the <code>darwin_amd64</code> version;</div>
+</li>
+<li class="level1"><div class="li"> For Window you would likely need the <code>windows_amd64</code> version</div>
+</li>
+</ul>
+
+<p>
+Hint: You can use the wget package which is already available in most 
+Linux and MacOS machines to download the zip file. Simply specify the 
+complete link after the wget command and the download should take a few 
+seconds.
+</p>
+
+<p>
+If you are using MacOS and you have the Homebrew package manager 
+installed, you can simply install Terraform using the following command:
+</p>
+<pre class="code">$ brew install terraform</pre>
+
+</div>
+
+<h3 class="sectionedit6" id="unzipping">Unzipping</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Linux / MacOS: </div>
+</li>
+</ul>
+
+<p>
+One way to easily unzip zip archives is the unzip command, followed by the name of the zip file. 
+Unzip your archive to the current directory:
+</p>
+<pre class="code">$ unzip name_of_terraform_archive.zip</pre>
+<ul>
+<li class="level1"><div class="li"> Windows</div>
+</li>
+</ul>
+
+<p>
+On Windows, use WinZip, 7Zip or the native unzipping tool.
+</p>
+
+</div>
+
+<h3 class="sectionedit7" id="checking_the_unzipped_contents">Checking the Unzipped Contents</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Linux / MacOS:</div>
+</li>
+</ul>
+
+<p>
+List the files in the current folder. Make sure the Terraform executable
+ is… executable (has the right permissions) and try running it with no 
+arguments. You should get a brief “usage” output.
+<strong>Hint</strong>: <code>ls -l</code>, look for the x flags
+<strong>Hint</strong>: <code>./terraform</code> ; use <code>chmod +x terraform</code> if the binary is not already executable on your system.
+</p>
+<ul>
+<li class="level1"><div class="li"> Windows:</div>
+</li>
+</ul>
+
+<p>
+Nothing to do 😊
+</p>
+
+</div>
+
+<h3 class="sectionedit8" id="updating_the_path">Updating the PATH</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li">	Linux / MacOS:</div>
+</li>
+</ul>
+
+<p>
+You’ll be running Terraform from different folders, each with its own 
+configuration, so it would be much easier to be able to call Terraform 
+from any file system location, just like you can do with your usual 
+Linux commands.
+</p>
+
+<p>
+<strong>Hint</strong>: Use the <code>pwd</code> (print working directory) command to find the full path to where you unzipped your Terraform executable.
+</p>
+
+<p>
+<strong>Hint</strong>: You can just use the following command to 
+temporarily modify the PATH variable but it will only last for your 
+current shell session. Remember to replace the “path/to/terraform/dir” 
+with your actual path.
+</p>
+<pre class="code">$ export PATH=$PATH:path/to/terraform/dir/''</pre>
+
+<p>
+<strong>Hint</strong>: Alternatively, you can make this change more 
+permanent for your user by entering the exact same command at the end of
+ the .bashrc file in the root of your home directory. You can use nano, a
+ lightweight editor, or any other text editor. Again, remember to 
+replace the “path/to/terraform/dir” with your actual path.
+</p>
+<pre class="code">$ export PATH=$PATH:path/to/terraform/dir/''</pre>
+
+<p>
+<strong>Hint</strong>: The .bashrc file is only read when Bash is 
+started interactively so it is normal for the changes to not take effect
+ immediately (since you are already in an interactive session). To force
+ re-reading the commands in .bashrc, either disconnect and reconnect to 
+your virtual machine or use the following command. Remember to replace 
+the “path/to/.bashrc” with your actual path, according to your assigned 
+user.
+</p>
+<pre class="code">$ source /path/to/.bashrc</pre>
+
+<p>
+<strong>Tip</strong>: One additional method that works in production as 
+well as on your own personal testing environment is to copy or move the 
+Terraform binary to a directory that is already being searched for 
+executables, like /usr/local/bin/. 
+</p>
+<ul>
+<li class="level1"><div class="li">	Windows:</div>
+</li>
+</ul>
+
+<p>
+Type “environment variables” in the Start menu go to the environment 
+variables editor and manually add an entry for the path where Terraform 
+is located.
+Restart any terminal sessions for environment variables changes to take 
+effect.
+</p>
+
+</div>
+
+<h2 class="sectionedit9" id="running_some_basic_commands">Running Some Basic Commands</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit10" id="terraform_first_run">Terraform First Run</h3>
+<div class="level3">
+
+<p>
+Create a new directory in your user’s home, such as lab1, and enter it. 
+Try running Terraform from within this folder to check if your PATH 
+update works properly. Run the Terraform executable as-is, with no 
+parameters
+</p>
+
+<p>
+<strong>Hint</strong>: 
+</p>
+<pre class="code">$ terraform</pre>
+
+<p>
+If you cannot run Terraform from the newly created directory, review the
+ tasks above for setting your PATH environment variable or ask your 
+instructor for assistance.
+</p>
+
+<p>
+What is the version of Terraform that you have installed?
+</p>
+
+</div>
+
+<h4 class="sectionedit11" id="check_the_terraform_version">Check the Terraform version</h4>
+<div class="level4">
+
+<p>
+<strong>Hint</strong>: use the <code>version</code> parameter; if it 
+takes more than an instant to finish the output, that is because 
+Terraform also checks online if there is a newer version when using this
+ parameter.
+</p>
+<pre class="code">$ terraform version</pre>
+
+</div>
+
+<h3 class="sectionedit12" id="try_to_plan">Try to Plan</h3>
+<div class="level3">
+
+<p>
+Try running terraform plan in this empty directory. Observe the output – what is missing?
+</p>
+<pre class="code">$ terraform plan</pre>
+
+<p>
+The reason you are not able to run <code>terraform plan</code> yet is 
+because you do not have any configuration files. Once you will write 
+your first .tf file in a folder, Terraform will analyze it and try to 
+compare the contents described in your configuration with those already 
+available in the cloud provider and output a list of changes to be made 
+(if any). This is the purpose of the <code>terraform plan</code> command.
+</p>
+
+</div>
+
+<h3 class="sectionedit13" id="try_to_apply">Try to Apply</h3>
+<div class="level3">
+
+<p>
+Try running <code>terraform apply</code> in this empty directory. Observe the output – what is missing?
+</p>
+<pre class="code">$ terraform apply</pre>
+
+<p>
+The reason you are not able to run <code>terraform apply</code> yet is 
+because you do not have any configuration files. Once you will write 
+your first .tf file in a folder, Terraform will analyze it and execute 
+any changes that have been detected between your configuration and what 
+is already available in the cloud provider. Notice that the error 
+mentions that, in theory, running terraform plan with an empty 
+configuration would default to the complete destruction of the cloud 
+infrastructure (if you apply an empty configuration it might mean that 
+you expect to have an empty configuration) but this is not usually what 
+you want when you run <code>terraform apply</code>.
+</p>
+
+</div>
+
+<h3 class="sectionedit14" id="try_to_view_the_state">Try to View the State</h3>
+<div class="level3">
+
+<p>
+Try running <code>terraform show</code> in this empty directory. Observe the output – what is missing?
+</p>
+<pre class="code">$ terraform show</pre>
+
+<p>
+The reason you are not able to run <code>terraform show</code> yet is 
+because you do not have any state files. Once you will apply your first 
+configuration, Terraform will store the last known state of the cloud 
+infrastructure in a local file called <code>terraform.tfstate</code>. 
+This state is used by Terraform to determine if subsequent changes need 
+to be made and will be updated every time you are about to change 
+something in your cloud infrastructure.
+</p>
+
+</div>
+
+<h3 class="sectionedit15" id="try_to_initialize">Try to Initialize</h3>
+<div class="level3">
+
+<p>
+Try running <code>terraform init</code> in this empty directory. Observe the output – what is missing?
+</p>
+<pre class="code">$ terraform init</pre>
+
+<p>
+The reason you are not able to run <code>terraform init</code> yet is 
+because you do not have any configuration files. Once you will write 
+your first .tf file in a folder, Terraform will look for “provider” 
+descriptor blocks in your core to determine which are the cloud 
+providers that it is supposed to communicate with. Then it will 
+automatically download the latest version of the corresponding provider 
+plugins, which are binary files that include all the knowledge needed to
+ talk the “language” of the cloud provider (AWS, OCI, GCP, Azure, etc).
+</p>
+
+<p>
+In general, it is a good idea to read at least once every error message 
+that Terraform outputs. They contain comprehensive details about how 
+Terraform works and what it expects, so you can quickly determine when 
+to use each command and how to prepare your configuration files to be 
+error-free
+</p>
+
+<p>
+Once you have managed to finish the tasks above, please raise your hand 
+in the conferencing/training software and leave it raised.
+</p>
+
+</div>
+
+                                <!-- wikipage stop -->
+                                <div class="clearer"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-side">
+                                                        <div class="nav-side" role="navigation">
+                                <div class="nav-side-inner">
+                                    <!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>Table of Contents</h3>
+<div style="" aria-expanded="true">
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#lab_01_-_the_lab_environment_installing_terraform">Lab 01 - The Lab Environment &amp; Installing Terraform</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#oci_access">OCI Access</a></div></li>
+<li class="level2"><div class="li"><a href="#downloading_and_getting_terraform_ready">Downloading and Getting Terraform Ready</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#option_1downloading_terraform_from_official_repositories">Option 1: Downloading Terraform from official repositories</a></div></li>
+<li class="level3"><div class="li"><a href="#option_2download_terraform_as_a_zip_file">Option 2: Download Terraform as a zip file</a></div></li>
+<li class="level3"><div class="li"><a href="#unzipping">Unzipping</a></div></li>
+<li class="level3"><div class="li"><a href="#checking_the_unzipped_contents">Checking the Unzipped Contents</a></div></li>
+<li class="level3"><div class="li"><a href="#updating_the_path">Updating the PATH</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#running_some_basic_commands">Running Some Basic Commands</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#terraform_first_run">Terraform First Run</a></div></li>
+<li class="level3"><div class="li"><a href="#try_to_plan">Try to Plan</a></div></li>
+<li class="level3"><div class="li"><a href="#try_to_apply">Try to Apply</a></div></li>
+<li class="level3"><div class="li"><a href="#try_to_view_the_state">Try to View the State</a></div></li>
+<li class="level3"><div class="li"><a href="#try_to_initialize">Try to Initialize</a></div></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+                                    <!-- ********** ASIDE ********** -->
+                                    
+                                    <div class="back-to-top-wrapper">
+                                        <a href="#dokuwiki__top" class="back-to-top-link primary"><span class="mu mu-arrow-up"></span> Back to Top</a>
+                                    </div>
+                                </div>
+                            </div>
+                                                    </div>
+                    </div><!-- /row -->
+                </div><!-- /container -->
+            </div><!-- /content -->
+        </div>
+
+            <div class="clearer"></div>
+            <hr class="a11y">
+
+        </div><!-- /wrapper -->
+
+        <!-- ********** FOOTER ********** -->
+        <footer id="dokuwiki__footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-8">
+                        <div class="doc"><bdi>terraform-oci/lab01.txt</bdi> · Last modified: 2022/06/01 23:55 by <bdi>andrei.ciorba</bdi></div>
+                                            </div>
+                    <div class="col-sm-3 col-md-2">
+                        <!-- PAGE ACTIONS -->
+                                                    <div id="dokuwiki__pagetools">
+                                <ul class="footer-menu ul-raw">
+                                    <li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab01&amp;do=edit" class="action source" accesskey="v" rel="nofollow" title="Show pagesource [V]">Show pagesource</a></li><li><bdi><a href="https://doc.devops.courses/doku.php?id=discussion:terraform-oci:lab01" class="wikilink2" title="discussion:terraform-oci:lab01" rel="nofollow" data-wiki-id="discussion:terraform-oci:lab01">Discussion</a></bdi></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab01&amp;do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]">Old revisions</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab01&amp;do=backlink" class="action backlink" rel="nofollow" title="Backlinks">Backlinks</a></li><li><a href="#dokuwiki__top" class="action top" accesskey="t" rel="nofollow" title="Back to top [T]">Back to top</a></li>                                </ul>
+                            </div>
+                                            </div>
+                    <div class="col-sm-3 col-md-2">
+                        <!-- SITE TOOLS -->
+                        <div id="dokuwiki__sitetools">
+                            <ul class="footer-menu ul-raw">
+                                <li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab01&amp;do=recent" class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab01&amp;do=media&amp;ns=terraform-oci" class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab01&amp;do=index" class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="no"><img src="terraform-oci%20lab01_files/taskrunner.gif" alt="" width="2" height="1"></div>
+        </footer><!-- /footer -->
+
+            </div></div><!-- /site -->
+
+    <script>
+        function togglediv(id) {
+            var div = document.getElementById(id);
+            div.style.display = div.style.display == "block" ? "none" : "block";
+        }
+    </script>
+
+
+</body></html>

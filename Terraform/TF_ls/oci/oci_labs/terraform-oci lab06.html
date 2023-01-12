@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" class="js" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>terraform-oci:lab06 | DevOps Courses</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="keywords" content="terraform-oci,lab06">
+<link rel="search" type="application/opensearchdescription+xml" href="https://doc.devops.courses/lib/exe/opensearch.php" title="DevOps Courses">
+<link rel="start" href="https://doc.devops.courses/">
+<link rel="contents" href="https://doc.devops.courses/doku.php?id=terraform-oci:lab06&amp;do=index" title="Sitemap">
+<link rel="manifest" href="https://doc.devops.courses/lib/exe/manifest.php">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="https://doc.devops.courses/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="https://doc.devops.courses/feed.php?mode=list&amp;ns=terraform-oci">
+<link rel="alternate" type="text/html" title="Plain HTML" href="https://doc.devops.courses/doku.php?do=export_xhtml&amp;id=terraform-oci:lab06">
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="https://doc.devops.courses/doku.php?do=export_raw&amp;id=terraform-oci:lab06">
+<link rel="canonical" href="https://doc.devops.courses/doku.php?id=terraform-oci:lab06">
+<link rel="stylesheet" href="terraform-oci%20lab06_files/css.css">
+<!--[if gte IE 9]><!-->
+<script>/*<![CDATA[*/var NS='terraform-oci';var SIG=" --- \/\/[[terraform-oci-student@ubergeek.ro|Student Terraform OCI]] 2022\/11\/16 16:29\/\/";var JSINFO = {"plugin_pdfjs":{"hide_download_button":0},"id":"terraform-oci:lab06","namespace":"terraform-oci","ACT":"show","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="terraform-oci%20lab06_files/jquery.php" defer="defer"></script>
+<script src="terraform-oci%20lab06_files/js.php" defer="defer"></script>
+<!--<![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="https://doc.devops.courses/lib/tpl/typowiki/images/favicon.ico">
+<link rel="apple-touch-icon" href="https://doc.devops.courses/lib/tpl/typowiki/images/apple-touch-icon.png">
+        <link href="terraform-oci%20lab06_files/microns.css" rel="stylesheet">
+</head>
+
+<body>
+        <!--[if lte IE 8 ]><div id="IE8"><![endif]-->
+
+            <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_typowiki loggedIn   ">
+        
+        <!-- ********** HEADER ********** -->
+        <nav>
+            <div class="nav-bar dark">
+                <div class="container">
+                    <div class="row">
+                    <div class="col-3 col-md-6 col-lg-7 nav-brand">
+                                            <a href="https://doc.devops.courses/doku.php?id=start" id="wiki-logo" accesskey="h" title="[H]"><img src="terraform-oci%20lab06_files/dokuwiki-128.png" alt=""></a>                      <h2><a href="https://doc.devops.courses/doku.php?id=start" accesskey="h" title="[H]">DevOps Courses</a></h2>
+                    </div>
+                    <div class="col-9 col-md-6 col-lg-5 nav-actions">
+                        <span id="doku-action-btn"><form class="button btn_source" method="post" action="/doku.php"><div class="no"><input type="hidden" name="do" value="edit"><input type="hidden" name="id" value="terraform-oci:lab06"><button type="submit" accesskey="v" title="Show pagesource [V]">Show pagesource</button></div></form></span>
+                        <button id="menu-toggle" onclick="togglediv('menu_unified')">Menu <span class="mu mu-menu txt-12" aria-hidden="true"></span></button>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        <ul class="a11y skip">
+            <a href="#dokuwiki__content">skip to content</a>
+        </ul>
+        <div class="nav-expanded dark">
+            <div id="menu_unified" class="nav-expanded-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-7 left">
+                            <span class="mu mu-search menu-icon" aria-hidden="true"></span>
+                            <form action="/doku.php?id=start" method="get" role="search" class="search doku_form" id="dw__search" accept-charset="utf-8"><input type="hidden" name="do" value="search"><input type="hidden" name="id" value="terraform-oci:lab06"><div class="no"><input name="q" type="text" class="edit" title="[F]" accesskey="f" placeholder="Search" autocomplete="on" id="qsearch__in"><button value="1" type="submit" title="Search">Search</button><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>                        </div>
+                        <div class="col-sm-5 right">
+                          <span class="mu mu-user menu-icon" aria-hidden="true"></span><p class="ui-title">Logged in as: <bdi>Student Terraform OCI</bdi> (<bdi>terraform-oci-student</bdi>)</p>                          <ul role="navigation">
+                              <li><bdi><a href="https://doc.devops.courses/doku.php?id=user:terraform-oci-student:start" class="wikilink2" title="user:terraform-oci-student:start" rel="nofollow" data-wiki-id="user:terraform-oci-student:start">User page</a></bdi></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab06&amp;do=profile" class="action profile" rel="nofollow" title="Update Profile">Update Profile</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab06&amp;do=logout&amp;sectok=2eb244dbe4175243dc22840059e4e571" class="action logout" rel="nofollow" title="Log Out">Log Out</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab06&amp;do=admin" class="action admin" rel="nofollow" title="Admin">Admin</a></li>                          </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+        <div class="wrapper">
+
+            <!-- ********** CONTENT ********** -->
+        <div class="usr-content">
+            <div id="dokuwiki__content">
+                <div class="container usr-container">
+                                                                <div class="breadcrumbs"><span class="bchead">Trace:</span> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab01" class="breadcrumbs" title="terraform-oci:lab01">lab01</a></bdi> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab02" class="breadcrumbs" title="terraform-oci:lab02">lab02</a></bdi> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab03" class="breadcrumbs" title="terraform-oci:lab03">lab03</a></bdi> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab04" class="breadcrumbs" title="terraform-oci:lab04">lab04</a></bdi> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab05" class="breadcrumbs" title="terraform-oci:lab05">lab05</a></bdi> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:start" class="breadcrumbs" title="terraform-oci:start">terraform-oci</a></bdi> <span class="bcsep">•</span> <span class="curid"><bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab06" class="breadcrumbs" title="terraform-oci:lab06">lab06</a></bdi></span></div>
+                                                                                            <div class="row usr-inner">
+                        <div class="col-md-9 col-main">
+                                                
+                            <div class="page">
+                                
+                                <!-- BREADCRUMBS -->
+
+                                <!-- wikipage start -->
+                                
+<h1 class="sectionedit1" id="lab_6_networking_remote_access">Lab #6 – Networking &amp; Remote Access</h1>
+<div class="level1">
+
+</div>
+
+<h2 class="sectionedit2" id="setup">Setup</h2>
+<div class="level2">
+
+<p>
+For this lab, you will be using the Terraform provider for Oracle OCI. 
+</p>
+
+<p>
+You will be using the credentials for the Terraform OCI Provider given to you by the trainer.
+</p>
+
+<p>
+<em>PLEASE BE CAREFUL when applying infrastructure changes. You are 
+using a shared environment with limited resources, so we kindly ask you 
+to not use more resources than you are instructed in the lab. The 
+service limits are not very high and we risk breaking the labs for 
+everyone so please play nice!</em>
+</p>
+
+<p>
+For all the following tasks that involve creation of resources, make sure you PREFIX all your resource names with <code>studentXX</code> where XX are your initials.
+</p>
+
+<p>
+For the following tasks, continue working on the file structure created in the previous lab. 
+</p>
+
+<p>
+It is recommended to create a new folder named <code>lab6</code>, copy into it your <code>lab5.tf</code> file from the previous lab, rename it to <code>lab6.tf</code> and continue working on it.
+</p>
+<pre class="code">$ cd ..
+$ mkdir lab6
+$ cd lab6
+$ cp ../lab5/lab5.tf lab6.tf</pre>
+
+<p>
+Make sure you run <code>terraform init</code> in the new folder if you only copy the configuration file, to redownload the providers.
+</p>
+
+</div>
+
+<h2 class="sectionedit3" id="networking_remote_access_for_your_instances">Networking &amp; remote access for your instances</h2>
+<div class="level2">
+
+<p>
+In the following tasks we will be looking at what additional components 
+need to be defined in your Terraform configuration to ensure proper 
+management access to your instances from the outside.
+</p>
+
+<p>
+Keep in mind that not all of these are required, depending on your 
+specific use cases, but we will cover more components just so you can 
+get familiar with them.
+</p>
+
+<p>
+Right now, we have one VCN and one subnet defined, which is OK if we 
+only want a functional instance with private network connectivity. That 
+is, an instance that cannot be accessed from the outside on a public IP 
+address.
+</p>
+
+<p>
+We will be defining the following additional components:
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>A NAT gateway</strong></div>
+</li>
+</ul>
+
+<p>
+A NAT gateway  gives cloud resources without public IP addresses access 
+to the internet without exposing those resources to incoming internet 
+connections. You can add a NAT gateway to your VCN to give instances in a
+ private subnet access to the internet. Instances in a private subnet 
+don't have public IP addresses. With the NAT gateway, they can initiate 
+connections to the internet and receive responses, but they cannot 
+receive inbound connections initiated from the internet.
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>An internet gateway</strong></div>
+</li>
+</ul>
+
+<p>
+An internet gateway is an optional virtual router you can add to your 
+VCN to enable direct connectivity to the internet. The gateway supports 
+connections initiated from within the VCN (egress) and connections 
+initiated from the internet (ingress).
+</p>
+
+<p>
+Resources that need to use the gateway for internet access must be in a 
+public subnet and have public IP addresses. Resources that have private 
+IP addresses can instead use a NAT gateway to initiate connections to 
+the internet.
+</p>
+
+<p>
+Each public subnet that needs to use the internet gateway must have a route table rule that specifies the gateway as the target.
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>A route table</strong></div>
+</li>
+</ul>
+
+<p>
+Your VCN uses virtual route tables to send traffic out of the VCN (for 
+example, to the internet, to your on-premises network, or to a peered 
+VCN). These virtual route tables have rules that look and act like 
+traditional network route rules you might already be familiar with. Each
+ rule specifies a destination CIDR block and the target (the next hop) 
+for any traffic that matches that CIDR.
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>A security list with security rules</strong></div>
+</li>
+</ul>
+
+<p>
+Security lists let you define a set of security rules that applies to 
+all the VNICs in an entire subnet. To use a given security list with a 
+particular subnet, you associate the security list with the subnet 
+either during subnet creation or later. A subnet can be associated with a
+ maximum of five security lists. Any VNICs that are created in that 
+subnet are subject to the security lists associated with the subnet.
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>A set of DHCP options policies</strong></div>
+</li>
+</ul>
+
+<p>
+The Networking service uses DHCP to automatically provide configuration 
+information to instances when they boot up. Although DHCP lets you 
+change some settings dynamically, others are static and never change. 
+For example, when you launch an instance, either you or Oracle specifies
+ the instance's private IP address. Each time the instance boots up or 
+you restart the instance's DHCP client, DHCP passes that same private IP
+ address to the instance. The address never changes during the 
+instance's lifetime.
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>A service gateway</strong></div>
+</li>
+</ul>
+
+<p>
+A service gateway enables cloud resources without public IP addresses to
+ privately access Oracle services. The Oracle Services Network is a 
+conceptual network in Oracle Cloud Infrastructure that is reserved for 
+Oracle services. These services have public IP addresses that you 
+typically reach over the internet. However, you can access the Oracle 
+Services Network without the traffic going over the internet and to do 
+this you will need a service gateway.
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>A dynamic routing gateway</strong></div>
+</li>
+</ul>
+
+<p>
+You use a DRG when connecting your existing on-premises network to your 
+virtual cloud network (VCN) with one (or both) of these: an IPSec VPN or
+ an OCI FastConnect. You can think of a DRG as a virtual router that 
+provides a path for private traffic (that is, traffic that uses private 
+IPv4 addresses) between your VCN and networks outside the VCN's region.
+</p>
+
+</div>
+
+<h3 class="sectionedit4" id="update_the_virtual_instance">Update the virtual instance</h3>
+<div class="level3">
+
+<p>
+Before moving on to networking, let's make some changes to the virtual instance that you already have.
+</p>
+
+<p>
+Comment out the original <code>oci_core_instance</code> resource definition or add the following parameter to its definition:
+</p>
+<pre class="code">count = 0</pre>
+
+<p>
+A count of zero tells Terraform that this resource should not be 
+deployed. Apply your config to see the instance being destroyed.
+</p>
+
+<p>
+Define a new <code>oci_core_instance</code> resource in your config with the following parameters:
+</p>
+<ul>
+<li class="level1"><div class="li"> Terraform-relevant name: “webserver”</div>
+</li>
+<li class="level1"><div class="li"> <code>availability_domain</code> &amp; <code>compartment_id</code>: use the same IDs like in the previous resource definition</div>
+</li>
+<li class="level1"><div class="li"> <code>display_name</code>: <code>studentXX-web</code> where XX are your initials</div>
+</li>
+<li class="level1"><div class="li"> <code>shape</code>: make sure you use the previously defined data source to select the <code>VM.Standard2.1</code> shape.</div>
+</li>
+<li class="level1"><div class="li"> <code>source_detail</code>s: use the <code>source_type = “image”</code> and the <code>source_id</code> pointing to the correct image ID for your region from a basic Oracle Linux 7.4 image: <a href="https://docs.cloud.oracle.com/iaas/images/image/0e74ccdd-860a-4e0c-ab1e-897e0d4a5e1c/" class="urlextern" title="https://docs.cloud.oracle.com/iaas/images/image/0e74ccdd-860a-4e0c-ab1e-897e0d4a5e1c/" rel="ugc nofollow">https://docs.cloud.oracle.com/iaas/images/image/0e74ccdd-860a-4e0c-ab1e-897e0d4a5e1c/</a></div>
+</li>
+<li class="level1"><div class="li"> <code>create_vnic_details</code>: use the same subnet attachment as before</div>
+</li>
+</ul>
+
+<p>
+Test deploying your new instance with <code>terraform plan</code> and <code>terraform apply</code>. Make any corrections if necessary.
+</p>
+
+</div>
+
+<h3 class="sectionedit5" id="metadata_public_key">Metadata – public key</h3>
+<div class="level3">
+
+<p>
+You will probably need to interact with this instance directly at some 
+point, for management purposes. The default (and preferred) method to 
+authenticate to an instance in OCI is by using a private/public key 
+pair.
+</p>
+
+<p>
+Check the metadata definition in the official documentation for your <code>oci_core_instance</code> to check that this field allows you to add a public key which will be automatically uploaded to your instance.
+</p>
+
+<p>
+The syntax for the metadata field is:
+</p>
+<pre class="code">metadata = {
+  ssh_authorized_keys = var.ssh_public_key
+  user_data = base64encode(file(var.file_name))
+  }</pre>
+
+<p>
+Locate the <code>id_rsa</code> and <code>id_rsa.pub</code> files which have been provided along with the lab files in the <code>ssh</code> folder. The first file is the private key, the second one is the corresponding public key.
+</p>
+
+<p>
+Add the public key to the <code>ssh_authorized_keys</code> field in your configuration. Don't use the <code>user_data</code> field for now, remove it from your config.
+</p>
+
+<p>
+Apply your config. 
+</p>
+
+<p>
+<strong>Hint</strong>: You can either paste the public key directly in your config or reference it with the <code>file()</code> function. It's up to you.
+</p>
+
+</div>
+
+<h3 class="sectionedit6" id="metadata_initialization_script">Metadata – Initialization Script</h3>
+<div class="level3">
+
+<p>
+Before moving ahead with the deployment of other resources in OCI, keep 
+in mind that some images have an always-on firewall that will not allow 
+you to communicate with any apps inside those images unless you 
+specifically allow that type of traffic. 
+</p>
+
+<p>
+For setting up firewall rules and also for installing additional pieces 
+of software upon the instance's creation, OCI allows you to define an 
+initialization script.
+</p>
+
+<p>
+Define the following variable:
+</p>
+<pre class="code">variable "user-data" {
+  default = &lt;&lt;EOF
+#!/bin/bash -x
+rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
+yum install -y php56w-mysqlnd php56w php56w-xml php56-gd mod_ssl openssl httpd unzip mlocate wget
+setsebool -P httpd_can_network_connect 1
+setenforce Permissive
+firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="0.0.0.0/0" port protocol="tcp" port="80" accept'
+firewall-cmd --reload
+setenforce Enforcing
+systemctl enable httpd
+systemctl start httpd
+EOF
+
+}</pre>
+
+<p>
+Notice that the script installs some packages (a web server included) 
+and also opens up the firewall to accept traffic on port 80 (HTTP).
+</p>
+
+<p>
+Update your instance definition to run this script when the instance is being built, under <code>metadata &gt; user_data</code>:
+</p>
+<pre class="code">metadata = {
+  ssh_authorized_keys = &lt;no changes here, same key as before&gt;
+  user_data           = base64encode(var.user-data)
+}</pre>
+
+</div>
+
+<h3 class="sectionedit7" id="add_an_internet_gateway">Add an internet gateway</h3>
+<div class="level3">
+
+<p>
+The internet gateway allows direct VCN connectivity to and from the 
+internet. The instances must be connected to a public subnet in your 
+VCN. By default, subnets created by Terraform are public.
+Use the example in the official documentation to create a resource of 
+type oci_core_internet_gateway: <a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_internet_gateway" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_internet_gateway" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_internet_gateway</a>
+</p>
+
+<p>
+Use the following structure:
+</p>
+<pre class="code">resource "oci_core_internet_gateway" "internet-gateway" {
+  compartment_id = &lt;use your compartment OCID&gt;
+  display_name   = &lt;use studentXX-internet-gateway&gt;
+  vcn_id         = &lt;use the id attribute of your VCN&gt;
+}</pre>
+
+</div>
+
+<h3 class="sectionedit8" id="add_a_route_to_the_internet_gateway">Add a route to the internet gateway</h3>
+<div class="level3">
+
+<p>
+Just like in physical networking, in order to properly use a gateway you
+ will need to define a route to it. In our case, we will define a 
+default route (that matches all destinations) and points to our gateway.
+</p>
+
+<p>
+Check the sample usage for a route in the official documentation: <a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_route_table" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_route_table" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_route_table</a>
+Create a resource of type <code>oci_core_route_table</code> and use the following structure:
+</p>
+<pre class="code">resource "oci_core_route_table" "webserver-rt" {
+  compartment_id = &lt;use your compartment OCID&gt;
+  vcn_id         = &lt;use the id attribute of your VCN&gt;
+  display_name   = "studentXX-webserver-rt"
+  route_rules {
+    destination       = "0.0.0.0/0"
+    network_entity_id = &lt;use the id of your internet gateway&gt;
+  }
+}</pre>
+
+</div>
+
+<h3 class="sectionedit9" id="create_a_set_of_dhcp_options">Create a set of DHCP options</h3>
+<div class="level3">
+
+<p>
+Check the official documentation for the various purposes and usage 
+methods for a set of DHCP options. While this component is not mandatory
+ for your deployment, it is a best practice since DHCP options allow you
+ to set how name resolution happens inside your VCN, including the 
+opportunity to define your own internal <abbr title="Domain Name System">DNS</abbr> servers: <a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_dhcp_options" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_dhcp_options" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_dhcp_options</a>
+</p>
+
+<p>
+We will provide the option to allow name resolution within instances in 
+the same VCN and also name resolution for domain names from the 
+internet.
+</p>
+
+<p>
+Use the following structure:
+</p>
+<pre class="code">resource "oci_core_dhcp_options" "oci_dhcp_options" {
+  compartment_id = &lt;use your compartment OCID&gt;
+  vcn_id         = &lt;use the id attribute of your VCN&gt;
+  display_name   = "studentXX-dhcp-options"
+
+  options {
+    type        = "DomainNameServer"
+    server_type = "VcnLocalPlusInternet"
+  }
+}</pre>
+
+<p>
+<strong>Hint</strong>: The option <code>VcnLocalPlusInternet</code> is 
+also referred to as “Internet and VCN Resolver”. Instances can resolve 
+internet hostnames (no internet gateway is required), and can resolve 
+hostnames of instances in the VCN.
+</p>
+
+</div>
+
+<h3 class="sectionedit10" id="create_a_security_list">Create a security list</h3>
+<div class="level3">
+
+<p>
+Security lists are made up of security rules and define how traffic is 
+allowed or blocked to and from a subnet. Usually, outside-to-inside 
+access is allowed only for some management protocols and those protocols
+ actually used by the applications inside your instances that need to be
+ accessed from the outside, while inside-to-outside access is permitted 
+for most traffic.
+</p>
+
+<p>
+Have a look at the official documentation for the oci_core_security_list resource and notice its structure: <a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_security_list" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_security_list" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_security_list</a>
+</p>
+<pre class="code">resource "oci_core_security_list" "WebserverSecList" {
+  compartment_id = &lt;use your compartment OCID&gt;
+  display_name   = "studentXX-webserver-sec-list"
+  vcn_id         = &lt;use the id attribute of your VCN&gt;
+  egress_security_rules {
+[...]
+  }
+  egress_security_rules {
+[...]
+  }
+  ingress_security_rules {
+[...]
+  }
+  ingress_security_rules {
+[...]
+  }
+}</pre>
+
+<p>
+Notice how the actual security list is just an enumeration of ingress and egress security rules.
+</p>
+
+<p>
+Let us define one security list with all the rules necessary for our deployment of a web server.
+</p>
+
+<p>
+<strong>Egress rules:</strong>
+</p>
+
+<p>
+First, define the following egress security rule that allows the ICMP protocol to any destination:
+</p>
+<pre class="code">egress_security_rules {
+  protocol    = 1 // ICMP
+  destination = "0.0.0.0/0"
+}</pre>
+
+<p>
+Now it's your turn: define an additional similar egress security rule that allows all oubound TCP traffic, to all destinations.
+</p>
+
+<p>
+<strong>Hint</strong>: The TCP protocol number is 6.
+</p>
+
+<p>
+<strong>Ingress rules:</strong>
+</p>
+
+<p>
+Define the following ingress security rule that allows the ICMP protocol from any destination to enter our subnet:
+</p>
+<pre class="code">  ingress_security_rules {
+    protocol = 1
+    source   = "0.0.0.0/0"
+  }
+}</pre>
+
+<p>
+Now it's your turn: define an additional ingress security rule that 
+alllows the TCP protocol (number 6, remember) from any source within 
+your VCN. This is required so that any instances connected to the same 
+VCN will be able to talk to each other.
+</p>
+
+<p>
+<strong>Hint</strong>: you can reference the <code>cidr_block</code> of your VCN or you can manually type it in. 
+</p>
+
+<p>
+Next, define the following additional ingress security rule that allows 
+SSH access from any destination on the internet on the standard SSH 
+port, TCP 22: 
+</p>
+<pre class="code">ingress_security_rules {
+  tcp_options {
+    max = 22
+    min = 22
+  }
+  protocol = 6 // tcp
+  source   = "0.0.0.0/0"
+}</pre>
+
+<p>
+Again, it's your turn: define a similar security rule that allows all 
+TCP connections from the internet, on port 80, since we're preparing a 
+web server after all. Optionally, define a security rule for the HTTPS 
+port, as well.
+</p>
+
+<p>
+Apply your config, fix any errors and check the security rules in the cloud console under <code>Networking &gt; Virtual Cloud Networks &gt; &lt;your VCN&gt; &gt; Ingress rules / Egress rules</code>.
+Your resulting <code>oci_core_security_list</code> should now have TWO egress rules and FOUR ingress rules and all the rule blocks should be defined INSIDE the <code>oci_core_security_list</code> resource definition.
+</p>
+
+<p>
+The following optional tasks are not mandatory for our instance's 
+connectivity but it's a good exercise to practice deploying these 
+networking objects for real-life scenarios.
+</p>
+
+</div>
+
+<h2 class="sectionedit11" id="optional_defining_a_dynamic_routing_gateway_drg">(optional) Defining a Dynamic Routing Gateway (DRG)</h2>
+<div class="level2">
+
+<p>
+You can think of a DRG as a virtual router that provides a path for 
+private traffic (that is, traffic that uses private IPv4 addresses) 
+between your VCN and networks outside the VCN's region.
+</p>
+
+<p>
+Like many other resources in the OCI Terraform provider, the DRG resource is made up of two distinct Terraform resources:
+</p>
+<ul>
+<li class="level1"><div class="li"> An <code>oci_core_drg</code> resource that actually creates the DRG</div>
+</li>
+<li class="level1"><div class="li"> An <code>oci_core_drg_attachment</code> that BINDS your DRG to a VCN</div>
+</li>
+</ul>
+
+<p>
+The definition of an <code>oci_core_drg</code> is very simple: <a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_drg" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_drg" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_drg</a>
+</p>
+
+<p>
+First, create a resource of type <code>oci_core_drg</code> in your config with the following parameters:
+</p>
+<pre class="code">resource "oci_core_drg" "terraform_drg" {
+  compartment_id = &lt;use your compartment OCID&gt;
+  display_name   = "studentXX-tf-drg"
+  timeouts {
+    &lt;add a creation timeout of 30 seconds&gt;
+    &lt;add a deletion timeout of 1 minute&gt;
+  }
+}</pre>
+
+<p>
+<strong>Hint</strong>: The <code>timeout {}</code> block is not 
+mandatory but in some situations it might be a good practice to override
+ the default timeouts that Terraform uses when creating, updating or 
+deleting resources. Have a look in the official documentation for the 
+syntax to be used when defining timeouts: <a href="https://www.terraform.io/docs/language/resources/syntax.html" class="urlextern" title="https://www.terraform.io/docs/language/resources/syntax.html" rel="ugc nofollow">https://www.terraform.io/docs/language/resources/syntax.html</a>
+</p>
+
+<p>
+Second, create a resource of type <code>oci_core_drg_attachment</code> in your config using the following template:
+</p>
+<pre class="code">resource "oci_core_drg_attachment" "test_drg_attachment" {
+  drg_id = &lt;enter the id attribute of your DRG&gt;
+  vcn_id = &lt;enter the id attribute of your VCN&gt;
+}</pre>
+
+<p>
+<strong>Hint</strong>: While the definition of the DRG is very simple, it's abilities to route traffic over VPNs of FastConnects lies in optional <code>route_table_id</code>
+ parameter which makes the DRG route traffic according to a specific set
+ of routes. This is outside the scope of this lab, but it's worth 
+remembering :) Check the official documentation for more information 
+about routing over external networks with DRGs: <a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_drg_attachment#route_table_id" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_drg_attachment#route_table_id" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_drg_attachment#route_table_id</a>
+</p>
+
+</div>
+
+<h2 class="sectionedit12" id="optional_defining_a_service_gateway">(optional) Defining a service gateway</h2>
+<div class="level2">
+
+<p>
+A service gateway enables cloud resources without public IP addresses to
+ privately access Oracle services. The Oracle Services Network is a 
+conceptual network in Oracle Cloud Infrastructure that is reserved for 
+Oracle services.
+</p>
+
+<p>
+For example, the object storage in OCI is one such type of service which
+ is often accessed by internal instances for downloading scripts, 
+packages, website content, etc.
+</p>
+
+</div>
+
+<h3 class="sectionedit13" id="extract_the_id_of_the_objects_storage_service">Extract the ID of the Objects Storage Service</h3>
+<div class="level3">
+
+<p>
+Create a data source of type <code>oci_core_services</code> according to the official documentation: <a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/data-sources/core_services" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/data-sources/core_services" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs/data-sources/core_services</a>
+</p>
+
+<p>
+Add a filter to the data source definition that extracts only the object
+ storage service's name by using a regular expression. Use the following
+ filter:
+</p>
+<pre class="code">filter {
+  name   = "name"
+  values = [".*Object.*Storage"]
+  regex  = true
+}</pre>
+
+<p>
+<strong>Note</strong>: not all data sources support filters.
+</p>
+
+<p>
+Create an <code>output</code> block and list the services attribute of this data source. Notice the <code>id</code> field of each service entry.
+</p>
+
+</div>
+
+<h3 class="sectionedit14" id="create_a_service_gateway">Create a Service Gateway</h3>
+<div class="level3">
+
+<p>
+A service gateway allows traffic from instances within a VCN to use 
+Oracle's internal network to access Oracle services. Create a resource 
+of type <code>oci_core_service_gateway</code> by following the official documentation: <a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_service_gateway" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_service_gateway" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_service_gateway</a> and the structure below:
+</p>
+<pre class="code">resource "oci_core_service_gateway" "test_service_gateway" {
+  compartment_id = &lt;enter your compartment OCID&gt;
+  vcn_id         = &lt;enter your VCN OCID&gt;
+  display_name   = "studentXX-service-gateway"
+  services {
+    service_id = &lt;enter the id of the object storage service from the previous data source&gt;
+  }
+}</pre>
+
+</div>
+
+<h3 class="sectionedit15" id="routing_traffic_to_the_service_gateway">Routing traffic to the Service Gateway</h3>
+<div class="level3">
+
+<p>
+There is one more step required for traffic to reach the service gateway: a route.
+</p>
+
+<p>
+Check the route_rules definition in the official documentation for information about forwarding traffic to an Oracle service: <a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_route_table#route_rules" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_route_table#route_rules" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_route_table#route_rules</a>
+</p>
+
+<p>
+Create a new resource of type <code>oci_core_route_table</code>, just like before, but with the following structure:
+</p>
+<pre class="code">resource "oci_core_route_table" "test_sg_rt" {
+  compartment_id = &lt;enter your compartment OCID&gt;
+  vcn_id         = &lt;enter your VCN OCID&gt;
+  display_name   = "studentXX-sg-rt"
+
+  route_rules {
+    destination       = &lt;use the CIDR block from the oci_core_services data source&gt;
+    destination_type  = "SERVICE_CIDR_BLOCK"
+    network_entity_id = &lt;use the ID from the oci_core_service_gateway resource&gt;
+  }
+}</pre>
+
+</div>
+
+<h2 class="sectionedit16" id="optional_defining_a_nat_gateway">(optional) Defining a NAT gateway</h2>
+<div class="level2">
+
+<p>
+A NAT gateway is useful for allowing instances connected to private subnets to access the internet.
+</p>
+
+</div>
+
+<h3 class="sectionedit17" id="add_a_nat_gateway">Add a NAT gateway</h3>
+<div class="level3">
+
+<p>
+The configuration of a NAT gateway is very simple, according to the official documentation: <a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_nat_gateway" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_nat_gateway" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_nat_gateway</a>
+</p>
+
+<p>
+The NAT gateway will automatically receive a public IP address to be 
+used for those instances that only have private IP addresses.
+</p>
+
+<p>
+Define the NAT gateway using the following structure:
+</p>
+<pre class="code">resource "oci_core_nat_gateway" "test_nat_gateway" {
+  compartment_id = &lt;enter your compartment OCID&gt;
+  vcn_id         = &lt;enter your VCN OCID&gt;
+  display_name   = "studentXX-nat-gateway"
+}</pre>
+
+</div>
+
+<h3 class="sectionedit18" id="redirecting_traffic_to_the_nat_gateway">Redirecting Traffic to the NAT Gateway</h3>
+<div class="level3">
+
+<p>
+Finally, the last step in redirecting traffic to the NAT Gateway is to 
+define en entry in the routing table. This entry, just like the ones 
+before, include a rule that specifies a destination (which is going to 
+be 0.0.0.0/0 if we want to use the gateway for all destination) and a <code>network_entity_id</code> which actually identifies the NAT Gateway by its ID.
+</p>
+
+<p>
+Add the following <code>oci_core_route_table</code> resource to your code:
+</p>
+<pre class="code">resource "oci_core_route_table" "test_nat_rt" {
+  compartment_id = &lt;enter your compartment OCID&gt;
+  vcn_id         = &lt;enter your VCN OCID&gt;
+  display_name   = "studentXX-nat-rt"
+  route_rules {
+    destination       = "0.0.0.0/0"
+    network_entity_id = &lt;enter the id attribute of the oci_core_nat_gateway&gt;
+  }
+}</pre>
+
+</div>
+
+<h2 class="sectionedit19" id="wrapping_up_update_the_subnet_test">Wrapping Up – Update the Subnet &amp; Test</h2>
+<div class="level2">
+
+<p>
+Before applying your configuration, update the subnet definition to 
+reflect the security list. Notice that the field points to a list of IDs
+ so don't forget the square brackets.
+</p>
+
+<p>
+In case your subnet is still defined in a module, add the <code>security_list_ids</code>
+ parameter under the module definition and make sure you send it as an 
+input variable when you call the module, just like you did with the <code>cidr_block</code>, <code>compartment_ocid</code> and <code>vcn_id</code> variables.
+</p>
+<pre class="code">resource "oci_core_subnet" "webserver01" {
+  availability_domain = &lt;no changes&gt;
+  cidr_block          = &lt;no changes&gt;
+  display_name        = &lt;no changes&gt;
+  compartment_id      = &lt;no changes&gt;
+  vcn_id              = &lt;no changes&gt;
+  security_list_ids   = [oci_core_security_list.&lt;name_of_your_security_list&gt;.id]
+}</pre>
+
+<p>
+Extract the public IP address of your instance with an <code>output</code> block or directly from the cloud console and test it in a local browser.
+</p>
+
+<p>
+You should see the default Apache web page.
+</p>
+
+<p>
+Also, at this point, you should be able to access your instace via SSH. 
+Connect using your preferred terminal app to the public IP address of 
+your instance, while referencing the private key.
+</p>
+
+<p>
+The syntax for connecting using the Linux or MacOS command line is:
+</p>
+<pre class="code">ssh -i path/to/rsa_id opc@public.ip.addr.ess</pre>
+
+</div>
+
+<h2 class="sectionedit20" id="clean-up">Clean-up</h2>
+<div class="level2">
+
+<p>
+This is the end of this lab. To clean-up your environment, run <code>terraform destroy</code>.
+</p>
+
+<p>
+<strong>Hint</strong>: If you are confident enough, add the <code>–auto-approve</code> flag to the command.
+</p>
+
+<p>
+ 
+</p>
+
+</div>
+
+<h1 class="sectionedit21" id="solutions_to_lab_6_networking_remote_access">Solutions to Lab #6 – Networking &amp; Remote Access</h1>
+<div class="level1">
+
+</div>
+
+<h2 class="sectionedit22" id="networking_remote_access_for_your_instances1">Networking &amp; remote access for your instances</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit23" id="update_the_virtual_instance1">Update the virtual instance</h3>
+<div class="level3">
+
+<p>
+On the previous instance definition, add <code>count=0</code> and define a new instance
+</p>
+<pre class="code">resource "oci_core_instance" "webserver" {
+  availability_domain = data.oci_identity_availability_domains.ADs.availability_domains[0]["name"]
+  compartment_id = var.compartment_ocid
+  shape = local.myshape
+  display_name = "StudentAC-web"
+
+  create_vnic_details {
+    subnet_id = module.subnet_module.subnet_id
+    display_name = primaryvnic
+  }
+
+  source_details {
+    source_id = local.myimage
+    source_type = "image"
+  }
+}</pre>
+
+</div>
+
+<h3 class="sectionedit24" id="metadata_public_key1">Metadata – public key</h3>
+<div class="level3">
+<pre class="code">resource "oci_core_instance" "webserver" {
+  availability_domain = data.oci_identity_availability_domains.ADs.availability_domains[0]["name"]
+  compartment_id = var.compartment_ocid
+  shape = local.myshape
+  display_name = "StudentAC-web"
+
+  create_vnic_details {
+    subnet_id = module.subnet_module.subnet_id
+    display_name = primaryvnic
+  }
+
+  source_details {
+    source_id = local.myimage
+    source_type = "image"
+  }
+  
+  metadata = {
+      "ssh_authorized_keys" = "ssh-rxsa AAAAB3NXj*AAAADDDDBBAADHA...."
+  }
+}</pre>
+
+</div>
+
+<h3 class="sectionedit25" id="metadata_initialization_script1">Metadata – Initialization Script</h3>
+<div class="level3">
+<pre class="code">variable "user-data" {
+  default = &lt;&lt;EOF
+#!/bin/bash -x
+rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
+yum install -y php56w-mysqlnd php56w php56w-xml php56-gd mod_ssl openssl httpd unzip mlocate wget
+setsebool -P httpd_can_network_connect 1
+setenforce Permissive
+firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="0.0.0.0/0" port protocol="tcp" port="80" accept'
+firewall-cmd --reload
+setenforce Enforcing
+systemctl enable httpd
+systemctl start httpd
+EOF
+
+resource "oci_core_instance" "webserver" {
+  availability_domain = data.oci_identity_availability_domains.ADs.availability_domains[0]["name"]
+  compartment_id = var.compartment_ocid
+  shape = local.myshape
+  display_name = "StudentAC-web"
+
+  create_vnic_details {
+    subnet_id = module.subnet_module.subnet_id
+    display_name = primaryvnic
+  }
+
+  source_details {
+    source_id = local.myimage
+    source_type = "image"
+  }
+  
+  metadata = {
+    "ssh_authorized_keys" = "ssh-rxsa AAAAB3NXj*AAAADDDDBBAADHA...."
+    user-data = base64encode(var.user-data)
+  }
+}
+}</pre>
+
+</div>
+
+<h3 class="sectionedit26" id="add_an_internet_gateway1">Add an internet gateway</h3>
+<div class="level3">
+<pre class="code">resource "oci_core_internet_gateway" "internet-gateway" {
+  compartment_id = var.compartment_ocid
+  display_name = "StudentAC-internet-gateway"
+  vcn_id = oci_core_vcn.test_vcn.id
+}</pre>
+
+</div>
+
+<h3 class="sectionedit27" id="add_a_route_to_the_internet_gateway1">Add a route to the internet gateway</h3>
+<div class="level3">
+<pre class="code">resource "oci_core_route_table" "webserver-rt" {
+  compartment_id = var.compartment_ocid
+  vcn_id = oci_core_vcn.test_vcn.id
+  display_name = "StudentAC-webserver-rt"
+  route_rules {
+    destination = "0.0.0.0/0"
+    network_entity_id = oci_core_internet_gateway.internet-gateway-id
+  }
+} </pre>
+
+</div>
+
+<h3 class="sectionedit28" id="create_a_set_of_dhcp_options1">Create a set of DHCP options</h3>
+<div class="level3">
+<pre class="code">resource "oci_core_dhcp_options" "dhcp_options" {
+  compartment_id = var.compartment_ocid
+  vcn_id = oci_core_vcn.test_vcn.id
+  display_name = "StudentAC-dhcp-options"
+  options {
+    type = "DomainNameServer
+    server_type = "VcnLocalPlusInternet
+  }
+}</pre>
+
+</div>
+
+<h3 class="sectionedit29" id="create_a_security_list1">Create a security list</h3>
+<div class="level3">
+<pre class="code">resource "oci_core_security_list" "webserver-sec-list" {
+  compartment_id = var.compartment_ocid
+  display_name = "StudentAC-webserver-sec-list"
+  vcn_id = oci_core_vcn.test_vcn.id
+
+  egress_security_rules {
+    protocol = 6 //TCP
+    destination = "0.0.0.0/0"
+  }
+
+  egress_security_rules {
+    protocol = 1 //ICMP
+    destination = "0.0.0.0/0"
+  }
+
+  ingress_security_rules {
+    protocol = 6 //TCP
+    source = oci_core_vcn.test_vcn.cidr_block
+  }
+
+  ingress_security_rules {
+    tcp_options {
+      max = 22 //SSH
+      min = 22
+    }
+    protocol = 6 //TCP
+    source = "0.0.0.0/0"
+  }
+
+  ingress_security_rules {
+    tcp_options {
+      max = 80 //HTTP
+      min = 80
+    }
+    protocol = 6 //TCP
+    source = "0.0.0.0/0"
+  }
+
+  ingress_security_rules {
+    protocol = 1 //ICMP
+    source = "0.0.0.0/0"
+  }
+}
+ </pre>
+
+</div>
+
+<h2 class="sectionedit30" id="optional_defining_a_dynamic_routing_gateway_drg1">(optional) Defining a Dynamic Routing Gateway (DRG)</h2>
+<div class="level2">
+<pre class="code">resource "oci_core_drg" "test_drg" {
+  compartment_id = var.compartment_ocid
+  display_name = "StudentAC-drg
+  timeouts {
+    create = "30s"
+    delete = "1m"
+  }
+}
+
+resource "oci_core_drg_attachment" "test_drg_attach" {
+  drg_id = oci_core_drg.test_drg.id
+  vcn_id = oci_core_vcn.test_vcn.id
+}
+ </pre>
+
+</div>
+
+<h2 class="sectionedit31" id="optional_defining_a_service_gateway1">(optional) Defining a service gateway</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit32" id="extract_the_id_of_the_objects_storage_service1">Extract the ID of the Objects Storage Service</h3>
+<div class="level3">
+<pre class="code">data "oci_core_services" "test_oci_services" {
+  filter {
+    name = "name"
+    values = [".*Object.*Storage"]
+    regex = true
+  }
+}
+
+output "test_oci_services" {
+  value = data.oci_core_services.test_oci_services.services
+}</pre>
+
+</div>
+
+<h3 class="sectionedit33" id="create_a_service_gateway1">Create a Service Gateway</h3>
+<div class="level3">
+<pre class="code">resource "oci_core_service_gateway" "test_service_gateway" {
+  compartment_id = var.compartment_ocid
+  display_name = "StudentAC-service-gateway"
+  vcn_id = oci_core_vcn.test_vcn.id
+  services {
+    service_id = data.oci_core_services.test_oci_services.services[0].id
+  }
+}</pre>
+
+</div>
+
+<h3 class="sectionedit34" id="routing_traffic_to_the_service_gateway1">Routing traffic to the Service Gateway</h3>
+<div class="level3">
+<pre class="code">resource "oci_core_route_table" "test_sg_rt" {
+  compartment_id = var.compartment_ocid
+  display_name = "StudentAC-servicegateway-routetable"
+  vcn_id = oci_core_vcn.test_vcn.id
+  
+  route_rules {
+    destination = data.oci_core_services.test_oci_services.services[0]["cidr_block"]
+    destination_type = "SERVICE_CIDR_BLOCK"
+    network_entity_id = oci_core_service_gateway.test_service_gateway.id
+  }
+}</pre>
+
+</div>
+
+<h2 class="sectionedit35" id="optional_defining_a_nat_gateway1">(optional) Defining a NAT gateway</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit36" id="add_a_nat_gateway1">Add a NAT gateway</h3>
+<div class="level3">
+<pre class="code">resource "oci_core_nat_gateway" "test_nat_gateway" {
+  compartment_id = var.compartment_ocid
+  display_name = "StudentAC-nat-gateway"
+  vcn_id = oci_core_vcn.test_vcn.id
+}</pre>
+
+</div>
+
+<h3 class="sectionedit37" id="redirecting_traffic_to_the_nat_gateway1">Redirecting Traffic to the NAT Gateway</h3>
+<div class="level3">
+<pre class="code">resource "oci_core_route_table" "test_nat_rt" {}
+  compartment_id = var.compartment_ocid
+  display_name = "StudentAC-nat-rt"
+  vcn_id = oci_core_vcn.test_vcn.id
+
+  route_rules {
+    destination = "0.0.0.0/0"
+    network_entity_id = oci_core_nat_gateway.test_nat_gateway.id
+  }
+}</pre>
+
+</div>
+
+<h2 class="sectionedit38" id="wrapping_up_update_the_subnet_test1">Wrapping Up – Update the Subnet &amp; Test</h2>
+<div class="level2">
+<pre class="code">module "subnet_module" {
+  source = "./subnet_module"
+  cidr_block = "10.0.100.0/24"
+  compartment_id = var.compartment_ocid
+  vcn_id = oci_core_vcn.test_vcn.id
+  sec_list_id = oci_core_security_list.webserver-sec-list.id
+  route_table_id = oci_core_route_table.webserver-rt.id
+  dhcp_options_id = oci_core_dhcp_options.dhcp_options.id
+}</pre>
+
+<p>
+ You should see the default Apache web page:
+</p>
+
+<p>
+Also, at this point, you should be able to access your instace via SSH. 
+Connect using your preferred terminal app to the public IP address of 
+your instance, while referencing the private key.
+The syntax for connecting using the Linux or MacOS command line is:
+</p>
+<pre class="code">ssh -i path/to/rsa_id opc@public.ip.addr.ess</pre>
+
+</div>
+
+<h2 class="sectionedit39" id="clean-up1">Clean-up</h2>
+<div class="level2">
+<pre class="code">$ terraform destroy
+or
+$ terraform destroy --auto-approve</pre>
+
+</div>
+
+                                <!-- wikipage stop -->
+                                <div class="clearer"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-side">
+                                                        <div class="nav-side" role="navigation">
+                                <div class="nav-side-inner">
+                                    <!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>Table of Contents</h3>
+<div style="" aria-expanded="true">
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#lab_6_networking_remote_access">Lab #6 – Networking &amp; Remote Access</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#setup">Setup</a></div></li>
+<li class="level2"><div class="li"><a href="#networking_remote_access_for_your_instances">Networking &amp; remote access for your instances</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#update_the_virtual_instance">Update the virtual instance</a></div></li>
+<li class="level3"><div class="li"><a href="#metadata_public_key">Metadata – public key</a></div></li>
+<li class="level3"><div class="li"><a href="#metadata_initialization_script">Metadata – Initialization Script</a></div></li>
+<li class="level3"><div class="li"><a href="#add_an_internet_gateway">Add an internet gateway</a></div></li>
+<li class="level3"><div class="li"><a href="#add_a_route_to_the_internet_gateway">Add a route to the internet gateway</a></div></li>
+<li class="level3"><div class="li"><a href="#create_a_set_of_dhcp_options">Create a set of DHCP options</a></div></li>
+<li class="level3"><div class="li"><a href="#create_a_security_list">Create a security list</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#optional_defining_a_dynamic_routing_gateway_drg">(optional) Defining a Dynamic Routing Gateway (DRG)</a></div></li>
+<li class="level2"><div class="li"><a href="#optional_defining_a_service_gateway">(optional) Defining a service gateway</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#extract_the_id_of_the_objects_storage_service">Extract the ID of the Objects Storage Service</a></div></li>
+<li class="level3"><div class="li"><a href="#create_a_service_gateway">Create a Service Gateway</a></div></li>
+<li class="level3"><div class="li"><a href="#routing_traffic_to_the_service_gateway">Routing traffic to the Service Gateway</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#optional_defining_a_nat_gateway">(optional) Defining a NAT gateway</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#add_a_nat_gateway">Add a NAT gateway</a></div></li>
+<li class="level3"><div class="li"><a href="#redirecting_traffic_to_the_nat_gateway">Redirecting Traffic to the NAT Gateway</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#wrapping_up_update_the_subnet_test">Wrapping Up – Update the Subnet &amp; Test</a></div></li>
+<li class="level2"><div class="li"><a href="#clean-up">Clean-up</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="#solutions_to_lab_6_networking_remote_access">Solutions to Lab #6 – Networking &amp; Remote Access</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#networking_remote_access_for_your_instances1">Networking &amp; remote access for your instances</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#update_the_virtual_instance1">Update the virtual instance</a></div></li>
+<li class="level3"><div class="li"><a href="#metadata_public_key1">Metadata – public key</a></div></li>
+<li class="level3"><div class="li"><a href="#metadata_initialization_script1">Metadata – Initialization Script</a></div></li>
+<li class="level3"><div class="li"><a href="#add_an_internet_gateway1">Add an internet gateway</a></div></li>
+<li class="level3"><div class="li"><a href="#add_a_route_to_the_internet_gateway1">Add a route to the internet gateway</a></div></li>
+<li class="level3"><div class="li"><a href="#create_a_set_of_dhcp_options1">Create a set of DHCP options</a></div></li>
+<li class="level3"><div class="li"><a href="#create_a_security_list1">Create a security list</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#optional_defining_a_dynamic_routing_gateway_drg1">(optional) Defining a Dynamic Routing Gateway (DRG)</a></div></li>
+<li class="level2"><div class="li"><a href="#optional_defining_a_service_gateway1">(optional) Defining a service gateway</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#extract_the_id_of_the_objects_storage_service1">Extract the ID of the Objects Storage Service</a></div></li>
+<li class="level3"><div class="li"><a href="#create_a_service_gateway1">Create a Service Gateway</a></div></li>
+<li class="level3"><div class="li"><a href="#routing_traffic_to_the_service_gateway1">Routing traffic to the Service Gateway</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#optional_defining_a_nat_gateway1">(optional) Defining a NAT gateway</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#add_a_nat_gateway1">Add a NAT gateway</a></div></li>
+<li class="level3"><div class="li"><a href="#redirecting_traffic_to_the_nat_gateway1">Redirecting Traffic to the NAT Gateway</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#wrapping_up_update_the_subnet_test1">Wrapping Up – Update the Subnet &amp; Test</a></div></li>
+<li class="level2"><div class="li"><a href="#clean-up1">Clean-up</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+                                    <!-- ********** ASIDE ********** -->
+                                    
+                                    <div class="back-to-top-wrapper">
+                                        <a href="#dokuwiki__top" class="back-to-top-link primary"><span class="mu mu-arrow-up"></span> Back to Top</a>
+                                    </div>
+                                </div>
+                            </div>
+                                                    </div>
+                    </div><!-- /row -->
+                </div><!-- /container -->
+            </div><!-- /content -->
+        </div>
+
+            <div class="clearer"></div>
+            <hr class="a11y">
+
+        </div><!-- /wrapper -->
+
+        <!-- ********** FOOTER ********** -->
+        <footer id="dokuwiki__footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-8">
+                        <div class="doc"><bdi>terraform-oci/lab06.txt</bdi> · Last modified: 2022/05/02 13:38 by <bdi>andrei.ciorba</bdi></div>
+                                            </div>
+                    <div class="col-sm-3 col-md-2">
+                        <!-- PAGE ACTIONS -->
+                                                    <div id="dokuwiki__pagetools">
+                                <ul class="footer-menu ul-raw">
+                                    <li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab06&amp;do=edit" class="action source" accesskey="v" rel="nofollow" title="Show pagesource [V]">Show pagesource</a></li><li><bdi><a href="https://doc.devops.courses/doku.php?id=discussion:terraform-oci:lab06" class="wikilink2" title="discussion:terraform-oci:lab06" rel="nofollow" data-wiki-id="discussion:terraform-oci:lab06">Discussion</a></bdi></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab06&amp;do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]">Old revisions</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab06&amp;do=backlink" class="action backlink" rel="nofollow" title="Backlinks">Backlinks</a></li><li><a href="#dokuwiki__top" class="action top" accesskey="t" rel="nofollow" title="Back to top [T]">Back to top</a></li>                                </ul>
+                            </div>
+                                            </div>
+                    <div class="col-sm-3 col-md-2">
+                        <!-- SITE TOOLS -->
+                        <div id="dokuwiki__sitetools">
+                            <ul class="footer-menu ul-raw">
+                                <li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab06&amp;do=recent" class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab06&amp;do=media&amp;ns=terraform-oci" class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab06&amp;do=index" class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="no"><img src="terraform-oci%20lab06_files/taskrunner.gif" alt="" width="2" height="1"></div>
+        </footer><!-- /footer -->
+
+            </div></div><!-- /site -->
+
+    <script>
+        function togglediv(id) {
+            var div = document.getElementById(id);
+            div.style.display = div.style.display == "block" ? "none" : "block";
+        }
+    </script>
+
+
+</body></html>

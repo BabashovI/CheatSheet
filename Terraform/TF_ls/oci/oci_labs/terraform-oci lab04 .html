@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" class="js" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>terraform-oci:lab04 | DevOps Courses</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="keywords" content="terraform-oci,lab04">
+<link rel="search" type="application/opensearchdescription+xml" href="https://doc.devops.courses/lib/exe/opensearch.php" title="DevOps Courses">
+<link rel="start" href="https://doc.devops.courses/">
+<link rel="contents" href="https://doc.devops.courses/doku.php?id=terraform-oci:lab04&amp;do=index" title="Sitemap">
+<link rel="manifest" href="https://doc.devops.courses/lib/exe/manifest.php">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="https://doc.devops.courses/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="https://doc.devops.courses/feed.php?mode=list&amp;ns=terraform-oci">
+<link rel="alternate" type="text/html" title="Plain HTML" href="https://doc.devops.courses/doku.php?do=export_xhtml&amp;id=terraform-oci:lab04">
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="https://doc.devops.courses/doku.php?do=export_raw&amp;id=terraform-oci:lab04">
+<link rel="canonical" href="https://doc.devops.courses/doku.php?id=terraform-oci:lab04">
+<link rel="stylesheet" href="terraform-oci%20lab04%20_files/css.css">
+<!--[if gte IE 9]><!-->
+<script>/*<![CDATA[*/var NS='terraform-oci';var SIG=" --- \/\/[[terraform-oci-student@ubergeek.ro|Student Terraform OCI]] 2022\/11\/16 16:29\/\/";var JSINFO = {"plugin_pdfjs":{"hide_download_button":0},"id":"terraform-oci:lab04","namespace":"terraform-oci","ACT":"show","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="terraform-oci%20lab04%20_files/jquery.php" defer="defer"></script>
+<script src="terraform-oci%20lab04%20_files/js.php" defer="defer"></script>
+<!--<![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="https://doc.devops.courses/lib/tpl/typowiki/images/favicon.ico">
+<link rel="apple-touch-icon" href="https://doc.devops.courses/lib/tpl/typowiki/images/apple-touch-icon.png">
+        <link href="terraform-oci%20lab04%20_files/microns.css" rel="stylesheet">
+</head>
+
+<body>
+        <!--[if lte IE 8 ]><div id="IE8"><![endif]-->
+
+            <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_typowiki loggedIn   ">
+        
+        <!-- ********** HEADER ********** -->
+        <nav>
+            <div class="nav-bar dark">
+                <div class="container">
+                    <div class="row">
+                    <div class="col-3 col-md-6 col-lg-7 nav-brand">
+                                            <a href="https://doc.devops.courses/doku.php?id=start" id="wiki-logo" accesskey="h" title="[H]"><img src="terraform-oci%20lab04%20_files/dokuwiki-128.png" alt=""></a>                      <h2><a href="https://doc.devops.courses/doku.php?id=start" accesskey="h" title="[H]">DevOps Courses</a></h2>
+                    </div>
+                    <div class="col-9 col-md-6 col-lg-5 nav-actions">
+                        <span id="doku-action-btn"><form class="button btn_source" method="post" action="/doku.php"><div class="no"><input type="hidden" name="do" value="edit"><input type="hidden" name="id" value="terraform-oci:lab04"><button type="submit" accesskey="v" title="Show pagesource [V]">Show pagesource</button></div></form></span>
+                        <button id="menu-toggle" onclick="togglediv('menu_unified')">Menu <span class="mu mu-menu txt-12" aria-hidden="true"></span></button>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        <ul class="a11y skip">
+            <a href="#dokuwiki__content">skip to content</a>
+        </ul>
+        <div class="nav-expanded dark">
+            <div id="menu_unified" class="nav-expanded-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-7 left">
+                            <span class="mu mu-search menu-icon" aria-hidden="true"></span>
+                            <form action="/doku.php?id=start" method="get" role="search" class="search doku_form" id="dw__search" accept-charset="utf-8"><input type="hidden" name="do" value="search"><input type="hidden" name="id" value="terraform-oci:lab04"><div class="no"><input name="q" type="text" class="edit" title="[F]" accesskey="f" placeholder="Search" autocomplete="on" id="qsearch__in"><button value="1" type="submit" title="Search">Search</button><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>                        </div>
+                        <div class="col-sm-5 right">
+                          <span class="mu mu-user menu-icon" aria-hidden="true"></span><p class="ui-title">Logged in as: <bdi>Student Terraform OCI</bdi> (<bdi>terraform-oci-student</bdi>)</p>                          <ul role="navigation">
+                              <li><bdi><a href="https://doc.devops.courses/doku.php?id=user:terraform-oci-student:start" class="wikilink2" title="user:terraform-oci-student:start" rel="nofollow" data-wiki-id="user:terraform-oci-student:start">User page</a></bdi></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab04&amp;do=profile" class="action profile" rel="nofollow" title="Update Profile">Update Profile</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab04&amp;do=logout&amp;sectok=2eb244dbe4175243dc22840059e4e571" class="action logout" rel="nofollow" title="Log Out">Log Out</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab04&amp;do=admin" class="action admin" rel="nofollow" title="Admin">Admin</a></li>                          </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+        <div class="wrapper">
+
+            <!-- ********** CONTENT ********** -->
+        <div class="usr-content">
+            <div id="dokuwiki__content">
+                <div class="container usr-container">
+                                                                <div class="breadcrumbs"><span class="bchead">Trace:</span> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab01" class="breadcrumbs" title="terraform-oci:lab01">lab01</a></bdi> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab02" class="breadcrumbs" title="terraform-oci:lab02">lab02</a></bdi> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab03" class="breadcrumbs" title="terraform-oci:lab03">lab03</a></bdi> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:start" class="breadcrumbs" title="terraform-oci:start">terraform-oci</a></bdi> <span class="bcsep">•</span> <span class="curid"><bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab04" class="breadcrumbs" title="terraform-oci:lab04">lab04</a></bdi></span></div>
+                                                                                            <div class="row usr-inner">
+                        <div class="col-md-9 col-main">
+                                                
+                            <div class="page">
+                                
+                                <!-- BREADCRUMBS -->
+
+                                <!-- wikipage start -->
+                                
+<h1 class="sectionedit1" id="lab_4_vm_resources">Lab #4 – VM Resources</h1>
+<div class="level1">
+
+</div>
+
+<h2 class="sectionedit2" id="setup">Setup</h2>
+<div class="level2">
+
+<p>
+For this lab, you will be using the Terraform provider for Oracle OCI. 
+</p>
+
+<p>
+You will be using the credentials for the Terraform OCI Provider given to you by the trainer.
+</p>
+
+<p>
+<em>PLEASE BE CAREFUL when applying infrastructure changes. You are 
+using a shared environment with limited resources, so we kindly ask you 
+to not use more resources than you are instructed in the lab. The 
+service limits are not very high and we risk breaking the labs for 
+everyone so please play nice!</em>
+</p>
+
+<p>
+For all the following tasks that involve creation of resources, make 
+sure you PREFIX all your resource names with “studentXX” where XX are 
+your initials.
+</p>
+
+<p>
+For all the tasks below, make sure you open a browser window with the official OCI documentation for Terraform: <a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs</a>
+</p>
+
+<p>
+It is recommended to create a new folder named <code>lab4</code>, copy into it your <code>lab3.tf</code> file from the previous lab, rename it to <code>lab4.tf</code> and continue working on it.
+</p>
+
+<p>
+If you want to start from scratch, make sure you copy at least the 
+provider definition from the previous lab, along with any authentication
+ credentials you might be using.
+</p>
+<pre class="code">$ cd ..
+$ mkdir lab4
+$ cd lab4
+$ cp ../lab3/lab3.tf lab4.tf</pre>
+
+<p>
+Make sure you run <code>terraform init</code> in the new folder if you only copy the configuration file, to redownload the providers.
+</p>
+
+</div>
+
+<h2 class="sectionedit3" id="deploying_our_first_instance">Deploying our first instance</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit4" id="check_the_resource_definition_for_a_vm">Check the resource definition for a VM</h3>
+<div class="level3">
+
+<p>
+Check the official documentation for information on the new data type, <code>resource</code>. For our purposes, our resource will be a virtual machine instance created on the OCI compute service.
+</p>
+
+<p>
+The name for the VM instance in OCI is <code>oci_core_instance</code>. The documentation page can be located by navigating on the left menu to Core &gt; Resources &gt; oci_core_instance. 
+</p>
+
+<p>
+Make sure you don’t confuse the resource with the data source with the same name! <a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_instance" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_instance" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_instance</a>
+</p>
+
+<p>
+Check the example usage sample at the beginning of the web page and the 
+argument reference at the end of the page to find out which parameters 
+are mandatory, and which are not.
+The mandatory fields for a virtual instance are:
+</p>
+<ul>
+<li class="level1"><div class="li"> Availability Domain – you should already have a data source for this</div>
+</li>
+<li class="level1"><div class="li"> Compartment ID – already available from the provider configuration tasks</div>
+</li>
+<li class="level1"><div class="li"> Shape – you should already have a data source for this</div>
+</li>
+<li class="level1"><div class="li"> Subnet ID - we don’t have this yet, so we need a subnet</div>
+</li>
+<li class="level1"><div class="li"> Image ID - <code>source_id</code> in the resource configuration – you should already have a data source for this</div>
+</li>
+</ul>
+
+<p>
+Nothing to create now, so move on to the next task. We’ll get back to 
+the instance resource definition after we have all the elements above 
+ready.
+</p>
+
+</div>
+
+<h3 class="sectionedit5" id="choose_the_shape_for_the_virtual_instance">Choose the shape for the virtual instance</h3>
+<div class="level3">
+
+<p>
+Reuse the data source definition for the oci_core_shapes data source from the previous lab and update its filter to return only <code>VM.Standard2.1</code> shapes.
+</p>
+
+<p>
+Select any position from the resulting list, or the first one if you chose to use the <code>distinct()</code> function.
+</p>
+
+<p>
+Test this output block with <code>terraform apply</code> and keep it in your code, as you will use it again during the instance creation.
+</p>
+
+</div>
+
+<h3 class="sectionedit6" id="using_locals">Using locals</h3>
+<div class="level3">
+
+<p>
+Locals are a way to simplify and minimize the amount of Terraform code. 
+For example, repeating the following line every time we need to use our 
+chose shape is not very efficient:
+</p>
+<pre class="code">shape = distinct(data.oci_core_shapes.test_shapes.shapes[*].name)[0]</pre>
+
+<p>
+Instead, we can define a “local” variable with a simple name that points to the same expression, like this:
+</p>
+<pre class="code">locals {
+  myshape = distinct(data.oci_core_shapes.test_shapes.shapes[*].name)[0]
+}</pre>
+
+<p>
+Now, every time we need this shape value, we can just reference it with:
+</p>
+<pre class="code">local.myshape</pre>
+
+<p>
+Try it in your code. Create a <code>locals</code> block and then display the shape in an output block using <code>local.myshape</code>.
+</p>
+
+</div>
+
+<h3 class="sectionedit7" id="choose_the_image_for_the_virtual_instance">Choose the image for the virtual instance</h3>
+<div class="level3">
+
+<p>
+Reuse the data source definition for the <code>oci_core_images</code> data source from the previous lab.
+</p>
+
+<p>
+The previous configuration filters only for Oracle Linux images. Change the data source definition so that it filters now for:
+</p>
+<ul>
+<li class="level1"><div class="li"> Operating system: “Canonical Ubuntu”</div>
+</li>
+<li class="level1"><div class="li"> Version: “18.04 Minimal”</div>
+</li>
+<li class="level1"><div class="li"> Keep the previous sorting method, “DESC”, by “TIMECREATED”</div>
+</li>
+</ul>
+
+<p>
+Create a temporary output block to list the contents of this data 
+source. You should see just a few images (around 3, with different build
+ timestamps), all matching the filters above. The update the output to 
+display just the id of the first image (you can use a local variable 
+here too, just add it to your previous <code>locals</code> block).
+</p>
+
+<p>
+<strong>Hint</strong>: When creating the output for the data source, don’t forget to check the attributes section for the <code>oci_core_shapes</code> data source in the official documentation, to make sure that you output the right attribute.
+</p>
+
+<p>
+<strong>Hint</strong>: The <code>oci_core_shapes</code> data source also
+ accepts a VM shape as a filter, so that it returns only those images 
+compatible with a given shape. As a best practice, you can add the <code>shape</code> filter to the data source definition as well and filter for <code>VM.Standard2.1</code> images. In this lab you will receive the exact same results, but this is a good practice for real life.
+</p>
+
+</div>
+
+<h3 class="sectionedit8" id="networking_create_the_vcn">Networking – create the VCN</h3>
+<div class="level3">
+
+<p>
+The final missing piece in our virtual instance definition puzzle is a 
+network to attach our instance to. According to the official 
+documentation for the <code>oci_core_instance</code> resource, it is mandatory to provide a subnet id for every instance that we create: <a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_instance" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_instance" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_instance</a>
+</p>
+
+<p>
+It looks like we need to create a subnet. If you look under the documentation page for the <code>oci_core_subnet</code>
+ resource, you will see that creating a subnet is easy but also requires
+ a parent network id (VCN ID), because a subnet cannot reside outside an
+ OCI VCN network: <a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_subnet" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_subnet" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_subnet</a>
+</p>
+
+<p>
+So, we need to create a VCN first.
+</p>
+
+<p>
+On the official Terraform documentation webpage to OCI, search for the <code>oci_core_vcn</code> resource and copy from the “Example Usage” section only the following fields:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>cidr_block</code> – use a valid private network address space with a network mask of at least 16 bits (for example 10.10.0.0/16)</div>
+</li>
+<li class="level1"><div class="li"> <code>compartment_id</code> – use the compartment OCID which you should have available by now</div>
+</li>
+<li class="level1"><div class="li"> <code>display_name</code> – this is 
+the only optional parameter, but we will use it so that your VCN can be 
+easily identified, as this is the name that you will see in the cloud 
+environment; use “studentXX-VCN” as the display name where XX are your 
+initials.</div>
+</li>
+</ul>
+
+<p>
+<strong>Hint</strong>: At this point you can go ahead and try to apply 
+your configuration. Only one object should be created, your VCN. Check 
+the cloud console and confirm that the VCN was properly created. You can
+ view the available VCNs in your compartment by navigating to Networking
+ &gt; Virtual Cloud Networks in your cloud console.
+</p>
+
+<p>
+<strong>Hint</strong>: Do not worry about overlapping IP address spaces 
+between your VCN and the VCNs of other students. The “magic” of 
+software-defined networking allows us to reuse the same IP address space
+ as many times as we need, without having to worry about isolation and 
+IP address overlap!
+</p>
+
+</div>
+
+<h3 class="sectionedit9" id="networking_create_the_subnet">Networking – create the subnet</h3>
+<div class="level3">
+
+<p>
+Head on to the official documentation page for the <code>oci_core_subnet</code> resource: <a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_subnet" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_subnet" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_subnet</a>
+</p>
+
+<p>
+A VCN can have multiple subnets, but we will create just a single subnet.
+</p>
+
+<p>
+Just like during the VCN creation, have a look at the “Example Usage” 
+section in the official documentation and add a subnet definition to 
+your code with the following parameters:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>cidr_block</code> – use a 
+valid subnet address that is part of the larger VCN address space. For 
+example, if you used 10.10.0.0/16 for your VCN, a valid subnet could be 
+10.10.50.0/24. Or just you’re your imagination, but make sure it’s still
+ a valid subnet! </div>
+</li>
+<li class="level1"><div class="li"> <code>compartment_id</code> – same one as in the VCN definition</div>
+</li>
+<li class="level1"><div class="li"> <code>display_name</code> – this is 
+the only optional parameter, but we will use it so that your subnet can 
+be easily identified, as this is the name that you will see in the cloud
+ environment; use “studentXX-subnet” as the display name where XX are 
+your initials.</div>
+</li>
+<li class="level1"><div class="li"> <code>vcn_id</code> – this is where 
+you will have to reference the ID of the VCN that you created in the 
+previous task. To reference another resource from your configuration, 
+use the following syntax: <code>resource_type.resource_name.attribute</code>. For example, if the VCN resource definition’s name was <code>terraform_vcn</code>, the <code>vcn_id</code> would be extracted with: <code>oci_core_vcn.terraform_vcn.id</code></div>
+</li>
+</ul>
+
+<p>
+Apply your config. You should now see the newly created subnet listed under your VCN in the cloud console.
+</p>
+
+<p>
+<strong>Hint</strong>: By default, if you omit the <code>availability_domain</code> from the resource definition, your subnet will be automatically created as regional, not AD-specific.
+</p>
+
+</div>
+
+<h3 class="sectionedit10" id="bringing_it_all_together_building_the_virtual_instance_resource_definition">Bringing it all together – building the virtual instance resource definition</h3>
+<div class="level3">
+
+<p>
+Finally, let’s head on to the official documentation page for the <code>oci_core_instance</code> resource definition: <a href="https://www.terraform.io/docs/providers/oci/r/core_instance.html" class="urlextern" title="https://www.terraform.io/docs/providers/oci/r/core_instance.html" rel="ugc nofollow">https://www.terraform.io/docs/providers/oci/r/core_instance.html</a>
+</p>
+
+<p>
+Starting from the “Example Usage” sample on the webpage, build your own resource definition for an <code>oci_core_instance</code> and set the following parameters:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>availability_domain</code> :use the data source or directly the name of the Frankfurt AD 1</div>
+</li>
+<li class="level1"><div class="li"> <code>compartment_id</code></div>
+</li>
+<li class="level1"><div class="li"> <code>shape</code>: use the local value or directly the data source</div>
+</li>
+<li class="level1"><div class="li"> <code>create_vnic_details &gt; subnet_id</code>: use the id from the subnet that you defined in a previous task</div>
+</li>
+<li class="level1"><div class="li"> <code>display_name</code>: use “studentXX-VM1” where XX are your initials</div>
+</li>
+<li class="level1"><div class="li"> <code>source_details &gt; source_id</code>: use the id from the Ubuntu image identified by the <code>oci_core_images</code> data source from a previous task</div>
+</li>
+<li class="level1"><div class="li"> <code>source_details &gt; source_type</code>: simply use <code>image</code></div>
+</li>
+</ul>
+
+<p>
+Plan and apply your config. Check the cloud console under Compute &gt; Instances and view your running instance.
+</p>
+
+</div>
+
+<h2 class="sectionedit11" id="perform_changes_on_the_deployed_instance">Perform changes on the deployed instance</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit12" id="updateable_change">Updateable change</h3>
+<div class="level3">
+
+<p>
+Let’s make a minor change to your VM definition by adding a set of tags.
+</p>
+
+<p>
+If you look under the official documentation page for the virtual instance, you will see that tags for OCI instances are called <code>freeform tags</code> and are made up of a set of key=value pairs: <a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_instance#freeform_tags" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_instance#freeform_tags" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_instance#freeform_tags</a>
+</p>
+
+<p>
+Add a freeform_tags block to your code with the following tags:
+</p>
+<pre class="code">"owner" = "enter_your_name_here"
+"department" = "cloud"
+"purpose" = "training"</pre>
+
+<p>
+You can replace the tags above with any other values, if you wish.
+</p>
+
+<p>
+Plan your config. Is Terraform going to change the resource in place or 
+is it going to destroy the current one a build a new one?
+</p>
+
+<p>
+Apply your config and see the change being reflected in the cloud 
+console under Compute &gt; Instances &gt; [your instance] &gt; Tags.
+</p>
+
+</div>
+
+<h3 class="sectionedit13" id="non-updateable_changes">Non-updateable changes</h3>
+<div class="level3">
+
+<p>
+Remember the data source of type <code>oci_core_images</code> which you 
+used to select the first Ubuntu 18.04 image for your virtual instance? 
+Head to the cloud console and make a note of the exact version used by 
+your currently running virtual instance.
+</p>
+
+<p>
+Go ahead and change the Terraform code of your virtual instance 
+definition so that the image to be booted is no longer the first one 
+returned by the data source, but the second one.
+</p>
+
+<p>
+After you make the change, run <code>terraform plan</code> again. What is going to happen? What field is causing this behaviour?
+</p>
+
+<p>
+Run <code>terraform apply</code> and watch the changes. After the apply 
+is complete, return to your cloud console and observe the new instance 
+and the image that it is currently using. Compare the current version to
+ the previous one.
+</p>
+
+<p>
+<strong>Hint</strong>: Remember that, like in most programming or scripting languages, lists are zero-indexed.
+</p>
+
+</div>
+
+<h3 class="sectionedit14" id="out-of-band_changes">Out-of-band changes</h3>
+<div class="level3">
+
+<p>
+What happens when somebody makes some changes directly in the cloud 
+console or by using some other tool, and your Terraform configuration 
+and state file know nothing about this?
+</p>
+
+<p>
+Head on to the cloud console and under your running instance (Compute 
+&gt; Instances &gt; [your instance] &gt; Tags) delete all 3 tags.
+</p>
+
+<p>
+Go back to your Terraform console and run <code>terraform plan</code>. Is the change detected by Terraform? Is it attempting to repair it?
+</p>
+
+</div>
+
+<h3 class="sectionedit15" id="ignoring_changes">Ignoring changes</h3>
+<div class="level3">
+
+<p>
+You might decide at some point that not all changes are equal, and some 
+out-of-band changes do not warrant a reason for Terraform to step in and
+ attempt to bring the instance back to compliance. For example, you 
+might not care whether someone changed the tags on your instance.
+</p>
+
+<p>
+You can tell Terraform to ignore specific parameters when refreshing the
+ state, that is, when it checks to see whether the cloud matches your 
+config and state files. Ignored parameters can safely be changed out of 
+band and Terraform will not attempt to bring the instance back to 
+compliance.
+</p>
+
+<p>
+Let’s ignore the <code>display_name</code> parameter for our instance.
+</p>
+
+<p>
+Have a look here for an example usage of this: <a href="https://www.terraform.io/docs/language/meta-arguments/lifecycle.html#ignore_changes" class="urlextern" title="https://www.terraform.io/docs/language/meta-arguments/lifecycle.html#ignore_changes" rel="ugc nofollow">https://www.terraform.io/docs/language/meta-arguments/lifecycle.html#ignore_changes</a>
+</p>
+
+<p>
+First, add a <code>lifecycle</code> block inside your resource definition with an <code>ignore_changes</code> list of parameters:
+</p>
+<pre class="code">lifecycle {
+  ignore_changes = [display_name]
+}</pre>
+
+<p>
+Second, head on to the cloud console and change the displayed name of your instance.
+</p>
+
+<p>
+Plan and apply your config. Notice the different behaviour now that the parameter is ignored.
+</p>
+
+</div>
+
+<h3 class="sectionedit16" id="instance_states">Instance states</h3>
+<div class="level3">
+
+<p>
+Try stopping your currently running instance from the cloud console. Wait until it says <code>stopped</code> (not <code>stopping</code>) and then try to apply you Terraform configuration again. Can Terraform bring your instance back to compliance, running?
+</p>
+
+<p>
+<code>oci_core_instance</code> has a special parameter called <code>state</code>: <a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_instance#state" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_instance#state" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_instance#state</a>
+</p>
+
+<p>
+By default, this parameter is ignored, which means that Terraform will 
+NOT check the current state of your instance, just the rest of its 
+configuration, as specified in your .tf file(s).
+</p>
+
+<p>
+Add the <code>state</code> parameter to your instance definition and set it to <code>RUNNING</code>.
+ This way, you tell Terraform that the desired state of your instance 
+also includes the fact that the instance should be running.
+</p>
+
+<p>
+Apply your config and observe the changes in the cloud console.
+</p>
+
+</div>
+
+<h2 class="sectionedit17" id="clean-up">Clean-up</h2>
+<div class="level2">
+
+<p>
+This is the end of this lab. To clean-up your environment, run <code>terraform destroy</code>.
+</p>
+
+<p>
+<strong>Hint</strong>: If you are confident enough, add the <code>-auto-approve</code> flag to the command.
+</p>
+
+<p>
+ 
+</p>
+
+</div>
+
+<h1 class="sectionedit18" id="solutions_to_lab_4_vm_resources">Solutions to Lab #4 – VM Resources</h1>
+<div class="level1">
+
+</div>
+
+<h2 class="sectionedit19" id="deploying_our_first_instance1">Deploying our first instance</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit20" id="check_the_resource_definition_for_a_vm1">Check the resource definition for a VM</h3>
+<div class="level3">
+
+<p>
+<a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_instance" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_instance" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_instance</a>
+</p>
+
+</div>
+
+<h3 class="sectionedit21" id="choose_the_shape_for_the_virtual_instance1">Choose the shape for the virtual instance</h3>
+<div class="level3">
+<pre class="code">data "oci_core_shapes" "test_shapes" {
+  compartment_id = var.compartment_ocid
+  filter {
+    name   = "name"
+    values = ["VM.Standard2.1"]
+  }
+}
+
+output "shapes" {
+  value = distinct(data.oci_core_shapes.test_shapes.shapes[*].name)[0]
+}</pre>
+
+</div>
+
+<h3 class="sectionedit22" id="using_locals1">Using locals</h3>
+<div class="level3">
+<pre class="code">locals {
+  myshape = distinct(data.oci_core_shapes.test_shapes.shapes[*].name)[0]
+}
+
+output "shape" {
+  value = local.myshape
+}</pre>
+
+</div>
+
+<h3 class="sectionedit23" id="choose_the_image_for_the_virtual_instance1">Choose the image for the virtual instance</h3>
+<div class="level3">
+<pre class="code">locals {
+  myshape = distinct(data.oci_core_shapes.test_shapes.shapes[*].name)[0]
+  myimage = data.oci_core_images.test_images.images[0].id
+}
+
+data "oci_core_images" "test_images" {
+  compartment_id           = var.compartment_ocid
+  sort_by                  = "TIMECREATED"
+  sort_order               = "DESC"
+  operating_system         = "Canonical Ubuntu"
+  operating_system_version = "18.04 Minimal"
+  shape                    = local.myshape
+}
+
+output "myimage" {
+  value = local.myimage
+}</pre>
+
+</div>
+
+<h3 class="sectionedit24" id="networking_create_the_vcn1">Networking – create the VCN</h3>
+<div class="level3">
+<pre class="code">resource "oci_core_vcn" "test_vcn" {
+  cidr_block     = "10.0.0.0/16"
+  compartment_id = var.compartment_ocid
+  display_name   = "StudentAC-VCN"
+}</pre>
+
+</div>
+
+<h3 class="sectionedit25" id="networking_create_the_subnet1">Networking – create the subnet</h3>
+<div class="level3">
+<pre class="code">resource "oci_core_subnet" "test_subnet" {
+  cidr_block     = "10.0.100.0/24"
+  compartment_id = var.compartment_ocid
+  display_name   = "StudentAC-subnet"
+  vcn_id         = oci_core_vcn.test_vcn.id
+}</pre>
+
+</div>
+
+<h3 class="sectionedit26" id="bringing_it_all_together_building_the_virtual_instance_resource_definition1">Bringing it all together – building the virtual instance resource definition</h3>
+<div class="level3">
+<pre class="code">resource "oci_core_instance" "test_instance" {
+  availability_domain = data.oci_identity_availability_domains.ADs.availability_domains[0]["name"]
+  compartment_id      = var.compartment_ocid
+  shape               = local.myshape
+  display_name        = "StudentAC-VM1"
+
+  create_vnic_details {
+    subnet_id = oci_core_subnet.test_subnet.id
+  }
+
+  source_details {
+    source_id   = local.myimage
+    source_type = "image"
+  }
+}</pre>
+
+</div>
+
+<h2 class="sectionedit27" id="perform_changes_on_the_deployed_instance1">Perform changes on the deployed instance</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit28" id="updateable_change1">Updateable change</h3>
+<div class="level3">
+<pre class="code">resource "oci_core_instance" "test_instance" {
+  availability_domain = data.oci_identity_availability_domains.ADs.availability_domains[0]["name"]
+  compartment_id      = var.compartment_ocid
+  shape               = local.myshape
+  display_name        = "StudentAC-VM1"
+
+  create_vnic_details {
+    subnet_id = oci_core_subnet.test_subnet.id
+  }
+
+  source_details {
+    source_id   = local.myimage
+    source_type = "image"
+  }
+
+  freeform_tags = {
+    "name"       = "Andrew"
+    "department" = "training"
+    "purpose"    = "testing"
+  }
+}</pre>
+
+</div>
+
+<h3 class="sectionedit29" id="non-updateable_changes1">Non-updateable changes</h3>
+<div class="level3">
+<pre class="code">locals {
+  myshape = distinct(data.oci_core_shapes.test_shapes.shapes[*].name)[0]
+  myimage = data.oci_core_images.test_images.images[1].id
+}
+
+resource "oci_core_instance" "test_instance" {
+  availability_domain = data.oci_identity_availability_domains.ADs.availability_domains[0]["name"]
+  compartment_id      = var.compartment_ocid
+  shape               = local.myshape
+  display_name        = "StudentAC-VM1"
+
+  create_vnic_details {
+    subnet_id = oci_core_subnet.test_subnet.id
+  }
+
+  source_details {
+    source_id   = local.myimage
+    source_type = "image"
+  }
+
+  freeform_tags = {
+    "name"       = "Andrew"
+    "department" = "training"
+    "purpose"    = "testing"
+  }
+}</pre>
+
+</div>
+
+<h3 class="sectionedit30" id="out-of-band_changes1">Out-of-band changes</h3>
+<div class="level3">
+
+<p>
+Delete the tags from the cloud console.
+</p>
+
+</div>
+
+<h3 class="sectionedit31" id="ignoring_changes1">Ignoring changes</h3>
+<div class="level3">
+
+<p>
+The output below shows <code>freeform_tags</code> instead of <code>display_name</code>. Ignoring the tags might not work on your cloud account, so use the <code>display_name</code> parameter instead.
+</p>
+<pre class="code">locals {
+  myshape = distinct(data.oci_core_shapes.test_shapes.shapes[*].name)[0]
+  myimage = data.oci_core_images.test_images.images[1].id
+}
+
+resource "oci_core_instance" "test_instance" {
+  availability_domain = data.oci_identity_availability_domains.ADs.availability_domains[0]["name"]
+  compartment_id      = var.compartment_ocid
+  shape               = local.myshape
+  display_name        = "StudentAC-VM1"
+
+  create_vnic_details {
+    subnet_id = oci_core_subnet.test_subnet.id
+  }
+
+  source_details {
+    source_id   = local.myimage
+    source_type = "image"
+  }
+
+  freeform_tags = {
+    "name"       = "Andrew"
+    "department" = "training"
+    "purpose"    = "testing"
+  }
+
+  lifecycle {
+    ignore_changes = [freeform_tags]
+  }
+}</pre>
+
+</div>
+
+<h3 class="sectionedit32" id="instance_states1">Instance states</h3>
+<div class="level3">
+<pre class="code">resource "oci_core_instance" "test_instance" {
+  availability_domain = data.oci_identity_availability_domains.ADs.availability_domains[0]["name"]
+  compartment_id      = var.compartment_ocid
+  shape               = local.myshape
+  display_name        = "StudentAC-VM1"
+
+  create_vnic_details {
+    subnet_id = oci_core_subnet.test_subnet.id
+  }
+
+  source_details {
+    source_id   = local.myimage
+    source_type = "image"
+  }
+
+  freeform_tags = {
+    "name"       = "Andrew"
+    "department" = "training"
+    "purpose"    = "testing"
+  }
+
+  lifecycle {
+    ignore_changes = [freeform_tags]
+  }
+
+  state = "RUNNING"
+}</pre>
+
+</div>
+
+<h2 class="sectionedit33" id="clean-up1">Clean-up</h2>
+<div class="level2">
+<pre class="code">$ terraform destroy -auto-approve</pre>
+
+</div>
+
+                                <!-- wikipage stop -->
+                                <div class="clearer"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-side">
+                                                        <div class="nav-side" role="navigation">
+                                <div class="nav-side-inner">
+                                    <!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>Table of Contents</h3>
+<div style="" aria-expanded="true">
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#lab_4_vm_resources">Lab #4 – VM Resources</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#setup">Setup</a></div></li>
+<li class="level2"><div class="li"><a href="#deploying_our_first_instance">Deploying our first instance</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#check_the_resource_definition_for_a_vm">Check the resource definition for a VM</a></div></li>
+<li class="level3"><div class="li"><a href="#choose_the_shape_for_the_virtual_instance">Choose the shape for the virtual instance</a></div></li>
+<li class="level3"><div class="li"><a href="#using_locals">Using locals</a></div></li>
+<li class="level3"><div class="li"><a href="#choose_the_image_for_the_virtual_instance">Choose the image for the virtual instance</a></div></li>
+<li class="level3"><div class="li"><a href="#networking_create_the_vcn">Networking – create the VCN</a></div></li>
+<li class="level3"><div class="li"><a href="#networking_create_the_subnet">Networking – create the subnet</a></div></li>
+<li class="level3"><div class="li"><a href="#bringing_it_all_together_building_the_virtual_instance_resource_definition">Bringing it all together – building the virtual instance resource definition</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#perform_changes_on_the_deployed_instance">Perform changes on the deployed instance</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#updateable_change">Updateable change</a></div></li>
+<li class="level3"><div class="li"><a href="#non-updateable_changes">Non-updateable changes</a></div></li>
+<li class="level3"><div class="li"><a href="#out-of-band_changes">Out-of-band changes</a></div></li>
+<li class="level3"><div class="li"><a href="#ignoring_changes">Ignoring changes</a></div></li>
+<li class="level3"><div class="li"><a href="#instance_states">Instance states</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#clean-up">Clean-up</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="#solutions_to_lab_4_vm_resources">Solutions to Lab #4 – VM Resources</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#deploying_our_first_instance1">Deploying our first instance</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#check_the_resource_definition_for_a_vm1">Check the resource definition for a VM</a></div></li>
+<li class="level3"><div class="li"><a href="#choose_the_shape_for_the_virtual_instance1">Choose the shape for the virtual instance</a></div></li>
+<li class="level3"><div class="li"><a href="#using_locals1">Using locals</a></div></li>
+<li class="level3"><div class="li"><a href="#choose_the_image_for_the_virtual_instance1">Choose the image for the virtual instance</a></div></li>
+<li class="level3"><div class="li"><a href="#networking_create_the_vcn1">Networking – create the VCN</a></div></li>
+<li class="level3"><div class="li"><a href="#networking_create_the_subnet1">Networking – create the subnet</a></div></li>
+<li class="level3"><div class="li"><a href="#bringing_it_all_together_building_the_virtual_instance_resource_definition1">Bringing it all together – building the virtual instance resource definition</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#perform_changes_on_the_deployed_instance1">Perform changes on the deployed instance</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#updateable_change1">Updateable change</a></div></li>
+<li class="level3"><div class="li"><a href="#non-updateable_changes1">Non-updateable changes</a></div></li>
+<li class="level3"><div class="li"><a href="#out-of-band_changes1">Out-of-band changes</a></div></li>
+<li class="level3"><div class="li"><a href="#ignoring_changes1">Ignoring changes</a></div></li>
+<li class="level3"><div class="li"><a href="#instance_states1">Instance states</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#clean-up1">Clean-up</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+                                    <!-- ********** ASIDE ********** -->
+                                    
+                                    <div class="back-to-top-wrapper">
+                                        <a href="#dokuwiki__top" class="back-to-top-link primary"><span class="mu mu-arrow-up"></span> Back to Top</a>
+                                    </div>
+                                </div>
+                            </div>
+                                                    </div>
+                    </div><!-- /row -->
+                </div><!-- /container -->
+            </div><!-- /content -->
+        </div>
+
+            <div class="clearer"></div>
+            <hr class="a11y">
+
+        </div><!-- /wrapper -->
+
+        <!-- ********** FOOTER ********** -->
+        <footer id="dokuwiki__footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-8">
+                        <div class="doc"><bdi>terraform-oci/lab04.txt</bdi> · Last modified: 2022/05/05 22:16 by <bdi>andrei.ciorba</bdi></div>
+                                            </div>
+                    <div class="col-sm-3 col-md-2">
+                        <!-- PAGE ACTIONS -->
+                                                    <div id="dokuwiki__pagetools">
+                                <ul class="footer-menu ul-raw">
+                                    <li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab04&amp;do=edit" class="action source" accesskey="v" rel="nofollow" title="Show pagesource [V]">Show pagesource</a></li><li><bdi><a href="https://doc.devops.courses/doku.php?id=discussion:terraform-oci:lab04" class="wikilink2" title="discussion:terraform-oci:lab04" rel="nofollow" data-wiki-id="discussion:terraform-oci:lab04">Discussion</a></bdi></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab04&amp;do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]">Old revisions</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab04&amp;do=backlink" class="action backlink" rel="nofollow" title="Backlinks">Backlinks</a></li><li><a href="#dokuwiki__top" class="action top" accesskey="t" rel="nofollow" title="Back to top [T]">Back to top</a></li>                                </ul>
+                            </div>
+                                            </div>
+                    <div class="col-sm-3 col-md-2">
+                        <!-- SITE TOOLS -->
+                        <div id="dokuwiki__sitetools">
+                            <ul class="footer-menu ul-raw">
+                                <li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab04&amp;do=recent" class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab04&amp;do=media&amp;ns=terraform-oci" class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab04&amp;do=index" class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="no"><img src="terraform-oci%20lab04%20_files/taskrunner.gif" alt="" width="2" height="1"></div>
+        </footer><!-- /footer -->
+
+            </div></div><!-- /site -->
+
+    <script>
+        function togglediv(id) {
+            var div = document.getElementById(id);
+            div.style.display = div.style.display == "block" ? "none" : "block";
+        }
+    </script>
+
+
+</body></html>

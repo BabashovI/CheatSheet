@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" class="js" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>terraform-oci:lab03 | DevOps Courses</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="keywords" content="terraform-oci,lab03">
+<link rel="search" type="application/opensearchdescription+xml" href="https://doc.devops.courses/lib/exe/opensearch.php" title="DevOps Courses">
+<link rel="start" href="https://doc.devops.courses/">
+<link rel="contents" href="https://doc.devops.courses/doku.php?id=terraform-oci:lab03&amp;do=index" title="Sitemap">
+<link rel="manifest" href="https://doc.devops.courses/lib/exe/manifest.php">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="https://doc.devops.courses/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="https://doc.devops.courses/feed.php?mode=list&amp;ns=terraform-oci">
+<link rel="alternate" type="text/html" title="Plain HTML" href="https://doc.devops.courses/doku.php?do=export_xhtml&amp;id=terraform-oci:lab03">
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="https://doc.devops.courses/doku.php?do=export_raw&amp;id=terraform-oci:lab03">
+<link rel="canonical" href="https://doc.devops.courses/doku.php?id=terraform-oci:lab03">
+<link rel="stylesheet" href="terraform-oci%20lab03_files/css.css">
+<!--[if gte IE 9]><!-->
+<script>/*<![CDATA[*/var NS='terraform-oci';var SIG=" --- \/\/[[terraform-oci-student@ubergeek.ro|Student Terraform OCI]] 2022\/11\/16 16:29\/\/";var JSINFO = {"plugin_pdfjs":{"hide_download_button":0},"id":"terraform-oci:lab03","namespace":"terraform-oci","ACT":"show","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="terraform-oci%20lab03_files/jquery.php" defer="defer"></script>
+<script src="terraform-oci%20lab03_files/js.php" defer="defer"></script>
+<!--<![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="https://doc.devops.courses/lib/tpl/typowiki/images/favicon.ico">
+<link rel="apple-touch-icon" href="https://doc.devops.courses/lib/tpl/typowiki/images/apple-touch-icon.png">
+        <link href="terraform-oci%20lab03_files/microns.css" rel="stylesheet">
+</head>
+
+<body>
+        <!--[if lte IE 8 ]><div id="IE8"><![endif]-->
+
+            <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_typowiki loggedIn   ">
+        
+        <!-- ********** HEADER ********** -->
+        <nav>
+            <div class="nav-bar dark">
+                <div class="container">
+                    <div class="row">
+                    <div class="col-3 col-md-6 col-lg-7 nav-brand">
+                                            <a href="https://doc.devops.courses/doku.php?id=start" id="wiki-logo" accesskey="h" title="[H]"><img src="terraform-oci%20lab03_files/dokuwiki-128.png" alt=""></a>                      <h2><a href="https://doc.devops.courses/doku.php?id=start" accesskey="h" title="[H]">DevOps Courses</a></h2>
+                    </div>
+                    <div class="col-9 col-md-6 col-lg-5 nav-actions">
+                        <span id="doku-action-btn"><form class="button btn_source" method="post" action="/doku.php"><div class="no"><input type="hidden" name="do" value="edit"><input type="hidden" name="id" value="terraform-oci:lab03"><button type="submit" accesskey="v" title="Show pagesource [V]">Show pagesource</button></div></form></span>
+                        <button id="menu-toggle" onclick="togglediv('menu_unified')">Menu <span class="mu mu-menu txt-12" aria-hidden="true"></span></button>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        <ul class="a11y skip">
+            <a href="#dokuwiki__content">skip to content</a>
+        </ul>
+        <div class="nav-expanded dark">
+            <div id="menu_unified" class="nav-expanded-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-7 left">
+                            <span class="mu mu-search menu-icon" aria-hidden="true"></span>
+                            <form action="/doku.php?id=start" method="get" role="search" class="search doku_form" id="dw__search" accept-charset="utf-8"><input type="hidden" name="do" value="search"><input type="hidden" name="id" value="terraform-oci:lab03"><div class="no"><input name="q" type="text" class="edit" title="[F]" accesskey="f" placeholder="Search" autocomplete="on" id="qsearch__in"><button value="1" type="submit" title="Search">Search</button><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>                        </div>
+                        <div class="col-sm-5 right">
+                          <span class="mu mu-user menu-icon" aria-hidden="true"></span><p class="ui-title">Logged in as: <bdi>Student Terraform OCI</bdi> (<bdi>terraform-oci-student</bdi>)</p>                          <ul role="navigation">
+                              <li><bdi><a href="https://doc.devops.courses/doku.php?id=user:terraform-oci-student:start" class="wikilink2" title="user:terraform-oci-student:start" rel="nofollow" data-wiki-id="user:terraform-oci-student:start">User page</a></bdi></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab03&amp;do=profile" class="action profile" rel="nofollow" title="Update Profile">Update Profile</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab03&amp;do=logout&amp;sectok=2eb244dbe4175243dc22840059e4e571" class="action logout" rel="nofollow" title="Log Out">Log Out</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab03&amp;do=admin" class="action admin" rel="nofollow" title="Admin">Admin</a></li>                          </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+        <div class="wrapper">
+
+            <!-- ********** CONTENT ********** -->
+        <div class="usr-content">
+            <div id="dokuwiki__content">
+                <div class="container usr-container">
+                                                                <div class="breadcrumbs"><span class="bchead">Trace:</span> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab04" class="breadcrumbs" title="terraform-oci:lab04">lab04</a></bdi> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab01" class="breadcrumbs" title="terraform-oci:lab01">lab01</a></bdi> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab02" class="breadcrumbs" title="terraform-oci:lab02">lab02</a></bdi> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:start" class="breadcrumbs" title="terraform-oci:start">terraform-oci</a></bdi> <span class="bcsep">•</span> <span class="curid"><bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab03" class="breadcrumbs" title="terraform-oci:lab03">lab03</a></bdi></span></div>
+                                                                                            <div class="row usr-inner">
+                        <div class="col-md-9 col-main">
+                                                
+                            <div class="page">
+                                
+                                <!-- BREADCRUMBS -->
+
+                                <!-- wikipage start -->
+                                
+<h1 class="sectionedit1" id="lab_03_-_providers_and_data_sources">Lab 03 - Providers and Data Sources</h1>
+<div class="level1">
+
+</div>
+
+<h2 class="sectionedit2" id="setup">Setup</h2>
+<div class="level2">
+
+<p>
+For this lab, you will be using the Terraform provider for Oracle OCI. 
+</p>
+
+<p>
+You will be using the credentials for the Terraform OCI Provider given to you by the trainer.
+</p>
+
+<p>
+<em>PLEASE BE CAREFUL when applying infrastructure changes. You are 
+using a shared environment with limited resources, so we kindly ask you 
+to not use more resources than you are instructed in the lab. The 
+service limits are not very high and we risk breaking the labs for 
+everyone so please play nice!</em>
+</p>
+
+<p>
+For all the following tasks that involve creation of resources, make sure you PREFIX all your resource names with <code>studentXX</code> where XX are your initials.
+</p>
+
+</div>
+
+<h2 class="sectionedit3" id="defining_a_provider">Defining a Provider</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit4" id="the_provider_element">The provider element</h3>
+<div class="level3">
+
+<p>
+Have a look at the structure of providers in general and of the OCI provider from the Terraform documentation website. <a href="https://www.terraform.io/docs/language/providers/configuration.html" class="urlextern" title="https://www.terraform.io/docs/language/providers/configuration.html" rel="ugc nofollow">https://www.terraform.io/docs/language/providers/configuration.html</a> and <a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs</a>
+Notice what is required and what is not for configuring the OCI provider.
+</p>
+
+</div>
+
+<h3 class="sectionedit5" id="the_oci_provider_structure">The OCI provider structure</h3>
+<div class="level3">
+
+<p>
+Create a new directory (<code>lab3</code>) and a new empty configuration file (<code>lab3.tf</code>) in the same directory. Edit <code>lab3.tf</code> and create the basic structure required for OCI:
+</p>
+<pre class="code">provider "oci" {
+  tenancy_ocid     = var.tenancy_ocid
+  user_ocid        = var.user_ocid
+  fingerprint      = var.fingerprint
+  private_key_path = var.private_key_path
+  region           = var.region
+}</pre>
+
+</div>
+
+<h3 class="sectionedit6" id="define_your_variables">Define your variables</h3>
+<div class="level3">
+
+<p>
+In order to have a valid configuration, define the <code>tenancy_ocid</code>, <code>user_ocid</code>, <code>fingerprint</code>, <code>private_key_path</code> and <code>region</code> variables in the same <code>lab03.tf</code> and initialize them. In order to identify these values, look under the following sections:
+</p>
+<ul>
+<li class="level1"><div class="li"> The tenancy: click on the profile 
+icon on the upper-right corner of the cloud console and select the 
+tenancy name. On the next screen you should be able to copy the 
+tenancy’s OCID.</div>
+</li>
+<li class="level1"><div class="li"> The user: click on the same profile 
+icon in the cloud console and then click your user name. On the next 
+screen you should be able to copy the user’s OCID.</div>
+</li>
+<li class="level1"><div class="li"> The fingerprint: your lab user already has an <abbr title="Application Programming Interface">API</abbr>
+ key uploaded so all you need is to jump to the same user profile page 
+as in the previous step and then scroll down until you reach the “API 
+Keys” section. You should be able to see one single public key and its 
+fingerprint. In case you find more than one <abbr title="Application Programming Interface">API</abbr> key, select the oldest one.</div>
+</li>
+<li class="level1"><div class="li"> The region: for the labs, we will be
+ working inside the Frankfurt region. In order to get the full name of 
+the region to use with Terraform, click on the region name on the 
+upper-right corner of the cloud console and go to “Manage Regions”. On 
+the next screen you should be able to copy the region identifier for the
+ Frankfurt region.</div>
+</li>
+</ul>
+
+<p>
+Do you remember how to define a variable block? To refresh your memory, here is one sample from the previous lab:
+</p>
+<pre class="code">variable "myself" {
+  description = "a variable that stores my name"
+  default     = "Agent Smith"
+}</pre>
+
+<p>
+You will need multiple variable blocks, one for each of the <code>tenancy_ocid</code>, <code>user_ocid</code>, <code>fingerprint</code>, <code>private_key_path</code> and <code>region</code> variables.
+</p>
+
+<p>
+A best practice here would be to use a separate <code>.tf</code> file (like <code>myvariables.tf</code>, for example) to define your variables and then another <code>terraform.tfvars</code> file to initialize you variables with default values.
+</p>
+
+<p>
+For example, a variable called <code>diskname</code> would be defined in <code>myvariables.tf</code> like this:
+</p>
+<pre class="code">variable "diskname" {}</pre>
+
+<p>
+… and then it would be initialized in <code>terraform.tfvars</code> like this:
+</p>
+<pre class="code">diskname = "dbstorage"</pre>
+
+<p>
+Try doing this for all your variables from now on to keep your code as clean as possible.
+</p>
+
+</div>
+
+<h3 class="sectionedit7" id="validate_configuration">Validate configuration</h3>
+<div class="level3">
+
+<p>
+Make sure that everything in your configuration file so far is correct, syntax-wise. Type <code>terraform</code> (with no arguments) and try to figure out which option can validate your syntax before any deployment. 
+</p>
+
+<p>
+<strong>Hint</strong>: Is your configuration <em>valid</em>? 
+</p>
+
+<p>
+You should have only one error, the <code>* provider.oci: no suitable version installed</code> (or a similar output).
+</p>
+
+<p>
+Go back and fix all other errors, if any, before proceeding.
+</p>
+
+</div>
+
+<h3 class="sectionedit8" id="try_to_apply_your_configuration">Try to apply your configuration</h3>
+<div class="level3">
+
+<p>
+Try running <code>terraform plan</code> on your configuration. What does the error say? What is it missing?
+</p>
+
+<p>
+This is also related to the previous error, which you received when you attempted <code>terraform validate</code>.
+</p>
+
+</div>
+
+<h3 class="sectionedit9" id="download_providers">Download providers</h3>
+<div class="level3">
+
+<p>
+Let Terraform download the necessary providers to communicate with OCI.
+</p>
+
+<p>
+<strong>Hint</strong>: terraform init
+</p>
+
+<p>
+How does Terraform know which providers to download?
+</p>
+
+</div>
+
+<h3 class="sectionedit10" id="check_the_downloaded_providers">Check the downloaded providers</h3>
+<div class="level3">
+
+<p>
+Check the file structure in your folder and look for the newly created path that contains the downloaded provider.
+</p>
+
+<p>
+<strong>Hint</strong>: Use <code>ls -la</code> to list hidden folders and files or just dir on Windows.
+</p>
+
+<p>
+How large is the downloaded provider file?
+</p>
+
+</div>
+
+<h3 class="sectionedit11" id="check_the_downloaded_provider_s_version">Check the downloaded provider’s version</h3>
+<div class="level3">
+
+<p>
+Can you think of a command that will display the current version of your
+ installed providers? Do not use the provider’s file name.
+</p>
+
+<p>
+<strong>Hint</strong>: You have used this command before.
+</p>
+
+</div>
+
+<h2 class="sectionedit12" id="extracting_data_with_data_sources_regions_and_ads">Extracting Data with Data Sources – Regions and ADs</h2>
+<div class="level2">
+
+<p>
+The following tasks will focus on extracting information from OCI. You 
+will not create any resources just yet, but you will connect to the 
+cloud <abbr title="Application Programming Interface">API</abbr> 
+endpoint and if you are properly authenticated you will be able to 
+retrieve specific information from within your OCI environment. In order
+ to extract information from the cloud provider, we will use data 
+sources.
+</p>
+
+<p>
+In the next tasks we will extract some information that will prove useful for deploying infrastructure in OCI.
+</p>
+
+</div>
+
+<h3 class="sectionedit13" id="the_data_source_element">The data source element</h3>
+<div class="level3">
+
+<p>
+Check the official documentation about data sources for the OCI provider
+ and make note of what types of information can be ontained from OCI.
+</p>
+
+<p>
+Notice the submenu on the left side of the page which groups various 
+types of services available in OCI (for example “Core”, “Database”, 
+“Digital Assistant”, “Container Engine” and so on). If you collapse 
+them, under most sections you will be able to see 2 subgroups: “Data 
+Sources” and “Resources”: <a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs</a>
+</p>
+
+<p>
+Another way to display just the data sources is to click on “Filter” at 
+the top of the list on the left side of the page and type “data sources”
+ in the input box.
+</p>
+
+</div>
+
+<h3 class="sectionedit14" id="create_a_data_source">Create a data source</h3>
+<div class="level3">
+
+<p>
+One of the simplest data sources that can be defined in OCI is the one 
+that provides you with a list of OCI regions. You can navigate to its 
+documentation page by going through Identity &gt; Data Sources &gt; 
+oci_identity_regions.
+</p>
+
+<p>
+Use the example in the documentation page and create an <code>oci_identity_regions</code> data source.
+</p>
+<pre class="code">data "oci_identity_regions" "ociregions" {
+}</pre>
+
+<p>
+In the example above, <code>oci_identity_regions</code> is the type of the data source - think of it as a class name. Then, <code>ociregions</code>
+ is the name that you give to this specific instance - think of it as 
+the name of an object that has been instantiated from its class. 
+</p>
+
+<p>
+For other data sources you will need to specify additional input parameters within the configuration block <code>{}</code>. For this data source, no additional information is required. Why is that?
+</p>
+
+<p>
+No additional information is required because the list of regions in OCI
+ is a type of information which becomes available as soon as you log in 
+to your cloud console or as soon as you authenticate to the <abbr title="Application Programming Interface">API</abbr> endpoint. In other words, as soon as you prove who you are, OCI can tell you which regions you can access.
+</p>
+
+</div>
+
+<h3 class="sectionedit15" id="view_what_the_data_source_dragged_in">View what the data source dragged in</h3>
+<div class="level3">
+
+<p>
+Try running <code>terraform plan</code> and <code>terraform apply</code>. If you run into any syntax or authentication errors, go ahead and fix them before moving on.
+</p>
+
+<p>
+Assuming you have no errors at this point, why are those regions not yet visible?
+</p>
+
+<p>
+Open the <code>terraform.tfstate</code> file in an editor/viewer. Notice the JSON structure of the file and look for the <code>resources</code> section. You should be able to identify your data source by its type, <code>oci_identity_regions</code>. Scroll down and you should be able to see the actual list of regions. How many entries are there?
+</p>
+
+</div>
+
+<h3 class="sectionedit16" id="a_better_way_to_view_the_data_source">A better way to view the data source</h3>
+<div class="level3">
+
+<p>
+So, the data source element worked but the information is available 
+quite inconveniently only in the state file. Let’s display this 
+information in the console. 
+</p>
+
+<p>
+First, let’s have a look at the documentation page for our <code>oci_identity_regions</code> data source: <a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/data-sources/identity_regions" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/data-sources/identity_regions" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs/data-sources/identity_regions</a>
+</p>
+
+<p>
+Scroll down to the “Attributes Reference” section. This is where you can
+ find the names of all the fields exported by a data source. These are 
+useful because whenever you want to use or even just to display a 
+specific piece of information from a data source, then you need to ask 
+for a specific field. Think of it as a public attribute in Java, for 
+example.
+</p>
+
+<p>
+What is the only attribute exported by the <code>oci_identity_regions</code> data source?
+</p>
+
+<p>
+Create a new output block and display the information under this attribute.
+</p>
+
+<p>
+<strong>Hint</strong>: Remember how to address a data source? 
+</p>
+<pre class="code">data.[data_source_type].[data_source_name].[data_source_attribute]</pre>
+
+<p>
+Run <code>terraform apply</code> to check your configuration and also 
+display the contents of your data source. Can you figure out what kind 
+of data structures are displayed?
+</p>
+
+</div>
+
+<h3 class="sectionedit17" id="display_the_availability_domains">Display the availability domains</h3>
+<div class="level3">
+
+<p>
+Create a second data source, this time to display the availability 
+domains in your own region. You may want to comment out the region 
+output code so that you don’t confuse the two outputs. Try to find the 
+right documentation page for this specific data source. Of course, 
+create an additional output block as well, to display its contents.
+</p>
+
+<p>
+<strong>Hint</strong>: Use the filter function in the Terraform OCI documentation pages to search for “domains”.
+<strong>Hint</strong>: This specific data source requires an additional 
+configuration parameter, which is the id of the compartment you are 
+currently working in. If you don’t already have a variable that stores 
+this value, create one and then provide its value to the data source 
+configuration block.
+</p>
+
+<p>
+Don’t forget to run <code>terraform apply</code> to view your output.
+</p>
+
+</div>
+
+<h3 class="sectionedit18" id="extract_specific_info_ad">Extract specific info – AD</h3>
+<div class="level3">
+
+<p>
+Have a look at the list of ADs in one of your outputs. The data 
+structure in the console shows a list of elements (denoted by the square
+ brackets []) and each element is a map (denoted by the curly braces {})
+ which is a collection of unordered key-value pairs.
+</p>
+
+<p>
+Build a second output block and try to extract only the name of the first AD. It should be something like <code>xxxx:EU-FRANKFURT-1-AD-1</code>.
+</p>
+
+<p>
+<strong>Hint</strong>: Elements in a list can be extracted by their numeric index (for example <code>[3]</code>) and elements from a map can be extracted by their key name (for example <code>[“id”]</code>).
+</p>
+
+</div>
+
+<h3 class="sectionedit19" id="extract_specific_info_ad_alternate_method">Extract specific info – AD – Alternate method</h3>
+<div class="level3">
+
+<p>
+Sometimes, the same information can be obtained simply by using a data 
+source better suited for the job. For example, if you knew beforehand 
+that you will only be deploying infrastructure in only one region, you 
+could simply ask OCI for that specific region code without listing all 
+the available regions. 
+</p>
+
+<p>
+In order to do this, look for a different data source that outputs a 
+single AD, not a list of ADs. Create the data source and an output to 
+view the result. Try to obtain the same result as in the previous task 
+without retrieving the entire list of ADs.
+</p>
+
+<p>
+<strong>Hint</strong>: Use a data source that requires you to provide an AD number and then output the name of that specific AD.
+</p>
+
+</div>
+
+<h3 class="sectionedit20" id="extract_specific_info_region">Extract specific info – region</h3>
+<div class="level3">
+
+<p>
+Have a look at the official documentation page for the <code>oci_identity_regions</code>
+ data source and at your previous output that lists all the regions. 
+Notice in both situations that regions are identified by keys and names.
+ 
+</p>
+
+<p>
+Create an output block that uses the <code>oci_identity_regions</code> data source and displays the name of the Frankfurt region (<code>eu-frankfurt-1</code>) knowing that its key is <code>FRA</code>.
+</p>
+
+<p>
+<strong>Hint</strong>: Pay attention to the syntax of the original 
+output. The output of your data source is a list of maps. Make sure you 
+index each accordingly.
+</p>
+
+</div>
+
+<h2 class="sectionedit21" id="extracting_data_with_data_sources_compute">Extracting Data with Data Sources – Compute</h2>
+<div class="level2">
+
+<p>
+In the next tasks we will extract some information that will prove useful for deploying virtual instances in OCI.
+</p>
+
+</div>
+
+<h3 class="sectionedit22" id="display_the_api_key_info">Display the API key info</h3>
+<div class="level3">
+
+<p>
+Let’s assume that at some point you will need to deploy a new lab 
+virtual instance using Terraform and you don’t want to generate a new 
+public/private key pair for this new instance, but you are fine using 
+the same key pair as your current <abbr title="Application Programming Interface">API</abbr> keys.
+</p>
+
+<p>
+Build a new data source to display all the information related to the <abbr title="Application Programming Interface">API</abbr> key that Terraform is currently using to interact with OCI’s <abbr title="Application Programming Interface">API</abbr>.
+</p>
+
+<p>
+<strong>Hint</strong>: search for “api” using the filter tool in the official documentation.
+</p>
+
+<p>
+<strong>Hint</strong>: don’t forget to look in the attributes section, to create an output block and to run <code>terraform apply</code>!
+</p>
+
+<p>
+Check whether the key fingerprint matches the one in  your user profile, in the cloud console.
+</p>
+
+<p>
+Your output should be similar (but not identical) to this one:
+</p>
+<pre class="code">api_key = tolist([
+  {
+    "fingerprint" = "93:47:63:cf:fd:6d:a7:e5:88:73:3f:f0:aa:fd:3f:d9"
+    "id" = "ocid1.tenancy.oc1..aaaaaaaansmdajirvrt3cmeazl3ihjqnaepnasuja7xyripfzslkjv7yfauq/ocid1.user.oc1..aaaaaaaajy5tirxiokgo7hkivthmrrinxdeiyqihtjak7fyenlqjvthxwikq/93:47:63:cf:fd:6d:a7:e5:88:73:3f:f0:aa:fd:3f:d9"
+    "inactive_status" = ""
+    "key_value" = &lt;&lt;-EOT
+    -----BEGIN PUBLIC KEY-----
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuC552j4FDZPZBSTCfTVn
+    CWXFovwoTfm3gai3ThPcaACWgxgvDPoNbYMmZxZeTp+X3QGdaScOClLcqwd1Dpm0
+    9W/GuXg4dpyMRizxV3I5mc3nZ/uuMONxdo7xW2ZF1myYmE+IQvurOYIQRRF6YrP2
+    7ci2/qoxzYY8Kt0nYo0sA16XZa+5X2OUfWG7cXQYxgEsmwx6MmP7INIXpU2lkzVR
+    EHncl1C+A12XHq+S546Ab9hoOQTnF+z/dmL8xURxlHaMtu67C6ouwS9cUYweSkvY
+    1FfG5iZ7IrnhpsnWQNTEpVGWGnc8XVud4oQsreiQcJKl8i/8Qw8zTabQQp7WOEK4
+    FwIDAQAB
+    -----END PUBLIC KEY-----
+    EOT
+    "state" = "ACTIVE"
+    "time_created" = "2020-04-08 10:22:42.031 +0000 UTC"
+    "user_id" = "ocid1.user.oc1..aaaaaaaajy5tirxiokgo7hkivthmrrinxdeiyqihtjak7fyenlqjvthxwikq"
+  },
+])</pre>
+
+</div>
+
+<h3 class="sectionedit23" id="obtain_a_list_of_available_compute_shapes">Obtain a list of available compute shapes</h3>
+<div class="level3">
+
+<p>
+Locate the correct data source and create a corresponding output block 
+that displays the list of available compute shapes. These shapes can be 
+selected when deploying new virtual instances.
+</p>
+
+<p>
+By default, if you output the entire data source, you will get a lot of 
+additional information in a list (a hardware description for each 
+shape). If you just want to return a list with the names of every shape,
+ you can use the splat operator (*) in the output block like this: 
+</p>
+<pre class="code">value = data.oci_core_shapes.test_shapes.shapes[*].name</pre>
+
+<p>
+<strong>Hint</strong>: Your lab account might be a trial one, so expect to see a limited number of shapes.
+</p>
+
+<p>
+<strong>Hint</strong>: Search for “shapes” in the filter area in the official Terraform documentation page for OCI. The data source should be <code>oci_compute_shapes</code>.
+</p>
+
+</div>
+
+<h3 class="sectionedit24" id="optimize_the_shapes_data_source_-_filters">Optimize the Shapes Data Source - Filters</h3>
+<div class="level3">
+
+<p>
+Some data sources allow you to define filters in order to better 
+optimize the amount of data returned to Terraform and stored in the 
+state file. This is especially useful for data sources that return very 
+large data sets (for example AWS currently has almost 100.000 images and
+ it would be terribly inefficient to store them all in your state file 
+when you only plan to use one or two…).
+</p>
+
+<p>
+Check the official documentation for filtering and try to build a filter
+ that cause the shapes data source to return only 2 values: 
+VM.Standard2.1 and VM.Standard.E2.1: <a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/guides/filters" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/guides/filters" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs/guides/filters</a>
+</p>
+
+<p>
+Apply your configuration again and check the output result. You should see an output similar to this:
+</p>
+<pre class="code">shapes = tolist([
+  "VM.Standard2.1",
+  "VM.Standard.E2.1"
+])</pre>
+
+<p>
+<strong>Hint</strong>: Don’t just copy and paste from the official documentation. The shapes mentioned there are not exactly the same.
+</p>
+
+<p>
+<strong>Hint</strong>: Do not use a regular expression for this.
+</p>
+
+<p>
+<strong>Hint</strong>: You might see shapes appearing twice in the 
+resulting output, which is fine. In that case, you can wrap the output 
+value in the <code>distinct()</code> function do display just the unique values.
+</p>
+
+</div>
+
+<h3 class="sectionedit25" id="obtain_a_list_of_available_compute_images">Obtain a list of available compute images</h3>
+<div class="level3">
+
+<p>
+Locate the correct data source and create a corresponding output block 
+that displays the list of available compute images. These images contain
+ the bootable operating systems that can be selected when deploying new 
+virtual instances.
+</p>
+
+<p>
+<strong>Hint</strong>: Search for “images” in the filter area in the official Terraform documentation page for OCI.
+</p>
+
+</div>
+
+<h3 class="sectionedit26" id="retrieve_the_id_of_the_most_recent_image">Retrieve the id of the most recent image</h3>
+<div class="level3">
+
+<p>
+Continue working on the previous image data source or create a new one. 
+If you create a new one make sure you still use the same data source 
+type but a different name.
+</p>
+
+<p>
+Use the official documentation of the image data source: <a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/data-sources/core_images" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs/data-sources/core_images" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs/data-sources/core_images</a>
+</p>
+
+<p>
+Add the following paramters to narrow down your selection to your data source:
+</p>
+<ul>
+<li class="level1"><div class="li">	Display only “Oracle Linux” images of a more recent version (for example 7.7 or 8)</div>
+</li>
+<li class="level1"><div class="li"> Display them in a descending order (<code>DESC</code>), by their creation date (<code>TIMECREATED</code>)</div>
+</li>
+<li class="level1"><div class="li"> Create a new output block or update 
+the previous one to display the name and the OCID of the first entry in 
+the data source result. To display multiple values in the same output 
+block, you need to add the interpolation syntax for each value, like in 
+this example, where we use a space to separate them:</div>
+</li>
+</ul>
+<pre class="code">value = “${var.one} ${var.two}” </pre>
+
+<p>
+You should now have a valid OCID for your current region, that can be used to boot up a new virtual instance.
+</p>
+
+<p>
+ 
+</p>
+
+</div>
+
+<h1 class="sectionedit27" id="solutions_to_lab_3_providers_and_data_sources">Solutions to Lab #3 – Providers and Data sources</h1>
+<div class="level1">
+
+</div>
+
+<h2 class="sectionedit28" id="defining_a_provider1">Defining a Provider</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit29" id="the_provider_element1">The provider element</h3>
+<div class="level3">
+
+<p>
+<a href="https://www.terraform.io/docs/language/providers/configuration.html" class="urlextern" title="https://www.terraform.io/docs/language/providers/configuration.html" rel="ugc nofollow">https://www.terraform.io/docs/language/providers/configuration.html</a>
+</p>
+
+<p>
+<a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs</a>
+</p>
+
+</div>
+
+<h3 class="sectionedit30" id="the_oci_provider_structure1">The OCI provider structure</h3>
+<div class="level3">
+<pre class="code">provider "oci" {
+  tenancy_ocid     = var.tenancy_ocid
+  user_ocid        = var.user_ocid
+  fingerprint      = var.fingerprint
+  private_key_path = var.private_key_path
+  region           = var.region
+}</pre>
+
+</div>
+
+<h3 class="sectionedit31" id="define_your_variables1">Define your variables</h3>
+<div class="level3">
+
+<p>
+<code>Variables.tf</code>
+</p>
+<pre class="code">variable "tenancy_ocid" {}
+variable "compartment_ocid" {}
+variable "user_ocid" {}
+variable "fingerprint" {}
+variable "private_key_path" {}
+variable "region" {}</pre>
+
+<p>
+<code>terraform.tfvars</code>
+</p>
+<pre class="code">tenancy_ocid = "ocid1.tenancy.oc1..aaaaaaaa...
+user_ocid = "ocid1.user.oc1..aaaaaaaaleS...
+fingerprint = "93:47:63:cf:fd:6d:a7:e5:88:7...
+private_key_path = "../oci—api—key.pem...
+region = "eu-frankfurt—l"
+compartment_ocid = "ocid1.compartment.oc1..aaaa.</pre>
+
+</div>
+
+<h3 class="sectionedit32" id="validate_configuration1">Validate configuration</h3>
+<div class="level3">
+<pre class="code">$ terraform validate</pre>
+
+</div>
+
+<h3 class="sectionedit33" id="try_to_apply_your_configuration1">Try to apply your configuration</h3>
+<div class="level3">
+<pre class="code">$ terraform plan</pre>
+
+</div>
+
+<h3 class="sectionedit34" id="download_providers1">Download providers</h3>
+<div class="level3">
+<pre class="code">$ terraform init</pre>
+
+</div>
+
+<h3 class="sectionedit35" id="check_the_downloaded_providers1">Check the downloaded providers</h3>
+<div class="level3">
+
+<p>
+Navigate inside the hidden folder <code>.terraform</code>
+</p>
+
+</div>
+
+<h3 class="sectionedit36" id="check_the_downloaded_provider_s_version1">Check the downloaded provider’s version</h3>
+<div class="level3">
+<pre class="code">$ terraform version</pre>
+
+</div>
+
+<h2 class="sectionedit37" id="extracting_data_with_data_sources_regions_and_ads1">Extracting Data with Data Sources – Regions and ADs</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit38" id="the_data_source_element1">The data source element</h3>
+<div class="level3">
+
+<p>
+<a href="https://registry.terraform.io/providers/hashicorp/oci/latest/docs" class="urlextern" title="https://registry.terraform.io/providers/hashicorp/oci/latest/docs" rel="ugc nofollow">https://registry.terraform.io/providers/hashicorp/oci/latest/docs</a>
+</p>
+
+</div>
+
+<h3 class="sectionedit39" id="create_a_data_source1">Create a data source</h3>
+<div class="level3">
+<pre class="code">data "oci_identity_regions" "ociregions" {
+}</pre>
+
+</div>
+
+<h3 class="sectionedit40" id="view_what_the_data_source_dragged_in1">View what the data source dragged in</h3>
+<div class="level3">
+
+<p>
+Plan, apply, open <code>terraform.tfstate</code>
+</p>
+
+</div>
+
+<h3 class="sectionedit41" id="a_better_way_to_view_the_data_source1">A better way to view the data source</h3>
+<div class="level3">
+<pre class="code">output "regions" {
+value = data.oci_identity_regions.ociregions.regions
+}</pre>
+
+</div>
+
+<h3 class="sectionedit42" id="display_the_availability_domains1">Display the availability domains</h3>
+<div class="level3">
+<pre class="code">data "oci_identity_availability_domains" "ADs" {
+  compartment_id = var.tenancy_ocid
+}
+output "ADs" {
+  value = data.oci_identity_availability_domains.ADs.availability_domains
+}</pre>
+
+</div>
+
+<h3 class="sectionedit43" id="extract_specific_info_ad1">Extract specific info – AD</h3>
+<div class="level3">
+<pre class="code">output "Frankfurt_AD" {
+ value = data.oci_identity_availability_domains.ADs.availability_domains[0]["name"]
+}</pre>
+
+</div>
+
+<h3 class="sectionedit44" id="extract_specific_info_ad_alternate_method1">Extract specific info – AD – Alternate method</h3>
+<div class="level3">
+<pre class="code">data "oci_identity_availability_domain" "AD" {
+  compartment_id = var.tenancy_ocid
+  ad_number = 1
+}
+
+output "AD1" {
+  value = data.oci_identity_availability_domain.AD.name
+}</pre>
+
+</div>
+
+<h3 class="sectionedit45" id="extract_specific_info_region1">Extract specific info – region</h3>
+<div class="level3">
+
+<p>
+Depending on when you’re reading this, the index number for Frankfurt 
+might change, so make sure you check the real data source, don’t just 
+cheat by using the answer below :)
+</p>
+<pre class="code">output "germany_region" {
+  value = data.oci_identity_regions.ociregions.regions[4]["name"]
+}</pre>
+
+</div>
+
+<h2 class="sectionedit46" id="extracting_data_with_data_sources_compute1">Extracting Data with Data Sources – Compute</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit47" id="display_the_api_key_info1">Display the API key info</h3>
+<div class="level3">
+<pre class="code">data "oci_identity_api_keys" "test_api_keys" {
+  user_id = var.user_ocid
+}
+output "api_key" {
+  value = data.oci_identity_api_keys.test_api_keys.api_keys
+}</pre>
+
+</div>
+
+<h3 class="sectionedit48" id="obtain_a_list_of_available_compute_shapes1">Obtain a list of available compute shapes</h3>
+<div class="level3">
+<pre class="code">data "oci_core_shapes" "test_shapes" {
+  compartment_id = var.compartment_ocid
+}
+
+output "shapes" {
+  value = data.oci_core_shapes.test_shapes.shapes[*].name
+}</pre>
+
+</div>
+
+<h3 class="sectionedit49" id="optimize_the_shapes_data_source_-_filters1">Optimize the Shapes Data Source - Filters</h3>
+<div class="level3">
+<pre class="code">data "oci_core_shapes" "test_shapes" {
+  compartment_id = var.compartment_ocid
+  filter {
+    name = "name"
+    values = [ "VM.Standard2.1", "VM.Standard.E2.1" ]
+  }
+}
+
+output "shapes" {
+  value = distinct(data.oci_core_shapes.test_shapes.shapes[*].name)
+}</pre>
+
+</div>
+
+<h3 class="sectionedit50" id="obtain_a_list_of_available_compute_images1">Obtain a list of available compute images</h3>
+<div class="level3">
+<pre class="code">data "oci_core_images" "test_images" {
+  compartment_id = var.compartment_ocid
+}</pre>
+
+</div>
+
+<h3 class="sectionedit51" id="retrieve_the_id_of_the_most_recent_image1">Retrieve the id of the most recent image</h3>
+<div class="level3">
+<pre class="code">data "oci_core_images" "test_images" {
+  compartment_id = var.compartment_ocid
+  sort_by = "TIMECREATED"
+  sort_order = "DESC"
+  operating_system = "Oracle Linux"
+}
+
+output "image_id" {
+  value = "${data.oci_core_images.test_images.images[0].display_name} ${data.oci_core_images.test_images.images[0].id}"
+}</pre>
+
+</div>
+
+                                <!-- wikipage stop -->
+                                <div class="clearer"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-side">
+                                                        <div class="nav-side" role="navigation">
+                                <div class="nav-side-inner">
+                                    <!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>Table of Contents</h3>
+<div style="" aria-expanded="true">
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#lab_03_-_providers_and_data_sources">Lab 03 - Providers and Data Sources</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#setup">Setup</a></div></li>
+<li class="level2"><div class="li"><a href="#defining_a_provider">Defining a Provider</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#the_provider_element">The provider element</a></div></li>
+<li class="level3"><div class="li"><a href="#the_oci_provider_structure">The OCI provider structure</a></div></li>
+<li class="level3"><div class="li"><a href="#define_your_variables">Define your variables</a></div></li>
+<li class="level3"><div class="li"><a href="#validate_configuration">Validate configuration</a></div></li>
+<li class="level3"><div class="li"><a href="#try_to_apply_your_configuration">Try to apply your configuration</a></div></li>
+<li class="level3"><div class="li"><a href="#download_providers">Download providers</a></div></li>
+<li class="level3"><div class="li"><a href="#check_the_downloaded_providers">Check the downloaded providers</a></div></li>
+<li class="level3"><div class="li"><a href="#check_the_downloaded_provider_s_version">Check the downloaded provider’s version</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#extracting_data_with_data_sources_regions_and_ads">Extracting Data with Data Sources – Regions and ADs</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#the_data_source_element">The data source element</a></div></li>
+<li class="level3"><div class="li"><a href="#create_a_data_source">Create a data source</a></div></li>
+<li class="level3"><div class="li"><a href="#view_what_the_data_source_dragged_in">View what the data source dragged in</a></div></li>
+<li class="level3"><div class="li"><a href="#a_better_way_to_view_the_data_source">A better way to view the data source</a></div></li>
+<li class="level3"><div class="li"><a href="#display_the_availability_domains">Display the availability domains</a></div></li>
+<li class="level3"><div class="li"><a href="#extract_specific_info_ad">Extract specific info – AD</a></div></li>
+<li class="level3"><div class="li"><a href="#extract_specific_info_ad_alternate_method">Extract specific info – AD – Alternate method</a></div></li>
+<li class="level3"><div class="li"><a href="#extract_specific_info_region">Extract specific info – region</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#extracting_data_with_data_sources_compute">Extracting Data with Data Sources – Compute</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#display_the_api_key_info">Display the API key info</a></div></li>
+<li class="level3"><div class="li"><a href="#obtain_a_list_of_available_compute_shapes">Obtain a list of available compute shapes</a></div></li>
+<li class="level3"><div class="li"><a href="#optimize_the_shapes_data_source_-_filters">Optimize the Shapes Data Source - Filters</a></div></li>
+<li class="level3"><div class="li"><a href="#obtain_a_list_of_available_compute_images">Obtain a list of available compute images</a></div></li>
+<li class="level3"><div class="li"><a href="#retrieve_the_id_of_the_most_recent_image">Retrieve the id of the most recent image</a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="#solutions_to_lab_3_providers_and_data_sources">Solutions to Lab #3 – Providers and Data sources</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#defining_a_provider1">Defining a Provider</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#the_provider_element1">The provider element</a></div></li>
+<li class="level3"><div class="li"><a href="#the_oci_provider_structure1">The OCI provider structure</a></div></li>
+<li class="level3"><div class="li"><a href="#define_your_variables1">Define your variables</a></div></li>
+<li class="level3"><div class="li"><a href="#validate_configuration1">Validate configuration</a></div></li>
+<li class="level3"><div class="li"><a href="#try_to_apply_your_configuration1">Try to apply your configuration</a></div></li>
+<li class="level3"><div class="li"><a href="#download_providers1">Download providers</a></div></li>
+<li class="level3"><div class="li"><a href="#check_the_downloaded_providers1">Check the downloaded providers</a></div></li>
+<li class="level3"><div class="li"><a href="#check_the_downloaded_provider_s_version1">Check the downloaded provider’s version</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#extracting_data_with_data_sources_regions_and_ads1">Extracting Data with Data Sources – Regions and ADs</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#the_data_source_element1">The data source element</a></div></li>
+<li class="level3"><div class="li"><a href="#create_a_data_source1">Create a data source</a></div></li>
+<li class="level3"><div class="li"><a href="#view_what_the_data_source_dragged_in1">View what the data source dragged in</a></div></li>
+<li class="level3"><div class="li"><a href="#a_better_way_to_view_the_data_source1">A better way to view the data source</a></div></li>
+<li class="level3"><div class="li"><a href="#display_the_availability_domains1">Display the availability domains</a></div></li>
+<li class="level3"><div class="li"><a href="#extract_specific_info_ad1">Extract specific info – AD</a></div></li>
+<li class="level3"><div class="li"><a href="#extract_specific_info_ad_alternate_method1">Extract specific info – AD – Alternate method</a></div></li>
+<li class="level3"><div class="li"><a href="#extract_specific_info_region1">Extract specific info – region</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#extracting_data_with_data_sources_compute1">Extracting Data with Data Sources – Compute</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#display_the_api_key_info1">Display the API key info</a></div></li>
+<li class="level3"><div class="li"><a href="#obtain_a_list_of_available_compute_shapes1">Obtain a list of available compute shapes</a></div></li>
+<li class="level3"><div class="li"><a href="#optimize_the_shapes_data_source_-_filters1">Optimize the Shapes Data Source - Filters</a></div></li>
+<li class="level3"><div class="li"><a href="#obtain_a_list_of_available_compute_images1">Obtain a list of available compute images</a></div></li>
+<li class="level3"><div class="li"><a href="#retrieve_the_id_of_the_most_recent_image1">Retrieve the id of the most recent image</a></div></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+                                    <!-- ********** ASIDE ********** -->
+                                    
+                                    <div class="back-to-top-wrapper">
+                                        <a href="#dokuwiki__top" class="back-to-top-link primary"><span class="mu mu-arrow-up"></span> Back to Top</a>
+                                    </div>
+                                </div>
+                            </div>
+                                                    </div>
+                    </div><!-- /row -->
+                </div><!-- /container -->
+            </div><!-- /content -->
+        </div>
+
+            <div class="clearer"></div>
+            <hr class="a11y">
+
+        </div><!-- /wrapper -->
+
+        <!-- ********** FOOTER ********** -->
+        <footer id="dokuwiki__footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-8">
+                        <div class="doc"><bdi>terraform-oci/lab03.txt</bdi> · Last modified: 2022/09/29 01:45 by <bdi>andrei.ciorba</bdi></div>
+                                            </div>
+                    <div class="col-sm-3 col-md-2">
+                        <!-- PAGE ACTIONS -->
+                                                    <div id="dokuwiki__pagetools">
+                                <ul class="footer-menu ul-raw">
+                                    <li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab03&amp;do=edit" class="action source" accesskey="v" rel="nofollow" title="Show pagesource [V]">Show pagesource</a></li><li><bdi><a href="https://doc.devops.courses/doku.php?id=discussion:terraform-oci:lab03" class="wikilink2" title="discussion:terraform-oci:lab03" rel="nofollow" data-wiki-id="discussion:terraform-oci:lab03">Discussion</a></bdi></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab03&amp;do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]">Old revisions</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab03&amp;do=backlink" class="action backlink" rel="nofollow" title="Backlinks">Backlinks</a></li><li><a href="#dokuwiki__top" class="action top" accesskey="t" rel="nofollow" title="Back to top [T]">Back to top</a></li>                                </ul>
+                            </div>
+                                            </div>
+                    <div class="col-sm-3 col-md-2">
+                        <!-- SITE TOOLS -->
+                        <div id="dokuwiki__sitetools">
+                            <ul class="footer-menu ul-raw">
+                                <li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab03&amp;do=recent" class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab03&amp;do=media&amp;ns=terraform-oci" class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab03&amp;do=index" class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="no"><img src="terraform-oci%20lab03_files/taskrunner.gif" alt="" width="2" height="1"></div>
+        </footer><!-- /footer -->
+
+            </div></div><!-- /site -->
+
+    <script>
+        function togglediv(id) {
+            var div = document.getElementById(id);
+            div.style.display = div.style.display == "block" ? "none" : "block";
+        }
+    </script>
+
+
+</body></html>

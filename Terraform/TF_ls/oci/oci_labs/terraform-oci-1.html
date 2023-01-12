@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" class="js" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>terraform-oci:start | DevOps Courses</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="keywords" content="terraform-oci,start">
+<link rel="search" type="application/opensearchdescription+xml" href="https://doc.devops.courses/lib/exe/opensearch.php" title="DevOps Courses">
+<link rel="start" href="https://doc.devops.courses/">
+<link rel="contents" href="https://doc.devops.courses/doku.php?id=terraform-oci:start&amp;do=index" title="Sitemap">
+<link rel="manifest" href="https://doc.devops.courses/lib/exe/manifest.php">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="https://doc.devops.courses/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="https://doc.devops.courses/feed.php?mode=list&amp;ns=terraform-oci">
+<link rel="alternate" type="text/html" title="Plain HTML" href="https://doc.devops.courses/doku.php?do=export_xhtml&amp;id=terraform-oci:start">
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="https://doc.devops.courses/doku.php?do=export_raw&amp;id=terraform-oci:start">
+<link rel="canonical" href="https://doc.devops.courses/doku.php?id=terraform-oci:start">
+<link rel="stylesheet" href="terraform-oci-1_files/css.css">
+<!--[if gte IE 9]><!-->
+<script>/*<![CDATA[*/var NS='terraform-oci';var SIG=" --- \/\/[[terraform-oci-student@ubergeek.ro|Student Terraform OCI]] 2022\/11\/16 16:25\/\/";var JSINFO = {"plugin_pdfjs":{"hide_download_button":0},"id":"terraform-oci:start","namespace":"terraform-oci","ACT":"show","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script src="terraform-oci-1_files/jquery.php" defer="defer"></script>
+<script src="terraform-oci-1_files/js.php" defer="defer"></script>
+<!--<![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="https://doc.devops.courses/lib/tpl/typowiki/images/favicon.ico">
+<link rel="apple-touch-icon" href="https://doc.devops.courses/lib/tpl/typowiki/images/apple-touch-icon.png">
+        <link href="terraform-oci-1_files/microns.css" rel="stylesheet">
+</head>
+
+<body>
+        <!--[if lte IE 8 ]><div id="IE8"><![endif]-->
+
+            <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_typowiki loggedIn   ">
+        
+        <!-- ********** HEADER ********** -->
+        <nav>
+            <div class="nav-bar dark">
+                <div class="container">
+                    <div class="row">
+                    <div class="col-3 col-md-6 col-lg-7 nav-brand">
+                                            <a href="https://doc.devops.courses/doku.php?id=start" id="wiki-logo" accesskey="h" title="[H]"><img src="terraform-oci-1_files/dokuwiki-128.png" alt=""></a>                      <h2><a href="https://doc.devops.courses/doku.php?id=start" accesskey="h" title="[H]">DevOps Courses</a></h2>
+                    </div>
+                    <div class="col-9 col-md-6 col-lg-5 nav-actions">
+                        <span id="doku-action-btn"><form class="button btn_source" method="post" action="/doku.php"><div class="no"><input type="hidden" name="do" value="edit"><input type="hidden" name="id" value="terraform-oci:start"><button type="submit" accesskey="v" title="Show pagesource [V]">Show pagesource</button></div></form></span>
+                        <button id="menu-toggle" onclick="togglediv('menu_unified')">Menu <span class="mu mu-menu txt-12" aria-hidden="true"></span></button>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        <ul class="a11y skip">
+            <a href="#dokuwiki__content">skip to content</a>
+        </ul>
+        <div class="nav-expanded dark">
+            <div id="menu_unified" class="nav-expanded-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-7 left">
+                            <span class="mu mu-search menu-icon" aria-hidden="true"></span>
+                            <form action="/doku.php?id=start" method="get" role="search" class="search doku_form" id="dw__search" accept-charset="utf-8"><input type="hidden" name="do" value="search"><input type="hidden" name="id" value="terraform-oci:start"><div class="no"><input name="q" type="text" class="edit" title="[F]" accesskey="f" placeholder="Search" autocomplete="on" id="qsearch__in"><button value="1" type="submit" title="Search">Search</button><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>                        </div>
+                        <div class="col-sm-5 right">
+                          <span class="mu mu-user menu-icon" aria-hidden="true"></span><p class="ui-title">Logged in as: <bdi>Student Terraform OCI</bdi> (<bdi>terraform-oci-student</bdi>)</p>                          <ul role="navigation">
+                              <li><bdi><a href="https://doc.devops.courses/doku.php?id=user:terraform-oci-student:start" class="wikilink2" title="user:terraform-oci-student:start" rel="nofollow" data-wiki-id="user:terraform-oci-student:start">User page</a></bdi></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:start&amp;do=profile" class="action profile" rel="nofollow" title="Update Profile">Update Profile</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:start&amp;do=logout&amp;sectok=2eb244dbe4175243dc22840059e4e571" class="action logout" rel="nofollow" title="Log Out">Log Out</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:start&amp;do=admin" class="action admin" rel="nofollow" title="Admin">Admin</a></li>                          </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+        <div class="wrapper">
+
+            <!-- ********** CONTENT ********** -->
+        <div class="usr-content">
+            <div id="dokuwiki__content">
+                <div class="container usr-container">
+                                                                <div class="breadcrumbs"><span class="bchead">Trace:</span> <span class="bcsep">•</span> <bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab04" class="breadcrumbs" title="terraform-oci:lab04">lab04</a></bdi> <span class="bcsep">•</span> <span class="curid"><bdi><a href="https://doc.devops.courses/doku.php?id=terraform-oci:start" class="breadcrumbs" title="terraform-oci:start">terraform-oci</a></bdi></span></div>
+                                                                                            <div class="row usr-inner">
+                        <div class="col-md-9 col-main">
+                                                
+                            <div class="page">
+                                
+                                <!-- BREADCRUMBS -->
+
+                                <!-- wikipage start -->
+                                
+<h1 class="sectionedit1" id="terraform_on_oci">Terraform on OCI</h1>
+<div class="level1">
+
+</div>
+
+<h2 class="sectionedit2" id="training_info">Training Info</h2>
+<div class="level2">
+
+<p>
+The certified trainers for this course are as follows:
+</p>
+<ul>
+<li class="level1"><div class="li"> Andrei Ciorba</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit3" id="course_description">Course Description</h2>
+<div class="level2">
+
+<p>
+This is an introductory course which covers the foundational knowledge 
+of virtual infrastructure and Hashicorp’s Terraform toolset for 
+infrastructure automation. 
+The training will cover multiple cloud providers, starting with AWS for 
+the basic examples and then proceeding with OCI, with a wide array of 
+examples. 
+</p>
+
+</div>
+
+<h2 class="sectionedit4" id="what_will_you_learn">What Will You Learn</h2>
+<div class="level2">
+
+<p>
+The course is focused on learning Terraform’s concepts and syntax and on
+ applying this knowledge to create and update working configurations. 
+Further expansion of a virtual deployment is covered through the use of 
+functions, provisioners and data sources.
+Moving forward with more advanced features, the course covers methods of
+ writing more efficient code and working with multiple environments, by 
+introducing variables, modules and managing state files.
+</p>
+
+</div>
+
+<h2 class="sectionedit5" id="prerequisites">Prerequisites</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> basic understanding of any programming or scripting language concepts (functions, variables, etc)</div>
+</li>
+<li class="level1"><div class="li"> basic understanding of simple cloud infrastructure elements (virtual networks, virtual instances, etc)</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit6" id="target_audience">Target Audience</h2>
+<div class="level2">
+
+<p>
+This course is targeting both developers who want to automate their code
+ testing infrastructure as well as cloud or physical 
+infrastructure-related positions that benefit from automation.
+</p>
+<hr>
+
+</div>
+
+<h2 class="sectionedit7" id="course_links">Course Links</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="https://doc.devops.courses/doku.php?id=terraform-oci:courses" class="wikilink1" title="terraform-oci:courses" data-wiki-id="terraform-oci:courses">Course Slides</a></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab01" class="wikilink1" title="terraform-oci:lab01" data-wiki-id="terraform-oci:lab01">Lab 01 - Installing Terraform</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab02" class="wikilink1" title="terraform-oci:lab02" data-wiki-id="terraform-oci:lab02">Lab 02 - Variables</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab03" class="wikilink1" title="terraform-oci:lab03" data-wiki-id="terraform-oci:lab03">Lab 03 - Providers and Data Sources</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab04" class="wikilink1" title="terraform-oci:lab04" data-wiki-id="terraform-oci:lab04">Lab 04 - VM Resources</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab05" class="wikilink1" title="terraform-oci:lab05" data-wiki-id="terraform-oci:lab05">Lab 05 - Terraform Features</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://doc.devops.courses/doku.php?id=terraform-oci:lab06" class="wikilink1" title="terraform-oci:lab06" data-wiki-id="terraform-oci:lab06">Lab 06 - Networking Resources</a></div>
+</li>
+<li class="level1"><div class="li"> Lab key files required for OCI access &amp; instance SSH: <a href="https://doc.devops.courses/lib/exe/fetch.php?media=terraform-oci:lab_key_files.zip" class="media mediafile mf_zip" title="terraform-oci:lab_key_files.zip (4&nbsp;KB)">lab_key_files.zip</a></div>
+</li>
+</ul>
+
+</div>
+
+                                <!-- wikipage stop -->
+                                <div class="clearer"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-side">
+                                                        <div class="nav-side" role="navigation">
+                                <div class="nav-side-inner">
+                                    <!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>Table of Contents</h3>
+<div style="" aria-expanded="true">
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#terraform_on_oci">Terraform on OCI</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#training_info">Training Info</a></div></li>
+<li class="level2"><div class="li"><a href="#course_description">Course Description</a></div></li>
+<li class="level2"><div class="li"><a href="#what_will_you_learn">What Will You Learn</a></div></li>
+<li class="level2"><div class="li"><a href="#prerequisites">Prerequisites</a></div></li>
+<li class="level2"><div class="li"><a href="#target_audience">Target Audience</a></div></li>
+<li class="level2"><div class="li"><a href="#course_links">Course Links</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+                                    <!-- ********** ASIDE ********** -->
+                                    
+                                    <div class="back-to-top-wrapper">
+                                        <a href="#dokuwiki__top" class="back-to-top-link primary"><span class="mu mu-arrow-up"></span> Back to Top</a>
+                                    </div>
+                                </div>
+                            </div>
+                                                    </div>
+                    </div><!-- /row -->
+                </div><!-- /container -->
+            </div><!-- /content -->
+        </div>
+
+            <div class="clearer"></div>
+            <hr class="a11y">
+
+        </div><!-- /wrapper -->
+
+        <!-- ********** FOOTER ********** -->
+        <footer id="dokuwiki__footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-8">
+                        <div class="doc"><bdi>terraform-oci/start.txt</bdi> · Last modified: 2022/05/03 14:13 by <bdi>andrei.ciorba</bdi></div>
+                                            </div>
+                    <div class="col-sm-3 col-md-2">
+                        <!-- PAGE ACTIONS -->
+                                                    <div id="dokuwiki__pagetools">
+                                <ul class="footer-menu ul-raw">
+                                    <li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:start&amp;do=edit" class="action source" accesskey="v" rel="nofollow" title="Show pagesource [V]">Show pagesource</a></li><li><bdi><a href="https://doc.devops.courses/doku.php?id=discussion:terraform-oci:start" class="wikilink2" title="discussion:terraform-oci:start" rel="nofollow" data-wiki-id="discussion:terraform-oci:start">Discussion</a></bdi></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:start&amp;do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]">Old revisions</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:start&amp;do=backlink" class="action backlink" rel="nofollow" title="Backlinks">Backlinks</a></li><li><a href="#dokuwiki__top" class="action top" accesskey="t" rel="nofollow" title="Back to top [T]">Back to top</a></li>                                </ul>
+                            </div>
+                                            </div>
+                    <div class="col-sm-3 col-md-2">
+                        <!-- SITE TOOLS -->
+                        <div id="dokuwiki__sitetools">
+                            <ul class="footer-menu ul-raw">
+                                <li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:start&amp;do=recent" class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:start&amp;do=media&amp;ns=terraform-oci" class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li><a href="https://doc.devops.courses/doku.php?id=terraform-oci:start&amp;do=index" class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="no"><img src="terraform-oci-1_files/taskrunner.gif" alt="" width="2" height="1"></div>
+        </footer><!-- /footer -->
+
+            </div></div><!-- /site -->
+
+    <script>
+        function togglediv(id) {
+            var div = document.getElementById(id);
+            div.style.display = div.style.display == "block" ? "none" : "block";
+        }
+    </script>
+
+
+</body></html>

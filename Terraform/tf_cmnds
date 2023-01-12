@@ -1,0 +1,107 @@
+- TF commands -
+    - terraform -h
+    - terraform init
+    - terraform plan
+    - terraform apply -auto-approve
+    - terraform apply -target 
+    - terraform show
+    - terraform destroy
+    - terraform output  --- value of output block
+    - terraform validate
+    - terraform fmt
+    - terraform providers  --- list providers used by configuration
+    - terraform refresh    ---- Update the state to match remote systems
+    - terraform import    --- imports 
+    - terraform workspace 
+        - list lists current workspaces
+        - new test  creates new "test" workspace
+
+----------------------------------------------------------------
+| main.tf      --- Main configuration file containing resource |
+| definition                                                   |
+| variables.tf --- Contains variable declarations              |
+| outputs.tf   --- Contains outputs from resources             |
+| provider.tf  --- Contains Provider definition                | 
+| terraform.tf --- Configure Terraform behaviour               |
+----------------------------------------------------------------
+
+- provider -
+    - resource "aws*instance" "app" -- "aws"=provider*"instance"=resource "app"=Resource_
+Name
+    - alias = "central" --- used for identify region alias under provider block
+        - provider  = aws.central   |--- which provider to use
+        - providers = { aws.central } |
+
+
+- variables -
+    - .ENV vars -> .tf.tfvars -> .auto.tfvars -> -var or -var-file (command-line-flags)(high pr.)
+    - variable "aws_inst_type" {default = "t3.micro"}
+    - name = var.aws_inst_name   --- inside main.tf
+        resource "aws_instance" "app01" {
+          instance_type = var.aws_inst_type
+        }
+    - export TF_VAR_aws_inst_type
+    - We can use any name for a variable except for: 
+        - source, version, providers, count, for_each, lifecycle, depends_on and locals
+
+- resource - 
+    - creates, updates, destroys infrastructure
+
+- data resource - 
+    - only reads infrastructure
+    - data.[TYPE].[NAME].[ATTRIBUTE]
+
+- .tfstate file -
+    - local, remote
+        - terraform state pull   --- pull state file from remote backend
+        - terraform state show   --- list detailed info
+        - terraform state list   --- lists all the resources recorded within the tfstate file
+
+        - terraform {
+            backend "s3" {
+                bucket = "bucket_name"
+                key    = "tfstate filename"
+                region = "reion_name"
+                dynamedb_table = "state-lcoking" #for state file locking
+                }
+        }
+- count and for_each -
+    - variable "webservers" {
+        type = set|list
+        default = ["web1","web2","web3"]
+    }
+    - count = 3  --- creates 3 resources
+        - count = length(var.webservers)  --- get list length
+    - for_each  = toset(var.webservers)  --- converts var.webserver into set
+        - filenmae = each.value
+
+- provisioner -
+    - remote-exec {}
+    - local-exec {}
+
+- dynamic block - 
+    - dynamic {}
+
+- modeule -
+    module "bla-bla" {
+        source = "path"
+    }
+
+- terraform cloud - 
+    - free plan
+    -
+
+- web_resources -
+    - https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+    - https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance
+    - https://developer.hashicorp.com/terraform/language/data-sources
+    - https://developer.hashicorp.com/terraform/language/values/variables
+    - https://developer.hashicorp.com/terraform/language/resources/provisioners/syntax
+    - https://developer.hashicorp.com/terraform/language/functions
+    - https://developer.hashicorp.com/terraform/language/expressions/dynamic-blocks
+    - https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle
+    - https://developer.hashicorp.com/terraform/internals/debugging
+    - https://developer.hashicorp.com/terraform/cli/import
+    -
+
+   
