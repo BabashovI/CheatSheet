@@ -19,6 +19,6 @@ debug.tmp
 id_rsa
 *.pub
 .git
-
+terraform-states_bucket_credentials
 # Test Artifacts
 .venv

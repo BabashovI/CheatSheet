@@ -2,6 +2,7 @@
 
 - /lib/ld-*   - run non executable program
 - echo $? - exit status of last command (0 no error)
+- chattr & lsattr --- change&list file attributes 
 - touch $(date +"%Y_%m_%d_%I_%M_%p")  --- create file with current datetime as filename
 - ' - Single quote removes meaning special meaning of special character.
 - find /qwe -type f -iname \_.js -exec cp --parents -t /tmp/ {} + -- find all js files and copy with parent directory
@@ -15,6 +16,15 @@
 - for i in $a;do echo $i| cut -d "," -f1;done    --- splits by "," 
 - for i in $(echo $a | tr ',' '\n');do grep "qwe $i" *;done
 - sudo chage -I -1 -m 0 -M 99999 -E -1 user       -- change user password exp to never
+- systemctl --type=service --state=active
+- systemctl enable --now  svc       -- enable and start service
+
+### virsh shutdown vms
+- vms="$(virsh list |sed '/Id\|--/d' | awk '{print $2}')"
+- for i in $(virsh list |awk '{print $2}'| grep -v Name); do virsh shutdown $i --mode acpi;done
+
+### NMAP
+- for i in "$(cat work)”;do nmap -sV -p 22 IP |grep -i ssh  ;done  --check for ssh port
 
 ### Network
 
@@ -65,3 +75,4 @@ git commit -m "commit message"
 git config --global --unset http.proxy
 git remote set-url <remote_name> <remote_url>
 git remote -v
+git squash   -- combine multiple commits into one
